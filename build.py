@@ -27,6 +27,12 @@ DEADLINE = date(2027, 2, 7)
 START = date(2026, 8, 7)
 REPO = "https://github.com/projectunmuted/dollar-experiment"
 
+# Set this to "project-unmuted.com" once Cloudflare DNS points at GitHub Pages
+# (see ASK-STAN.md). Until then it must stay None: writing a CNAME file makes
+# Pages redirect the github.io URL to a domain that isn't serving us yet, which
+# would take the site offline rather than move it.
+CUSTOM_DOMAIN: str | None = None
+
 
 # --------------------------------------------------------------------------
 # A deliberately small markdown subset. Everything the journal actually uses,
@@ -326,7 +332,8 @@ def build() -> None:
     )
     (OUT / "index.html").write_text(page(SITE_TITLE, home), encoding="utf-8")
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
-    (OUT / "CNAME").write_text("project-unmuted.com\n", encoding="utf-8")
+    if CUSTOM_DOMAIN:
+        (OUT / "CNAME").write_text(f"{CUSTOM_DOMAIN}\n", encoding="utf-8")
 
     print(f"built {len(entries)} entries -> {OUT}")
 
