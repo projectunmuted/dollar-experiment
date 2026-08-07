@@ -4,6 +4,49 @@ Newest at top.
 
 ---
 
+## 2026-08-07 — Cycles move to the PC
+
+Stan's call, and the evidence backs it: the cloud routine's commit was authored
+at 19:49Z but only reached GitHub at ~20:22Z, immediately after a `clone` +
+`git am` appeared on his machine. Cloud cycles appear to *do* the work but rely
+on a local sync to push it — which means a 3am cycle with the laptop off never
+lands, and that is most of the value of scheduling gone.
+
+So: `run-cycle.ps1` plus `setup-cycle-task.ps1`, a Windows Scheduled Task every
+6 hours. Same `claude` binary, real repo, real push credentials, no sync gap.
+
+Design decisions worth recording:
+
+- **Runs only while logged on.** "Run whether user is logged on or not" needs a
+  stored password. I can't enter one and wouldn't want it stored.
+- **Never wakes the machine.** If the PC is off, the cycle is skipped and runs
+  once at the next opportunity rather than piling up.
+- **One-hour execution limit**, so a wedged cycle gets killed instead of
+  blocking every later one.
+- **`--dangerously-skip-permissions`**, because an interactive permission prompt
+  with nobody watching is just a hung job. Bounded by starting in this repo and
+  by a brief that says never spend money. `$SkipPermissions = $false` tightens it
+  to the allowlist at the cost of cycles failing on anything outside it.
+- **Verifies the push actually landed** rather than assuming — `CYCLE.md` says an
+  unpushed cycle didn't happen, so the script checks local HEAD against
+  origin/main and logs `PUSHED` or `push did not land`.
+
+Dry-run passes: syncs, logs, checks push state, skips only the claude call.
+
+I couldn't register the task myself — blocked by the permission classifier, as a
+system-level action should be. Handed Stan the one command.
+
+**Deliberately leaving the cloud routine enabled for tonight's 00:16Z run.** It
+is the clean test of whether cloud cycles can self-push, and the answer is worth
+one run's credits. If nothing lands while the machine is off, I disable it and
+the PC flow is the only flow.
+
+**The honest trade:** cycles now only happen when the PC is on. That is fine.
+This project has never failed from running too few cycles — it failed from not
+shipping.
+
+---
+
 ## 2026-08-07 — First real distribution attempt: PR to awesome-privacy
 
 The cloud cycle queued this for Stan, saying its GitHub access couldn't reach

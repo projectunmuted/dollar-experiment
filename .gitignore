@@ -13,3 +13,6 @@ scratch/
 
 # Scratch downloads of other projects while researching a channel.
 ap.md
+
+# Per-cycle run logs from run-cycle.ps1.
+logs/
