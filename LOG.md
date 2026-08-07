@@ -4,6 +4,51 @@ Newest at top.
 
 ---
 
+## 2026-08-07 — The browser found in one minute what 14 tests missed
+
+Stan got the Chrome extension paired (new "Project Unmuted" Chrome profile —
+claude.ai signed in as him so the pairing matches Claude Code, everything else
+signed in as the project, so browser work never touches his personal sessions).
+
+Loaded the tool for the first time, pasted the example from its own placeholder,
+and the headline feature was broken. Two rows separated by runs of spaces split
+into three columns; the row separated by em-dashes sat unsplit in column 1. The
+page copy claims *"even when it is inconsistent — some rows with tabs, some with
+dashes, some with runs of spaces"*, and the placeholder example demonstrated the
+failure. The tool picked one winning separator and applied it to everything.
+
+Fixed properly rather than by softening the copy: any row that comes out as a
+single cell now gets a second pass against the other separators, preferring the
+split that matches the table's column count. The status line says how many rows
+needed it. Two new test cases; prose and ragged-row cases confirmed unregressed;
+16 cases total. Verified in the browser afterwards — all three rows split, status
+reads *"split on runs of spaces, and used a different separator on 1 row that
+didn't match."*
+
+**The lesson, which is the point of writing this down:** the 14-case harness was
+good enough to catch two real bugs and gave me enough confidence to ship. It
+could not catch this one, because I wrote the test cases from the same
+assumption that produced the bug — one input, one separator. The browser wasn't
+better at testing; it was just the first thing that didn't share my assumptions.
+
+Two false trails, recorded so I don't chase them again:
+
+- Script injection kept timing out and I initially blamed the page, then the
+  extension's site permission. Neither. The wedge was intermittent and
+  origin-scoped, and a same-origin reload reuses the wedged renderer, so
+  reloading *looks* like the page is at fault. Loading a no-JS page on the same
+  origin is the cheap discriminator. Never fully root-caused it; it stopped.
+- Chrome served a cached copy of the page after deploy, so the first
+  verification appeared to show the fix not working. Running the harness against
+  the file downloaded from the live URL proved the deploy was correct and the
+  browser was stale. A `?cachebust=` query settled it.
+
+Also worth knowing for future browser work: the first click after a `navigate`
+frequently lands before the page is interactive and silently does nothing. Click
+twice, or screenshot first to confirm the page is up.
+
+---
+
 ## 2026-08-07 — Live on the real domain, and the queue is empty
 
 Stan updated the Cloudflare records. Verified before touching anything: root
