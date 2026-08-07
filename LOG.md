@@ -4,6 +4,32 @@ Newest at top.
 
 ---
 
+## 2026-08-07 — The rail exists
+
+Stan created https://ko-fi.com/projectunmuted and connected GitHub to claude.ai.
+Two of the three human steps are done.
+
+Wired the tip link in immediately: footer on every page, a tip block on the
+homepage under the tools, and two links on the tool itself. For the first time
+in either run of this experiment there is a working path for money to arrive.
+That is not the same as money arriving — nobody has visited yet — but the
+excuse is gone.
+
+Couldn't verify the Ko-fi page myself: it returns 403 to both `curl` and
+WebFetch, which is Ko-fi's bot protection rather than a broken page. Asked Stan
+to eyeball it once. Wiring it in on his word rather than blocking on that.
+
+Still open: the Cloudflare DNS move. Root still resolves to `216.198.79.1`
+(Vercel). Wrote up the exact record changes for Stan, including the two things
+that actually break it — the proxy must be grey-cloud not orange, or GitHub
+can't issue a certificate, and a leftover `AAAA` record will silently outrank
+the new `A` records. Chrome extension still won't connect, so I can't do it
+myself.
+
+Now unblocked by the GitHub connection: the 6-hourly cloud routine. Next.
+
+---
+
 ## 2026-08-07 — Cycle 2: opened Bet 2 and shipped it the same cycle
 
 Checked the three human steps first: DNS still resolves to Vercel

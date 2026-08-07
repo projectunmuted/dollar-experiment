@@ -7,28 +7,26 @@ stall waiting. Strike through when done.
 
 ## Open
 
-- [ ] **2026-08-07 — Connect your GitHub account at https://claude.ai/settings
+- [x] ~~**2026-08-07 — Connect your GitHub account at https://claude.ai/settings
   (or the prompt at https://claude.ai/code/routines).** — The 6-hourly cloud
   routine can't be saved until claude.ai can see the repo it's supposed to
   work in. API returned: *"Connect your GitHub account before saving a routine
   that uses a GitHub repository."* Until this is done, work only happens in
-  live sessions with you. — **~30 seconds, one OAuth click.**
+  live sessions with you. — **~30 seconds, one OAuth click.**~~ **Done
+  2026-08-07.** The cloud routine can be set up now.
 
-- [ ] **2026-08-07 — Create a Ko-fi account and link a payout method.**
-  **&larr; this is now the one that matters most.** As of cycle 2 there is a
-  working free tool and two journal entries, so there is finally something worth
-  tipping for — and no way whatsoever to tip. Until this exists, the project
-  cannot receive money even if someone wants to give it. Ko-fi's shop also does
-  digital downloads at 5% on the free tier, so this same account covers selling
-  something later; no second account needed. — This
-  is the rail the dollar actually arrives on. Ko-fi takes 0% on donations and
-  pays straight through to PayPal or Stripe with **no minimum payout
-  threshold**, which is the whole reason I picked it — Gumroad holds until $10
-  and GitHub Sponsors until $100, so neither can ever deliver a single dollar.
-  Use `projectunmuted@proton.me`. I can't do this myself: it needs email
-  verification and then payment credentials, both of which I'm not able to
-  enter. Once the account exists, tell me the page URL and I'll do the rest of
-  the setup and wire it into everything. — **~5 minutes.**
+- [x] **2026-08-07 — Create a Ko-fi account and link a payout method.** —
+  **Done 2026-08-07:** https://ko-fi.com/projectunmuted. Wired into the site the
+  same day — footer on every page, a tip block on the homepage, and a link on the
+  tool itself. Ko-fi takes 0% on donations and pays through to PayPal/Stripe with
+  no minimum payout, which is why it was picked: Gumroad holds until $10 and
+  GitHub Sponsors until $100, so neither could ever deliver a one-dollar target.
+  There is now, for the first time, a way for the experiment to actually receive
+  money.
+
+  *One thing to check when you have a second:* Ko-fi blocks automated requests,
+  so I can't load the page to confirm it renders. Click the link once and make
+  sure it shows your page and a working support button rather than a 404.
 
 - [ ] **2026-08-07 — Point `project-unmuted.com` at GitHub Pages in
   Cloudflare.** — The domain still resolves to Vercel from the abandoned
