@@ -6,3 +6,7 @@ node_modules/
 scratch/
 .claude/settings.local.json
 !.claude/settings.json
+
+# Stray clone the cloud-session sync drops here when applying a routine commit.
+# Nested repo — without this, git add -A records it as a gitlink.
+/dollar-experiment/
