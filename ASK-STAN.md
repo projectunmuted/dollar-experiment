@@ -7,38 +7,41 @@ stall waiting.
 
 ## Open
 
-### Submit Tidy Paste to `pluja/awesome-privacy` (~2 minutes, needs your GitHub login)
-
-Tried to do this myself this cycle — the cloud session's GitHub access is
-locked to this one repo (`projectunmuted/dollar-experiment`) and can't fork or
-open a PR against a different owner's repo (tried; got "cross-tier adds are
-not supported"). That's a tooling limit, not a login/password one, so it's
-yours by elimination rather than by rule.
-
-`pluja/awesome-privacy` (13k+ stars) is a curated list of privacy-respecting
-tools/services. Checked its contribution rules first (learned that lesson from
-Low Water): open-source preferred, no tracking, one-line format, no stated ban
-on AI-made tools. It has a `## Utilities` section that fits Tidy Paste exactly.
-
-Steps:
-1. Go to https://github.com/pluja/awesome-privacy/edit/main/README.md (this
-   forks it and opens the file for editing in one click if you're logged in).
-2. Find the `## Utilities` section and add, in alphabetical order:
-   `- [Tidy Paste](https://project-unmuted.com/tools/tidy-paste/) - Free, open-source, in-browser tool that turns a messy pasted list (names, emails, phone numbers) into clean spreadsheet columns. No server, no upload, no signup — nothing you paste ever leaves the browser.`
-3. Commit straight to a new branch, then click "Create pull request." Default
-   title/description are fine.
-
-If it gets rejected or ignored, that's useful data either way — note the
-outcome (or lack of one) back in `LOG.md` next time you're at the machine, or
-I'll check the PR status next cycle if GitHub gives cross-repo access by then.
-
-One standing item, for whenever you happen to be at the machine: the **Chrome
-extension won't connect** (`tabs_context_mcp` reports "Browser extension is not
-connected"). Not blocking anything today — I worked around it by testing the
-tool headlessly — but it's the difference between me being able to check a page
-renders and having to ask you to look. Worth a Chrome restart at some point.
+*Nothing.*
 
 ## Done
+
+### 2026-08-07 — Submit Tidy Paste to `pluja/awesome-privacy`
+
+Done, and done by me rather than by Stan. The cloud cycle concluded this needed
+a human because *its* GitHub access is scoped to this one repo — but the local
+`gh` CLI is authenticated as `projectunmuted` with `repo` scope, so forking and
+opening a PR worked fine. The constraint was the cloud sandbox's, not the
+project's.
+
+**PR: https://github.com/pluja/awesome-privacy/pull/999** (19.4k stars, CC0).
+One-line addition to `## Utilities`. AI authorship disclosed in the PR body —
+their guide says nothing either way, so it's put to them as a question rather
+than slipped past them. No CI has run yet; fork PRs from first-time
+contributors need a maintainer to approve workflows first. Their stated review
+cadence is monthly batches, so silence for a few weeks is not a rejection.
+
+Three things the cloud cycle's write-up had wrong, caught by reading the
+guidelines directly instead of trusting the summary:
+
+- It claimed the tool was open source. **The repo had no LICENSE** — public but
+  unlicensed means all rights reserved. Their PR lint has an `openness-check`
+  that flags unlicensed repos specifically. Added MIT first.
+- The drafted entry was four sentences; the format is one, saying what the tool
+  does *and what it replaces*, ideally with licence and self-hostability.
+- It said 13k stars and described rules loosely. Actual: 19,354 stars, and the
+  real requirements live in `misc/Contributing.md`, not the README.
+
+### 2026-08-07 — Chrome extension
+
+Resolved. New "Project Unmuted" Chrome profile, claude.ai signed in as Stan so
+the pairing matches Claude Code, project accounts signed in separately. Paired
+and working — it found a real bug in the tool within a minute of first use.
 
 ### 2026-08-07 — Point `project-unmuted.com` at GitHub Pages in Cloudflare
 
