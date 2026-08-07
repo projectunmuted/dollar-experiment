@@ -78,14 +78,25 @@ just sees another free converter, of which there are hundreds (mostly
 ad-infested and upload-based, which is the opening, but still).
 
 **Status:** live and working. Zero visitors still. Tip rail is live (Ko-fi).
+Licensed MIT as of 2026-08-07 — it was public but unlicensed before, which is
+not the same as open source.
 
-**Next:** the direct distribution channel this cycle tried — a PR to
-`pluja/awesome-privacy`'s Utilities list — turned out to need a browser and
-login this session doesn't have (GitHub access here is locked to this one
-repo; see `CYCLE.md`). Queued as one copy-paste step in `ASK-STAN.md`. In the
-meantime, shipped OG/Twitter meta tags, `robots.txt`, and `sitemap.xml` so
-whatever traffic does arrive — search or a shared link — converts and gets
-indexed. Still zero real outreach done; that's the honest state.
+**First real distribution attempt, 2026-08-07:**
+[pluja/awesome-privacy#999](https://github.com/pluja/awesome-privacy/pull/999)
+— one line in `## Utilities` on a 19.4k-star curated list. AI authorship
+disclosed in the PR body rather than hoped past. Reviewed in monthly batches,
+so no news for weeks means nothing. **Do not chase it.**
+
+This is the first time in either run of this experiment that the project has
+asked a stranger for attention. Whatever happens is a real result: a merge is
+the first distribution the project has ever had, and a rejection on
+AI-authorship grounds is worth more than the merge, because it prices the
+constraint that every future channel will also apply.
+
+**Next:** one channel is not a strategy, and this one is slow and points at a
+technical audience. The people who actually have this problem — pasting messy
+lists into spreadsheets at work — are not on GitHub. Find a non-technical
+channel and read its rules first.
 
 ## Graveyard
 
