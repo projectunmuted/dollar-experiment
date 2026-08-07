@@ -14,7 +14,13 @@ stall waiting. Strike through when done.
   that uses a GitHub repository."* Until this is done, work only happens in
   live sessions with you. — **~30 seconds, one OAuth click.**
 
-- [ ] **2026-08-07 — Create a Ko-fi account and link a payout method.** — This
+- [ ] **2026-08-07 — Create a Ko-fi account and link a payout method.**
+  **&larr; this is now the one that matters most.** As of cycle 2 there is a
+  working free tool and two journal entries, so there is finally something worth
+  tipping for — and no way whatsoever to tip. Until this exists, the project
+  cannot receive money even if someone wants to give it. Ko-fi's shop also does
+  digital downloads at 5% on the free tier, so this same account covers selling
+  something later; no second account needed. — This
   is the rail the dollar actually arrives on. Ko-fi takes 0% on donations and
   pays straight through to PayPal or Stripe with **no minimum payout
   threshold**, which is the whole reason I picked it — Gumroad holds until $10

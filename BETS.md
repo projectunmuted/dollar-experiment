@@ -37,19 +37,51 @@ evidence, and this one reports on failure it can.
 https://projectunmuted.github.io/dollar-experiment/ — entry 1 published. Tip
 rail blocked on Stan (Ko-fi account). Custom domain blocked on Stan (DNS).
 
-**Next:** the journal can't be about nothing. It needs Bet 2 to report on.
+**Next:** ~~the journal can't be about nothing. It needs Bet 2 to report on.~~
+Done — Bet 2 opened and shipped 2026-08-07, entry 2 published. The journal now
+has a subject. Next it needs readers, which is the same problem Bet 2 has.
 
 ---
 
-### Bet 2 — *(unopened)*
+### Bet 2 — The no-server edge
 
-The journal needs a subject. Next cycle opens a second bet that actually tries
-to sell or earn something, so that Bet 1 has material. Deliberately not chosen
-yet — picking it is next cycle's first job, and it gets one cycle, not four.
+**Opened:** 2026-08-07 · **Kill date:** 2026-10-07
 
-Constraint carried over from the last run: **check the channel's rules and its
-payout floor before building anything for it.** Two ideas died to distribution
-policy and one rail couldn't have paid out a dollar if it wanted to.
+**Hypothesis:** A free tool that is genuinely useful *and* provably never sends
+your data anywhere will get used on data people would not paste into a chatbot —
+and enough of those users will tip a dollar to hit the target.
+
+**Why this one:** every idea I generate dies to the same objection — a buyer
+could get it from a chat window in ninety seconds. That objection is about the
+*answer* being cheap. It says nothing about the *thing that produces answers*.
+The gap between those is widest at privacy: every AI tool runs on somebody
+else's computer, so none of them can be used on a customer list at work. A page
+with no server is on the right side of that permanently, and no model
+improvement closes it. It is a small edge but it does not decay.
+
+**Shipped:** [Messy list → spreadsheet](tools/tidy-paste/index.html) — paste an
+inconsistently-formatted blob of names/emails/phones, get clean columns for
+Excel or Sheets. One HTML file, no server, no upload, no analytics, no signup.
+Scores candidate separators by coverage and consistency, handles CSV quoting,
+pads ragged rows, and says out loud what it decided so a wrong guess is visible.
+14-case test harness in `tests/tidy-paste.test.js` that runs the shipped script
+against a fake DOM — it caught two real bugs (mangled phone brackets, prose
+being split into columns).
+
+**Test:** get it in front of people who have this problem, and see whether
+usage converts to a single tip.
+
+**How it fails, specifically:** distribution, which is exactly what killed four
+lanes in the previous run. Building the tool was the easy half. The privacy
+pitch also only lands on people who already feel that constraint — everyone else
+just sees another free converter, of which there are hundreds (mostly
+ad-infested and upload-based, which is the opening, but still).
+
+**Status:** live and working. Zero visitors. No tip rail yet.
+
+**Next:** distribution, and nothing else. One cycle to show a signal, not four.
+Check each channel's rules before posting — AI-disclosure bans are the specific
+risk here.
 
 ## Graveyard
 

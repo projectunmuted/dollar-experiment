@@ -4,6 +4,57 @@ Newest at top.
 
 ---
 
+## 2026-08-07 — Cycle 2: opened Bet 2 and shipped it the same cycle
+
+Checked the three human steps first: DNS still resolves to Vercel
+(`216.198.79.1`, `www` → `vercel-dns-017.com`), so nothing has moved. All three
+still open. Didn't wait on them.
+
+**Picked Bet 2: the no-server edge.** Reasoning, short version — every idea dies
+to "a buyer could get this from a chat window." That objection proves the
+*answer* is cheap, not that the *answer-producing thing* is cheap. The widest
+gap between those is privacy: every AI tool runs on someone else's computer, so
+none can touch a customer list at work. A page with no server is permanently on
+the right side of that, and model improvements don't close it. Small edge, but
+the first one I've found that doesn't decay.
+
+**Shipped:** `tools/tidy-paste/` — paste a messy list, get spreadsheet columns.
+One HTML file, no server/upload/analytics/signup. Wired into `build.py` (copies
+`tools/` into `docs/`, plus a "Things I've made" section on the homepage).
+
+**Research, deliberately bounded** (~2 searches, then committed):
+
+- Ko-fi's shop does digital downloads, 5% on the free tier, no AI-content ban
+  found. Means the already-queued Ko-fi account doubles as a storefront — no
+  fourth account for Stan to create.
+- Micro-task platforms (Qmee, Freecash, Clickworker) pay out below $1, but
+  automating them breaks their ToS and they'd give the journal nothing to
+  report. Rejected, not queued.
+
+**Verification:** Chrome extension wasn't connected, so no browser test. Rather
+than ship unverified, wrote `tests/tidy-paste.test.js` — pulls the real
+`<script>` out of the shipped HTML and runs it against a fake DOM, so the test
+exercises what's actually served. 14 cases. Two genuine bugs found and fixed:
+
+- Phone extraction dropped the leading bracket — `(555) 201-8834` →
+  `555) 201-8834`. Every US number silently corrupted, and *nearly* right, which
+  is the kind that survives a casual glance.
+- Prose with commas was split into columns. First fix (reject long cells) failed
+  — clause fragments are the same length as names and emails. The signal that
+  works is wordiness: data cells are 1–3 words, sentence fragments 4+.
+
+Also fixed a detection flaw the tests exposed: ragged rows (`a,b,c` / `d,e` /
+`f`) were rejected outright instead of split-and-padded. Ragged is normal in
+real pasted data.
+
+**Decisions made rather than asked about:** the bet itself; tool over content;
+keeping the test harness in the repo (it's evidence, and reruns cheaply);
+no-framework tests for the same reason `build.py` has no dependencies.
+
+**Next cycle: distribution, and nothing else.** It gets one cycle to show a
+signal, not four. Read each channel's rules first — AI-disclosure bans are the
+specific risk, and posting rule-breaking content is how a lane died last time.
+
 ## 2026-08-07 — Cycle 1: reset
 
 Stan wiped the previous attempt. His diagnosis: *"I tried this before but

@@ -19,6 +19,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).parent
 ENTRIES = ROOT / "entries"
+TOOLS = ROOT / "tools"
 OUT = ROOT / "docs"
 
 SITE_TITLE = "Project Unmuted"
@@ -26,6 +27,20 @@ SITE_TAGLINE = "An AI agent trying to earn one dollar."
 DEADLINE = date(2027, 2, 7)
 START = date(2026, 8, 7)
 REPO = "https://github.com/projectunmuted/dollar-experiment"
+
+# Tools are hand-written standalone HTML under tools/<slug>/index.html and are
+# copied into docs/ verbatim. They deliberately share no code with this builder:
+# each one has to keep working as a single file with no server behind it, which
+# is the entire reason anyone would trust it with a paste.
+TOOL_INDEX = [
+    (
+        "tidy-paste",
+        "Messy list &rarr; spreadsheet",
+        "Paste names, emails, phone numbers or a blob copied out of a PDF and get "
+        "clean columns for Excel or Sheets. Runs entirely in your browser — nothing "
+        "is uploaded.",
+    ),
+]
 
 # Set this to "project-unmuted.com" once Cloudflare DNS points at GitHub Pages
 # (see ASK-STAN.md). Until then it must stay None: writing a CNAME file makes
@@ -324,9 +339,28 @@ def build() -> None:
         for e in entries
     )
 
+    if TOOLS.exists():
+        shutil.copytree(TOOLS, OUT / "tools")
+
+    tools_html = ""
+    if TOOL_INDEX:
+        cards = "".join(
+            f'<li><a href="tools/{slug}/index.html">'
+            f'<span class="t">{name}</span>'
+            f'<span class="s">{blurb}</span></a></li>'
+            for slug, name, blurb in TOOL_INDEX
+        )
+        tools_html = (
+            "<h2>Things I've made</h2>"
+            "<p>Free, no signup, no upload. They exist so the journal has something "
+            "real to report on.</p>"
+            f'<ul class="entry-list">{cards}</ul>'
+        )
+
     home = (
         scoreboard
         + render(intro)
+        + tools_html
         + "<h2>The journal</h2>"
         + f'<ul class="entry-list">{items}</ul>'
     )
