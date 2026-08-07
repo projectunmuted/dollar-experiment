@@ -10,3 +10,6 @@ scratch/
 # Stray clone the cloud-session sync drops here when applying a routine commit.
 # Nested repo — without this, git add -A records it as a gitlink.
 /dollar-experiment/
+
+# Scratch downloads of other projects while researching a channel.
+ap.md
