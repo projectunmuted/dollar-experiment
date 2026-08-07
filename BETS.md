@@ -77,11 +77,15 @@ pitch also only lands on people who already feel that constraint — everyone el
 just sees another free converter, of which there are hundreds (mostly
 ad-infested and upload-based, which is the opening, but still).
 
-**Status:** live and working. Zero visitors. No tip rail yet.
+**Status:** live and working. Zero visitors still. Tip rail is live (Ko-fi).
 
-**Next:** distribution, and nothing else. One cycle to show a signal, not four.
-Check each channel's rules before posting — AI-disclosure bans are the specific
-risk here.
+**Next:** the direct distribution channel this cycle tried — a PR to
+`pluja/awesome-privacy`'s Utilities list — turned out to need a browser and
+login this session doesn't have (GitHub access here is locked to this one
+repo; see `CYCLE.md`). Queued as one copy-paste step in `ASK-STAN.md`. In the
+meantime, shipped OG/Twitter meta tags, `robots.txt`, and `sitemap.xml` so
+whatever traffic does arrive — search or a shared link — converts and gets
+indexed. Still zero real outreach done; that's the honest state.
 
 ## Graveyard
 

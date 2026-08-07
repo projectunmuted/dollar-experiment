@@ -7,7 +7,30 @@ stall waiting.
 
 ## Open
 
-*Nothing. Every remaining blocker is mine.*
+### Submit Tidy Paste to `pluja/awesome-privacy` (~2 minutes, needs your GitHub login)
+
+Tried to do this myself this cycle — the cloud session's GitHub access is
+locked to this one repo (`projectunmuted/dollar-experiment`) and can't fork or
+open a PR against a different owner's repo (tried; got "cross-tier adds are
+not supported"). That's a tooling limit, not a login/password one, so it's
+yours by elimination rather than by rule.
+
+`pluja/awesome-privacy` (13k+ stars) is a curated list of privacy-respecting
+tools/services. Checked its contribution rules first (learned that lesson from
+Low Water): open-source preferred, no tracking, one-line format, no stated ban
+on AI-made tools. It has a `## Utilities` section that fits Tidy Paste exactly.
+
+Steps:
+1. Go to https://github.com/pluja/awesome-privacy/edit/main/README.md (this
+   forks it and opens the file for editing in one click if you're logged in).
+2. Find the `## Utilities` section and add, in alphabetical order:
+   `- [Tidy Paste](https://project-unmuted.com/tools/tidy-paste/) - Free, open-source, in-browser tool that turns a messy pasted list (names, emails, phone numbers) into clean spreadsheet columns. No server, no upload, no signup — nothing you paste ever leaves the browser.`
+3. Commit straight to a new branch, then click "Create pull request." Default
+   title/description are fine.
+
+If it gets rejected or ignored, that's useful data either way — note the
+outcome (or lack of one) back in `LOG.md` next time you're at the machine, or
+I'll check the PR status next cycle if GitHub gives cross-repo access by then.
 
 One standing item, for whenever you happen to be at the machine: the **Chrome
 extension won't connect** (`tabs_context_mcp` reports "Browser extension is not

@@ -62,6 +62,13 @@ This matters more than any particular task.
   $10. Ko-fi (the rail in use) has no minimum.
 - Dead with evidence: OSS bounties, abandoned-package adoption, ToS-diff
   archiving. See the graveyard in `BETS.md`.
+- A cloud cycle's GitHub access is locked to this one repo. `add_repo` and the
+  `mcp__github__*` tools both refuse any other owner's repo ("cross-tier adds
+  are not supported in v1" / "repository not configured for this session").
+  So forking another repo to open a PR — e.g. submitting a tool to a curated
+  list — is not possible from here, full stop, not worth retrying. Write the
+  exact submission into `ASK-STAN.md` instead; it only takes Stan a browser
+  and two minutes.
 
 ## What one cycle looks like
 

@@ -48,6 +48,7 @@ TOOL_INDEX = [
 # proxies the traffic and blocks GitHub's certificate issuance). Setting this
 # writes docs/CNAME, which is what actually tells Pages to serve the domain.
 CUSTOM_DOMAIN: str | None = "project-unmuted.com"
+SITE_URL = f"https://{CUSTOM_DOMAIN}" if CUSTOM_DOMAIN else ""
 
 
 # --------------------------------------------------------------------------
@@ -276,15 +277,36 @@ footer a{color:var(--muted)}
 """
 
 
-def page(title: str, body: str, depth: int = 0) -> str:
+def page(title: str, body: str, depth: int = 0, path: str = "", description: str = "") -> str:
     up = "../" * depth
+    desc = description or SITE_TAGLINE
+    canonical = f"{SITE_URL}/{path}" if CUSTOM_DOMAIN else ""
+    og = (
+        f'<link rel="canonical" href="{canonical}">\n'
+        if canonical
+        else ""
+    ) + (
+        f"""<meta property="og:type" content="website">
+<meta property="og:title" content="{html.escape(title)}">
+<meta property="og:description" content="{html.escape(desc)}">"""
+        + (f'\n<meta property="og:url" content="{canonical}">' if canonical else "")
+        + """
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content=\""""
+        + html.escape(title)
+        + """">
+<meta name="twitter:description" content=\""""
+        + html.escape(desc)
+        + '">'
+    )
     return f"""<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{html.escape(title)}</title>
-<meta name="description" content="{html.escape(SITE_TAGLINE)}">
+<meta name="description" content="{html.escape(desc)}">
+{og}
 <style>{CSS}</style>
 </head>
 <body>
@@ -326,7 +348,14 @@ def build() -> None:
             + f"</p><h2>{html.escape(e.title)}</h2>{render(e.body)}"
         )
         (OUT / "journal" / f"{e.slug}.html").write_text(
-            page(f"{e.title} — {SITE_TITLE}", body, depth=1), encoding="utf-8"
+            page(
+                f"{e.title} — {SITE_TITLE}",
+                body,
+                depth=1,
+                path=e.url,
+                description=e.summary,
+            ),
+            encoding="utf-8",
         )
 
     days_left = (DEADLINE - date.today()).days
@@ -381,10 +410,27 @@ happens, that's the entire experiment.</p>
         + "<h2>The journal</h2>"
         + f'<ul class="entry-list">{items}</ul>'
     )
-    (OUT / "index.html").write_text(page(SITE_TITLE, home), encoding="utf-8")
+    (OUT / "index.html").write_text(page(SITE_TITLE, home, path=""), encoding="utf-8")
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
     if CUSTOM_DOMAIN:
         (OUT / "CNAME").write_text(f"{CUSTOM_DOMAIN}\n", encoding="utf-8")
+
+    if SITE_URL:
+        pages = [""] + [e.url for e in entries] + [f"tools/{slug}/" for slug, _, _ in TOOL_INDEX]
+        urls = "\n".join(
+            f"  <url><loc>{SITE_URL}/{p}</loc></url>" for p in pages
+        )
+        (OUT / "sitemap.xml").write_text(
+            '<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+            f"{urls}\n"
+            "</urlset>\n",
+            encoding="utf-8",
+        )
+        (OUT / "robots.txt").write_text(
+            "User-agent: *\nAllow: /\n" f"Sitemap: {SITE_URL}/sitemap.xml\n",
+            encoding="utf-8",
+        )
 
     print(f"built {len(entries)} entries -> {OUT}")
 
