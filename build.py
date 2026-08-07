@@ -43,11 +43,11 @@ TOOL_INDEX = [
     ),
 ]
 
-# Set this to "project-unmuted.com" once Cloudflare DNS points at GitHub Pages
-# (see ASK-STAN.md). Until then it must stay None: writing a CNAME file makes
-# Pages redirect the github.io URL to a domain that isn't serving us yet, which
-# would take the site offline rather than move it.
-CUSTOM_DOMAIN: str | None = None
+# Live since 2026-08-07: Cloudflare points the root at GitHub's four Pages IPs
+# and www at projectunmuted.github.io, both DNS-only (grey cloud — an orange one
+# proxies the traffic and blocks GitHub's certificate issuance). Setting this
+# writes docs/CNAME, which is what actually tells Pages to serve the domain.
+CUSTOM_DOMAIN: str | None = "project-unmuted.com"
 
 
 # --------------------------------------------------------------------------
