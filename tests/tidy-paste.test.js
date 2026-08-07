@@ -138,6 +138,21 @@ run("prose with commas must NOT split", [
 
 run("phones keep their brackets", "(555) 201-8834 and (020) 7946 0018", { mode: "phones" });
 
+// The headline claim on the page: mixed separators in one paste. Found by
+// actually loading the tool in a browser — every row must end up split, not
+// just the ones matching the winning separator.
+run("MIXED separators in one paste", [
+  "Dana Whitfield  dana@example.com  (555) 201-8834",
+  "Marcus Ellery — marcus.ellery@example.org — 555.884.1120",
+  "Priya Raman  priya@example.net  +1 555 660 2287",
+].join("\n"));
+
+run("mixed: tabs plus a pipe row", [
+  "Dana\tdana@example.com\tLeeds",
+  "Marcus | marcus@example.org | Bristol",
+  "Priya\tpriya@example.net\tYork",
+].join("\n"));
+
 // ---- Exercise the export paths, which the fake DOM doesn't cover ----
 console.log("\n=== exports ===");
 els.mode.value = "auto";

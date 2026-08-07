@@ -268,13 +268,49 @@ No cookies, no tracking, no upload.</p>
     return { kind: "one" };
   }
 
+  function splitOne(line, plan) {
+    if (plan.kind === "delim") return splitLine(line, plan.delim);
+    if (plan.kind === "spaces") return line.split(/ {2,}|\t+/);
+    if (plan.kind === "dash") return line.split(/\s+[—–]\s+|\s+-\s+/);
+    return [line];
+  }
+
+  var FALLBACKS = [
+    { kind: "delim", delim: "\t" }, { kind: "delim", delim: "|" },
+    { kind: "delim", delim: ";" }, { kind: "delim", delim: "," },
+    { kind: "spaces" }, { kind: "dash" }
+  ];
+
+  // The whole point of this tool is inconsistently-formatted paste, and real
+  // paste mixes separators — two rows with runs of spaces and one with an
+  // em-dash. Picking a single winning separator leaves those odd rows sitting
+  // unsplit in column 1. So: split everything with the winner, then give any
+  // row that came out as one lonely cell a second chance with the others.
   function splitBy(lines, plan) {
-    return lines.map(function (line) {
-      if (plan.kind === "delim") return splitLine(line, plan.delim);
-      if (plan.kind === "spaces") return line.split(/ {2,}|\t+/);
-      if (plan.kind === "dash") return line.split(/\s+[—–]\s+|\s+-\s+/);
-      return [line];
+    var rows = lines.map(function (line) { return splitOne(line, plan); });
+
+    var tally = {};
+    rows.forEach(function (r) { tally[r.length] = (tally[r.length] || 0) + 1; });
+    var target = 1, best = 0;
+    for (var k in tally) {
+      if (Number(k) > 1 && tally[k] > best) { best = tally[k]; target = Number(k); }
+    }
+    if (target < 2) return { rows: rows, rescued: 0 };
+
+    var rescued = 0;
+    rows = rows.map(function (r, i) {
+      if (r.length > 1) return r;
+      var pick = null;
+      for (var f = 0; f < FALLBACKS.length; f++) {
+        var alt = splitOne(lines[i], FALLBACKS[f]);
+        if (alt.length === target) { pick = alt; break; }
+        if (alt.length > 1 && (!pick || alt.length > pick.length)) pick = alt;
+      }
+      if (!pick) return r;
+      rescued++;
+      return pick;
     });
+    return { rows: rows, rescued: rescued };
   }
 
   function extract(text, which) {
@@ -322,7 +358,13 @@ No cookies, no tracking, no upload.</p>
       else if (m === "one") { plan = { kind: "one" }; how = "left as one column"; }
       else { plan = { kind: "delim", delim: m }; how = "split on the separator you chose"; }
 
-      rows = splitBy(lines, plan);
+      var split = splitBy(lines, plan);
+      rows = split.rows;
+      if (split.rescued) {
+        how += ", and used a different separator on " +
+          (split.rescued === 1 ? "1 row that didn't match" :
+           split.rescued + " rows that didn't match");
+      }
     }
 
     if (optTrim.checked) {
