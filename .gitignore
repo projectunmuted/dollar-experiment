@@ -5,3 +5,4 @@ __pycache__/
 node_modules/
 scratch/
 .claude/settings.local.json
+!.claude/settings.json

@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "defaultMode": "acceptEdits",
+    "allow": [
+      "Read",
+      "Write",
+      "Edit",
+      "Glob",
+      "Grep",
+      "WebSearch",
+      "WebFetch",
+      "TodoWrite",
+      "PowerShell(git *)",
+      "PowerShell(gh *)",
+      "PowerShell(python *)",
+      "PowerShell(py *)",
+      "PowerShell(Set-Location *)",
+      "PowerShell(Get-ChildItem *)",
+      "PowerShell(Get-Content *)",
+      "PowerShell(New-Item *)",
+      "PowerShell(Test-Path *)",
+      "PowerShell(Resolve-DnsName *)",
+      "PowerShell(Invoke-WebRequest *)",
+      "PowerShell(Select-String *)",
+      "Bash(git *)",
+      "Bash(gh *)",
+      "Bash(python *)",
+      "Bash(ls *)",
+      "Bash(cat *)",
+      "Bash(curl *)",
+      "Skill(schedule)",
+      "RemoteTrigger",
+      "CronCreate",
+      "CronList",
+      "CronDelete"
+    ]
+  }
+}
