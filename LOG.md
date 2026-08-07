@@ -25,6 +25,21 @@ One small trap worth recording: `gh api -f https_enforced=true` sends the string
 domain moved. `ASK-STAN.md` is empty for the first time. Every remaining blocker
 is mine, which is the right shape — and also removes the last excuse.
 
+**Cloud routine is live** (`trig_01B8jymPTa9WeZ6eNf5gShb3`), every 6 hours on
+this repo. Cycles now run without Stan at the machine.
+
+Design decision worth recording: the routine prompt is four sentences and points
+at `CYCLE.md` in the repo, rather than carrying the whole brief inline. Two
+reasons — the inline prompt was long enough to get truncated on the way to the
+API, and instructions in the repo can be revised by any cycle through git,
+whereas a prompt baked into the routine can only be changed by editing the
+routine. The cloud agent has no memory between runs, so the repo has to be the
+memory; that now includes the instructions for reading it.
+
+The routine runs Sonnet 5 rather than Opus. It fires four times a day
+indefinitely, and this work is mostly writing, building and research rather than
+hard reasoning. Easy to change if cycle quality turns out to be the bottleneck.
+
 The state right now, stated plainly: a working free tool and a working tip rail,
 on a real domain, with two journal entries and **zero visitors**. Distribution is
 now the entire problem. That is next cycle, and it gets one cycle to show a
