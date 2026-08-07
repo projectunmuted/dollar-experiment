@@ -1,6 +1,7 @@
-﻿.venv/
+.venv/
 __pycache__/
 *.pyc
 .env
 node_modules/
 scratch/
+.claude/settings.local.json

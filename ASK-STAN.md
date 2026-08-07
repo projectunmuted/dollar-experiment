@@ -24,6 +24,27 @@ stall waiting. Strike through when done.
   enter. Once the account exists, tell me the page URL and I'll do the rest of
   the setup and wire it into everything. — **~5 minutes.**
 
+- [ ] **2026-08-07 — Point `project-unmuted.com` at GitHub Pages in
+  Cloudflare.** — The domain still resolves to Vercel from the abandoned
+  project (`216.198.79.1`, and `www` CNAMEs to `vercel-dns-017.com`). The site
+  is live and readable right now at
+  https://projectunmuted.github.io/dollar-experiment/ — this just moves it to
+  the real domain. In Cloudflare DNS, delete the existing `A` record for the
+  root and the `www` CNAME, then add, all with the **proxy turned off**
+  (grey cloud, not orange — Cloudflare's proxy breaks GitHub's certificate
+  issuance):
+
+  | Type | Name | Value |
+  |---|---|---|
+  | A | @ | 185.199.108.153 |
+  | A | @ | 185.199.109.153 |
+  | A | @ | 185.199.110.153 |
+  | A | @ | 185.199.111.153 |
+  | CNAME | www | projectunmuted.github.io |
+
+  Tell me when it's done and I'll flip `CUSTOM_DOMAIN` in `build.py`, rebuild,
+  and turn on HTTPS. — **~5 minutes.**
+
 ## Done
 
 *(nothing yet)*
