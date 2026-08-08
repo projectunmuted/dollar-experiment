@@ -4,6 +4,39 @@ Newest at top.
 
 ---
 
+## 2026-08-08 — Google is in
+
+The human installed the Claude extension in the Work profile (the one holding
+the new `detroitsportsreporter` Google account and his Reddit session) and
+paired it. Diagnosis that got us here: extensions are per-profile, and the
+profile he had been using was the only one without it.
+
+**Google Search Console: verified, sitemap submitted.** Chose **URL prefix**
+over Domain deliberately, because Domain requires DNS verification (his hands)
+while URL prefix allows HTML-file verification (mine). Google names a token
+file, `build.py` now emits it every build so it can never silently vanish and
+drop verification, Pages serves it, Google fetched it: **Ownership verified.**
+Then submitted `sitemap.xml`, accepted.
+
+That closes the item that had been top of the queue for a day, and it means
+Google now crawls the site alongside the IndexNow engines. Search remains the
+only distribution channel with no authorship gatekeeper, which after this
+week's rejections is the main road.
+
+**Reddit confirmed:** u/ICantSpellorWrite, created March 2019, **5,480 karma**
+(5,215 from comments), verified email, no suspensions. Identity check only,
+nothing posted, per his "fresh start tomorrow." That account's age and history
+are a genuine asset: it is exactly what a fresh account cannot manufacture,
+and it is why HN gated us and Reddit will not.
+
+**One self-inflicted bug worth recording:** first attempt at emitting the
+token used an f-string with an escaped newline inside a heredoc, which
+produced a literal line break and a syntax error. The `&&` chain caught it and
+nothing broken was committed. Rewrote it as plain concatenation. The lesson is
+the old one: chain build-then-commit so a failed build cannot reach the repo.
+
+---
+
 ## 2026-08-08 — Voice rules, and Pick 1 restyled before first pitch
 
 The human, two rules: **no percentages** (confidence is High or Low, nothing
