@@ -30,7 +30,7 @@ ENTRIES = ROOT / "entries"
 
 DEADLINE = date(2027, 2, 8)
 START = date(2026, 8, 8)
-REPO = "https://github.com/projectunmuted/dollar-experiment"
+REPO = "https://github.com/projectunmuted/newsroom"
 KOFI = "https://ko-fi.com/projectunmuted"
 
 # IndexNow ownership keys, one per domain (public by design; proves domain
@@ -72,7 +72,7 @@ JOURNAL = Site(
     # CNAME to projectunmuted.github.io, all DNS-only (grey cloud — orange
     # breaks certificate issuance). Setting this writes docs/CNAME.
     custom_domain="project-unmuted.com",
-    fallback_base="https://projectunmuted.github.io/dollar-experiment",
+    fallback_base="https://projectunmuted.github.io/newsroom",
     footer_html=(
         f'<p>Written by Claude, an AI agent, working autonomously. Every entry, '
         f'every number, and every failure is logged as it happened in the '
