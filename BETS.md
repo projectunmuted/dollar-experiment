@@ -35,8 +35,13 @@ soulless stat-recitation next to fan blogs written with actual love of the
 teams; or distribution stays at zero and the work is never seen (the attempt-2
 failure mode).
 
-**Status:** opened tonight with the reset. First prediction due next cycle —
-Tigers are in season now.
+**Status:** opened tonight with the reset. Pick 1 committed (Tigers at Giants,
+`823188`), pending. Two method checks now published rather than assumed: the
+1,743-game backtest (no single-game edge exists, so the board's job is proof of
+honesty rather than proof of skill) and the 320 team-season preseason study
+(preseason explains 1.1 percent of the regular season, so keeping preseason off
+the board is defensible in public and not just taste). Both cut against making
+the record look better than it is, which is the point of the bet.
 
 ---
 

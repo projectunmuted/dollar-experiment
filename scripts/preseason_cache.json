@@ -1,0 +1,3202 @@
+[
+ {
+  "team": "ari",
+  "season": 2015,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 13.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.8125
+ },
+ {
+  "team": "atl",
+  "season": 2015,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 8.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.5
+ },
+ {
+  "team": "bal",
+  "season": 2015,
+  "pre_w": 1.0,
+  "pre_g": 4.0,
+  "reg_w": 5.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.25,
+  "reg_pct": 0.3125
+ },
+ {
+  "team": "buf",
+  "season": 2015,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 8.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.5
+ },
+ {
+  "team": "car",
+  "season": 2015,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 15.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.9375
+ },
+ {
+  "team": "chi",
+  "season": 2015,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 6.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.375
+ },
+ {
+  "team": "cin",
+  "season": 2015,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 12.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.75
+ },
+ {
+  "team": "cle",
+  "season": 2015,
+  "pre_w": 1.0,
+  "pre_g": 4.0,
+  "reg_w": 3.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.25,
+  "reg_pct": 0.1875
+ },
+ {
+  "team": "dal",
+  "season": 2015,
+  "pre_w": 1.0,
+  "pre_g": 4.0,
+  "reg_w": 4.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.25,
+  "reg_pct": 0.25
+ },
+ {
+  "team": "den",
+  "season": 2015,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 12.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.75
+ },
+ {
+  "team": "det",
+  "season": 2015,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 7.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.4375
+ },
+ {
+  "team": "gb",
+  "season": 2015,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 10.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.625
+ },
+ {
+  "team": "hou",
+  "season": 2015,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 9.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.5625
+ },
+ {
+  "team": "ind",
+  "season": 2015,
+  "pre_w": 1.0,
+  "pre_g": 4.0,
+  "reg_w": 8.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.25,
+  "reg_pct": 0.5
+ },
+ {
+  "team": "jax",
+  "season": 2015,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 5.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.3125
+ },
+ {
+  "team": "kc",
+  "season": 2015,
+  "pre_w": 4.0,
+  "pre_g": 4.0,
+  "reg_w": 11.0,
+  "reg_g": 16.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.6875
+ },
+ {
+  "team": "lac",
+  "season": 2015,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 10.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.625
+ },
+ {
+  "team": "lar",
+  "season": 2015,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 11.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.6875
+ },
+ {
+  "team": "lv",
+  "season": 2015,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 7.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.4375
+ },
+ {
+  "team": "mia",
+  "season": 2015,
+  "pre_w": 1.0,
+  "pre_g": 4.0,
+  "reg_w": 6.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.25,
+  "reg_pct": 0.375
+ },
+ {
+  "team": "min",
+  "season": 2015,
+  "pre_w": 4.0,
+  "pre_g": 5.0,
+  "reg_w": 11.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.8,
+  "reg_pct": 0.6875
+ },
+ {
+  "team": "ne",
+  "season": 2015,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 12.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.75
+ },
+ {
+  "team": "no",
+  "season": 2015,
+  "pre_w": 0.0,
+  "pre_g": 4.0,
+  "reg_w": 7.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.0,
+  "reg_pct": 0.4375
+ },
+ {
+  "team": "nyg",
+  "season": 2015,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 6.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.375
+ },
+ {
+  "team": "nyj",
+  "season": 2015,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 10.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.625
+ },
+ {
+  "team": "phi",
+  "season": 2015,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 7.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.4375
+ },
+ {
+  "team": "pit",
+  "season": 2015,
+  "pre_w": 1.0,
+  "pre_g": 5.0,
+  "reg_w": 10.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.2,
+  "reg_pct": 0.625
+ },
+ {
+  "team": "sea",
+  "season": 2015,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 10.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.625
+ },
+ {
+  "team": "sf",
+  "season": 2015,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 5.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.3125
+ },
+ {
+  "team": "tb",
+  "season": 2015,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 6.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.375
+ },
+ {
+  "team": "ten",
+  "season": 2015,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 3.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.1875
+ },
+ {
+  "team": "wsh",
+  "season": 2015,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 9.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.5625
+ },
+ {
+  "team": "ari",
+  "season": 2016,
+  "pre_w": 1.0,
+  "pre_g": 4.0,
+  "reg_w": 7.5,
+  "reg_g": 16.0,
+  "pre_pct": 0.25,
+  "reg_pct": 0.46875
+ },
+ {
+  "team": "atl",
+  "season": 2016,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 11.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.6875
+ },
+ {
+  "team": "bal",
+  "season": 2016,
+  "pre_w": 4.0,
+  "pre_g": 4.0,
+  "reg_w": 8.0,
+  "reg_g": 16.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.5
+ },
+ {
+  "team": "buf",
+  "season": 2016,
+  "pre_w": 1.0,
+  "pre_g": 4.0,
+  "reg_w": 7.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.25,
+  "reg_pct": 0.4375
+ },
+ {
+  "team": "car",
+  "season": 2016,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 6.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.375
+ },
+ {
+  "team": "chi",
+  "season": 2016,
+  "pre_w": 1.0,
+  "pre_g": 4.0,
+  "reg_w": 3.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.25,
+  "reg_pct": 0.1875
+ },
+ {
+  "team": "cin",
+  "season": 2016,
+  "pre_w": 1.0,
+  "pre_g": 4.0,
+  "reg_w": 6.5,
+  "reg_g": 16.0,
+  "pre_pct": 0.25,
+  "reg_pct": 0.40625
+ },
+ {
+  "team": "cle",
+  "season": 2016,
+  "pre_w": 0.0,
+  "pre_g": 4.0,
+  "reg_w": 1.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.0,
+  "reg_pct": 0.0625
+ },
+ {
+  "team": "dal",
+  "season": 2016,
+  "pre_w": 1.0,
+  "pre_g": 4.0,
+  "reg_w": 13.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.25,
+  "reg_pct": 0.8125
+ },
+ {
+  "team": "den",
+  "season": 2016,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 9.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.5625
+ },
+ {
+  "team": "det",
+  "season": 2016,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 9.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.5625
+ },
+ {
+  "team": "gb",
+  "season": 2016,
+  "pre_w": 3.5,
+  "pre_g": 5.0,
+  "reg_w": 10.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.7,
+  "reg_pct": 0.625
+ },
+ {
+  "team": "hou",
+  "season": 2016,
+  "pre_w": 4.0,
+  "pre_g": 4.0,
+  "reg_w": 9.0,
+  "reg_g": 16.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.5625
+ },
+ {
+  "team": "ind",
+  "season": 2016,
+  "pre_w": 2.5,
+  "pre_g": 5.0,
+  "reg_w": 8.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.5
+ },
+ {
+  "team": "jax",
+  "season": 2016,
+  "pre_w": 1.0,
+  "pre_g": 4.0,
+  "reg_w": 3.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.25,
+  "reg_pct": 0.1875
+ },
+ {
+  "team": "kc",
+  "season": 2016,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 12.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.75
+ },
+ {
+  "team": "lac",
+  "season": 2016,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 9.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.5625
+ },
+ {
+  "team": "lar",
+  "season": 2016,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 4.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.25
+ },
+ {
+  "team": "lv",
+  "season": 2016,
+  "pre_w": 1.0,
+  "pre_g": 4.0,
+  "reg_w": 8.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.25,
+  "reg_pct": 0.5
+ },
+ {
+  "team": "mia",
+  "season": 2016,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 10.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.625
+ },
+ {
+  "team": "min",
+  "season": 2016,
+  "pre_w": 4.0,
+  "pre_g": 4.0,
+  "reg_w": 8.0,
+  "reg_g": 16.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.5
+ },
+ {
+  "team": "ne",
+  "season": 2016,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 14.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.875
+ },
+ {
+  "team": "no",
+  "season": 2016,
+  "pre_w": 0.0,
+  "pre_g": 4.0,
+  "reg_w": 7.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.0,
+  "reg_pct": 0.4375
+ },
+ {
+  "team": "nyg",
+  "season": 2016,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 11.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.6875
+ },
+ {
+  "team": "nyj",
+  "season": 2016,
+  "pre_w": 1.0,
+  "pre_g": 4.0,
+  "reg_w": 5.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.25,
+  "reg_pct": 0.3125
+ },
+ {
+  "team": "phi",
+  "season": 2016,
+  "pre_w": 4.0,
+  "pre_g": 4.0,
+  "reg_w": 7.0,
+  "reg_g": 16.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.4375
+ },
+ {
+  "team": "pit",
+  "season": 2016,
+  "pre_w": 1.0,
+  "pre_g": 4.0,
+  "reg_w": 11.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.25,
+  "reg_pct": 0.6875
+ },
+ {
+  "team": "sea",
+  "season": 2016,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 10.5,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.65625
+ },
+ {
+  "team": "sf",
+  "season": 2016,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 2.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.125
+ },
+ {
+  "team": "tb",
+  "season": 2016,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 9.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.5625
+ },
+ {
+  "team": "ten",
+  "season": 2016,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 9.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.5625
+ },
+ {
+  "team": "wsh",
+  "season": 2016,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 8.5,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.53125
+ },
+ {
+  "team": "ari",
+  "season": 2017,
+  "pre_w": 2.0,
+  "pre_g": 5.0,
+  "reg_w": 8.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.4,
+  "reg_pct": 0.5
+ },
+ {
+  "team": "atl",
+  "season": 2017,
+  "pre_w": 0.0,
+  "pre_g": 4.0,
+  "reg_w": 10.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.0,
+  "reg_pct": 0.625
+ },
+ {
+  "team": "bal",
+  "season": 2017,
+  "pre_w": 4.0,
+  "pre_g": 4.0,
+  "reg_w": 9.0,
+  "reg_g": 16.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.5625
+ },
+ {
+  "team": "buf",
+  "season": 2017,
+  "pre_w": 1.0,
+  "pre_g": 4.0,
+  "reg_w": 9.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.25,
+  "reg_pct": 0.5625
+ },
+ {
+  "team": "car",
+  "season": 2017,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 11.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.6875
+ },
+ {
+  "team": "chi",
+  "season": 2017,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 5.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.3125
+ },
+ {
+  "team": "cin",
+  "season": 2017,
+  "pre_w": 1.0,
+  "pre_g": 4.0,
+  "reg_w": 7.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.25,
+  "reg_pct": 0.4375
+ },
+ {
+  "team": "cle",
+  "season": 2017,
+  "pre_w": 4.0,
+  "pre_g": 4.0,
+  "reg_w": 0.0,
+  "reg_g": 16.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.0
+ },
+ {
+  "team": "dal",
+  "season": 2017,
+  "pre_w": 3.5,
+  "pre_g": 5.0,
+  "reg_w": 9.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.7,
+  "reg_pct": 0.5625
+ },
+ {
+  "team": "den",
+  "season": 2017,
+  "pre_w": 4.0,
+  "pre_g": 4.0,
+  "reg_w": 5.0,
+  "reg_g": 16.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.3125
+ },
+ {
+  "team": "det",
+  "season": 2017,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 9.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.5625
+ },
+ {
+  "team": "gb",
+  "season": 2017,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 7.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.4375
+ },
+ {
+  "team": "hou",
+  "season": 2017,
+  "pre_w": 1.5,
+  "pre_g": 4.0,
+  "reg_w": 4.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.375,
+  "reg_pct": 0.25
+ },
+ {
+  "team": "ind",
+  "season": 2017,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 4.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.25
+ },
+ {
+  "team": "jax",
+  "season": 2017,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 10.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.625
+ },
+ {
+  "team": "kc",
+  "season": 2017,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 10.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.625
+ },
+ {
+  "team": "lac",
+  "season": 2017,
+  "pre_w": 1.0,
+  "pre_g": 4.0,
+  "reg_w": 9.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.25,
+  "reg_pct": 0.5625
+ },
+ {
+  "team": "lar",
+  "season": 2017,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 11.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.6875
+ },
+ {
+  "team": "lv",
+  "season": 2017,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 10.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.625
+ },
+ {
+  "team": "mia",
+  "season": 2017,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 6.5,
+  "reg_g": 17.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.38235294117647056
+ },
+ {
+  "team": "min",
+  "season": 2017,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 13.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.8125
+ },
+ {
+  "team": "ne",
+  "season": 2017,
+  "pre_w": 1.0,
+  "pre_g": 4.0,
+  "reg_w": 13.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.25,
+  "reg_pct": 0.8125
+ },
+ {
+  "team": "no",
+  "season": 2017,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 11.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.6875
+ },
+ {
+  "team": "nyg",
+  "season": 2017,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 3.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.1875
+ },
+ {
+  "team": "nyj",
+  "season": 2017,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 5.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.3125
+ },
+ {
+  "team": "phi",
+  "season": 2017,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 13.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.8125
+ },
+ {
+  "team": "pit",
+  "season": 2017,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 13.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.8125
+ },
+ {
+  "team": "sea",
+  "season": 2017,
+  "pre_w": 4.0,
+  "pre_g": 4.0,
+  "reg_w": 9.0,
+  "reg_g": 16.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.5625
+ },
+ {
+  "team": "sf",
+  "season": 2017,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 6.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.375
+ },
+ {
+  "team": "tb",
+  "season": 2017,
+  "pre_w": 1.0,
+  "pre_g": 4.0,
+  "reg_w": 5.5,
+  "reg_g": 17.0,
+  "pre_pct": 0.25,
+  "reg_pct": 0.3235294117647059
+ },
+ {
+  "team": "ten",
+  "season": 2017,
+  "pre_w": 1.0,
+  "pre_g": 4.0,
+  "reg_w": 9.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.25,
+  "reg_pct": 0.5625
+ },
+ {
+  "team": "wsh",
+  "season": 2017,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 7.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.4375
+ },
+ {
+  "team": "ari",
+  "season": 2018,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 3.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.1875
+ },
+ {
+  "team": "atl",
+  "season": 2018,
+  "pre_w": 0.0,
+  "pre_g": 4.0,
+  "reg_w": 7.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.0,
+  "reg_pct": 0.4375
+ },
+ {
+  "team": "bal",
+  "season": 2018,
+  "pre_w": 5.0,
+  "pre_g": 5.0,
+  "reg_w": 10.0,
+  "reg_g": 16.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.625
+ },
+ {
+  "team": "buf",
+  "season": 2018,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 6.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.375
+ },
+ {
+  "team": "car",
+  "season": 2018,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 7.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.4375
+ },
+ {
+  "team": "chi",
+  "season": 2018,
+  "pre_w": 2.0,
+  "pre_g": 5.0,
+  "reg_w": 12.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.4,
+  "reg_pct": 0.75
+ },
+ {
+  "team": "cin",
+  "season": 2018,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 6.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.375
+ },
+ {
+  "team": "cle",
+  "season": 2018,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 7.5,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.46875
+ },
+ {
+  "team": "dal",
+  "season": 2018,
+  "pre_w": 0.0,
+  "pre_g": 4.0,
+  "reg_w": 10.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.0,
+  "reg_pct": 0.625
+ },
+ {
+  "team": "den",
+  "season": 2018,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 6.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.375
+ },
+ {
+  "team": "det",
+  "season": 2018,
+  "pre_w": 1.0,
+  "pre_g": 4.0,
+  "reg_w": 6.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.25,
+  "reg_pct": 0.375
+ },
+ {
+  "team": "gb",
+  "season": 2018,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 6.5,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.40625
+ },
+ {
+  "team": "hou",
+  "season": 2018,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 11.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.6875
+ },
+ {
+  "team": "ind",
+  "season": 2018,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 10.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.625
+ },
+ {
+  "team": "jax",
+  "season": 2018,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 5.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.3125
+ },
+ {
+  "team": "kc",
+  "season": 2018,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 12.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.75
+ },
+ {
+  "team": "lac",
+  "season": 2018,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 12.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.75
+ },
+ {
+  "team": "lar",
+  "season": 2018,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 13.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.8125
+ },
+ {
+  "team": "lv",
+  "season": 2018,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 10.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.625
+ },
+ {
+  "team": "mia",
+  "season": 2018,
+  "pre_w": 1.0,
+  "pre_g": 4.0,
+  "reg_w": 7.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.25,
+  "reg_pct": 0.4375
+ },
+ {
+  "team": "min",
+  "season": 2018,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 8.5,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.53125
+ },
+ {
+  "team": "ne",
+  "season": 2018,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 11.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.6875
+ },
+ {
+  "team": "no",
+  "season": 2018,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 13.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.8125
+ },
+ {
+  "team": "nyg",
+  "season": 2018,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 5.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.3125
+ },
+ {
+  "team": "nyj",
+  "season": 2018,
+  "pre_w": 1.0,
+  "pre_g": 4.0,
+  "reg_w": 4.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.25,
+  "reg_pct": 0.25
+ },
+ {
+  "team": "phi",
+  "season": 2018,
+  "pre_w": 1.0,
+  "pre_g": 4.0,
+  "reg_w": 9.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.25,
+  "reg_pct": 0.5625
+ },
+ {
+  "team": "pit",
+  "season": 2018,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 9.5,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.59375
+ },
+ {
+  "team": "sea",
+  "season": 2018,
+  "pre_w": 0.0,
+  "pre_g": 4.0,
+  "reg_w": 10.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.0,
+  "reg_pct": 0.625
+ },
+ {
+  "team": "sf",
+  "season": 2018,
+  "pre_w": 1.0,
+  "pre_g": 4.0,
+  "reg_w": 4.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.25,
+  "reg_pct": 0.25
+ },
+ {
+  "team": "tb",
+  "season": 2018,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 5.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.3125
+ },
+ {
+  "team": "ten",
+  "season": 2018,
+  "pre_w": 0.0,
+  "pre_g": 4.0,
+  "reg_w": 9.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.0,
+  "reg_pct": 0.5625
+ },
+ {
+  "team": "wsh",
+  "season": 2018,
+  "pre_w": 1.0,
+  "pre_g": 4.0,
+  "reg_w": 7.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.25,
+  "reg_pct": 0.4375
+ },
+ {
+  "team": "ari",
+  "season": 2019,
+  "pre_w": 1.0,
+  "pre_g": 4.0,
+  "reg_w": 5.5,
+  "reg_g": 16.0,
+  "pre_pct": 0.25,
+  "reg_pct": 0.34375
+ },
+ {
+  "team": "atl",
+  "season": 2019,
+  "pre_w": 1.0,
+  "pre_g": 5.0,
+  "reg_w": 7.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.2,
+  "reg_pct": 0.4375
+ },
+ {
+  "team": "bal",
+  "season": 2019,
+  "pre_w": 4.0,
+  "pre_g": 4.0,
+  "reg_w": 14.0,
+  "reg_g": 16.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.875
+ },
+ {
+  "team": "buf",
+  "season": 2019,
+  "pre_w": 4.0,
+  "pre_g": 4.0,
+  "reg_w": 10.0,
+  "reg_g": 16.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.625
+ },
+ {
+  "team": "car",
+  "season": 2019,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 5.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.3125
+ },
+ {
+  "team": "chi",
+  "season": 2019,
+  "pre_w": 1.0,
+  "pre_g": 4.0,
+  "reg_w": 8.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.25,
+  "reg_pct": 0.5
+ },
+ {
+  "team": "cin",
+  "season": 2019,
+  "pre_w": 1.0,
+  "pre_g": 4.0,
+  "reg_w": 2.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.25,
+  "reg_pct": 0.125
+ },
+ {
+  "team": "cle",
+  "season": 2019,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 6.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.375
+ },
+ {
+  "team": "dal",
+  "season": 2019,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 8.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.5
+ },
+ {
+  "team": "den",
+  "season": 2019,
+  "pre_w": 2.0,
+  "pre_g": 5.0,
+  "reg_w": 7.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.4,
+  "reg_pct": 0.4375
+ },
+ {
+  "team": "det",
+  "season": 2019,
+  "pre_w": 0.0,
+  "pre_g": 4.0,
+  "reg_w": 3.5,
+  "reg_g": 16.0,
+  "pre_pct": 0.0,
+  "reg_pct": 0.21875
+ },
+ {
+  "team": "gb",
+  "season": 2019,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 13.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.8125
+ },
+ {
+  "team": "hou",
+  "season": 2019,
+  "pre_w": 1.0,
+  "pre_g": 4.0,
+  "reg_w": 10.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.25,
+  "reg_pct": 0.625
+ },
+ {
+  "team": "ind",
+  "season": 2019,
+  "pre_w": 1.0,
+  "pre_g": 4.0,
+  "reg_w": 7.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.25,
+  "reg_pct": 0.4375
+ },
+ {
+  "team": "jax",
+  "season": 2019,
+  "pre_w": 0.0,
+  "pre_g": 4.0,
+  "reg_w": 6.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.0,
+  "reg_pct": 0.375
+ },
+ {
+  "team": "kc",
+  "season": 2019,
+  "pre_w": 1.0,
+  "pre_g": 4.0,
+  "reg_w": 12.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.25,
+  "reg_pct": 0.75
+ },
+ {
+  "team": "lac",
+  "season": 2019,
+  "pre_w": 1.0,
+  "pre_g": 4.0,
+  "reg_w": 5.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.25,
+  "reg_pct": 0.3125
+ },
+ {
+  "team": "lar",
+  "season": 2019,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 9.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.5625
+ },
+ {
+  "team": "lv",
+  "season": 2019,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 11.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.6875
+ },
+ {
+  "team": "mia",
+  "season": 2019,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 5.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.3125
+ },
+ {
+  "team": "min",
+  "season": 2019,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 10.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.625
+ },
+ {
+  "team": "ne",
+  "season": 2019,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 12.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.75
+ },
+ {
+  "team": "no",
+  "season": 2019,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 13.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.8125
+ },
+ {
+  "team": "nyg",
+  "season": 2019,
+  "pre_w": 4.0,
+  "pre_g": 4.0,
+  "reg_w": 4.0,
+  "reg_g": 16.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.25
+ },
+ {
+  "team": "nyj",
+  "season": 2019,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 7.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.4375
+ },
+ {
+  "team": "phi",
+  "season": 2019,
+  "pre_w": 1.0,
+  "pre_g": 4.0,
+  "reg_w": 9.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.25,
+  "reg_pct": 0.5625
+ },
+ {
+  "team": "pit",
+  "season": 2019,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 8.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.5
+ },
+ {
+  "team": "sea",
+  "season": 2019,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 11.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.6875
+ },
+ {
+  "team": "sf",
+  "season": 2019,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 13.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.8125
+ },
+ {
+  "team": "tb",
+  "season": 2019,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 7.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.4375
+ },
+ {
+  "team": "ten",
+  "season": 2019,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 9.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.5625
+ },
+ {
+  "team": "wsh",
+  "season": 2019,
+  "pre_w": 1.0,
+  "pre_g": 4.0,
+  "reg_w": 3.0,
+  "reg_g": 16.0,
+  "pre_pct": 0.25,
+  "reg_pct": 0.1875
+ },
+ {
+  "team": "ari",
+  "season": 2021,
+  "pre_w": 1.5,
+  "pre_g": 3.0,
+  "reg_w": 11.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.6470588235294118
+ },
+ {
+  "team": "atl",
+  "season": 2021,
+  "pre_w": 0.0,
+  "pre_g": 3.0,
+  "reg_w": 7.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.0,
+  "reg_pct": 0.4117647058823529
+ },
+ {
+  "team": "bal",
+  "season": 2021,
+  "pre_w": 3.0,
+  "pre_g": 3.0,
+  "reg_w": 8.0,
+  "reg_g": 17.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.47058823529411764
+ },
+ {
+  "team": "buf",
+  "season": 2021,
+  "pre_w": 3.0,
+  "pre_g": 3.0,
+  "reg_w": 11.0,
+  "reg_g": 17.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.6470588235294118
+ },
+ {
+  "team": "car",
+  "season": 2021,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 5.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.29411764705882354
+ },
+ {
+  "team": "chi",
+  "season": 2021,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 6.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.35294117647058826
+ },
+ {
+  "team": "cin",
+  "season": 2021,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 10.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.5882352941176471
+ },
+ {
+  "team": "cle",
+  "season": 2021,
+  "pre_w": 3.0,
+  "pre_g": 3.0,
+  "reg_w": 8.0,
+  "reg_g": 17.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.47058823529411764
+ },
+ {
+  "team": "dal",
+  "season": 2021,
+  "pre_w": 0.0,
+  "pre_g": 4.0,
+  "reg_w": 12.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.0,
+  "reg_pct": 0.7058823529411765
+ },
+ {
+  "team": "den",
+  "season": 2021,
+  "pre_w": 3.0,
+  "pre_g": 3.0,
+  "reg_w": 7.0,
+  "reg_g": 17.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.4117647058823529
+ },
+ {
+  "team": "det",
+  "season": 2021,
+  "pre_w": 0.0,
+  "pre_g": 3.0,
+  "reg_w": 3.5,
+  "reg_g": 17.0,
+  "pre_pct": 0.0,
+  "reg_pct": 0.20588235294117646
+ },
+ {
+  "team": "gb",
+  "season": 2021,
+  "pre_w": 0.0,
+  "pre_g": 3.0,
+  "reg_w": 13.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.0,
+  "reg_pct": 0.7647058823529411
+ },
+ {
+  "team": "hou",
+  "season": 2021,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 4.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.23529411764705882
+ },
+ {
+  "team": "ind",
+  "season": 2021,
+  "pre_w": 3.0,
+  "pre_g": 3.0,
+  "reg_w": 9.0,
+  "reg_g": 17.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.5294117647058824
+ },
+ {
+  "team": "jax",
+  "season": 2021,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 3.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.17647058823529413
+ },
+ {
+  "team": "kc",
+  "season": 2021,
+  "pre_w": 3.0,
+  "pre_g": 3.0,
+  "reg_w": 12.0,
+  "reg_g": 17.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.7058823529411765
+ },
+ {
+  "team": "lac",
+  "season": 2021,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 9.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.5294117647058824
+ },
+ {
+  "team": "lar",
+  "season": 2021,
+  "pre_w": 0.0,
+  "pre_g": 3.0,
+  "reg_w": 12.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.0,
+  "reg_pct": 0.7058823529411765
+ },
+ {
+  "team": "lv",
+  "season": 2021,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 10.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.5882352941176471
+ },
+ {
+  "team": "mia",
+  "season": 2021,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 9.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.5294117647058824
+ },
+ {
+  "team": "min",
+  "season": 2021,
+  "pre_w": 0.0,
+  "pre_g": 3.0,
+  "reg_w": 8.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.0,
+  "reg_pct": 0.47058823529411764
+ },
+ {
+  "team": "ne",
+  "season": 2021,
+  "pre_w": 3.0,
+  "pre_g": 3.0,
+  "reg_w": 10.0,
+  "reg_g": 17.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.5882352941176471
+ },
+ {
+  "team": "no",
+  "season": 2021,
+  "pre_w": 1.5,
+  "pre_g": 3.0,
+  "reg_w": 9.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.5294117647058824
+ },
+ {
+  "team": "nyg",
+  "season": 2021,
+  "pre_w": 0.0,
+  "pre_g": 3.0,
+  "reg_w": 4.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.0,
+  "reg_pct": 0.23529411764705882
+ },
+ {
+  "team": "nyj",
+  "season": 2021,
+  "pre_w": 2.5,
+  "pre_g": 3.0,
+  "reg_w": 4.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.8333333333333334,
+  "reg_pct": 0.23529411764705882
+ },
+ {
+  "team": "phi",
+  "season": 2021,
+  "pre_w": 0.5,
+  "pre_g": 3.0,
+  "reg_w": 9.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.16666666666666666,
+  "reg_pct": 0.5294117647058824
+ },
+ {
+  "team": "pit",
+  "season": 2021,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 9.5,
+  "reg_g": 17.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.5588235294117647
+ },
+ {
+  "team": "sea",
+  "season": 2021,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 7.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.4117647058823529
+ },
+ {
+  "team": "sf",
+  "season": 2021,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 10.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.5882352941176471
+ },
+ {
+  "team": "tb",
+  "season": 2021,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 13.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.7647058823529411
+ },
+ {
+  "team": "ten",
+  "season": 2021,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 12.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.7058823529411765
+ },
+ {
+  "team": "wsh",
+  "season": 2021,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 7.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.4117647058823529
+ },
+ {
+  "team": "ari",
+  "season": 2022,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 4.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.23529411764705882
+ },
+ {
+  "team": "atl",
+  "season": 2022,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 7.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.4117647058823529
+ },
+ {
+  "team": "bal",
+  "season": 2022,
+  "pre_w": 3.0,
+  "pre_g": 3.0,
+  "reg_w": 10.0,
+  "reg_g": 17.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.5882352941176471
+ },
+ {
+  "team": "buf",
+  "season": 2022,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 13.5,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.7941176470588235
+ },
+ {
+  "team": "car",
+  "season": 2022,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 7.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.4117647058823529
+ },
+ {
+  "team": "chi",
+  "season": 2022,
+  "pre_w": 3.0,
+  "pre_g": 3.0,
+  "reg_w": 3.0,
+  "reg_g": 17.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.17647058823529413
+ },
+ {
+  "team": "cin",
+  "season": 2022,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 12.5,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.7352941176470589
+ },
+ {
+  "team": "cle",
+  "season": 2022,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 7.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.4117647058823529
+ },
+ {
+  "team": "dal",
+  "season": 2022,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 12.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.7058823529411765
+ },
+ {
+  "team": "den",
+  "season": 2022,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 5.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.29411764705882354
+ },
+ {
+  "team": "det",
+  "season": 2022,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 9.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.5294117647058824
+ },
+ {
+  "team": "gb",
+  "season": 2022,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 8.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.47058823529411764
+ },
+ {
+  "team": "hou",
+  "season": 2022,
+  "pre_w": 3.0,
+  "pre_g": 3.0,
+  "reg_w": 3.5,
+  "reg_g": 17.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.20588235294117646
+ },
+ {
+  "team": "ind",
+  "season": 2022,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 4.5,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.2647058823529412
+ },
+ {
+  "team": "jax",
+  "season": 2022,
+  "pre_w": 0.0,
+  "pre_g": 4.0,
+  "reg_w": 9.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.0,
+  "reg_pct": 0.5294117647058824
+ },
+ {
+  "team": "kc",
+  "season": 2022,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 14.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.8235294117647058
+ },
+ {
+  "team": "lac",
+  "season": 2022,
+  "pre_w": 0.0,
+  "pre_g": 3.0,
+  "reg_w": 10.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.0,
+  "reg_pct": 0.5882352941176471
+ },
+ {
+  "team": "lar",
+  "season": 2022,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 5.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.29411764705882354
+ },
+ {
+  "team": "lv",
+  "season": 2022,
+  "pre_w": 4.0,
+  "pre_g": 4.0,
+  "reg_w": 6.0,
+  "reg_g": 17.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.35294117647058826
+ },
+ {
+  "team": "mia",
+  "season": 2022,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 9.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.5294117647058824
+ },
+ {
+  "team": "min",
+  "season": 2022,
+  "pre_w": 0.0,
+  "pre_g": 3.0,
+  "reg_w": 13.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.0,
+  "reg_pct": 0.7647058823529411
+ },
+ {
+  "team": "ne",
+  "season": 2022,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 8.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.47058823529411764
+ },
+ {
+  "team": "no",
+  "season": 2022,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 7.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.4117647058823529
+ },
+ {
+  "team": "nyg",
+  "season": 2022,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 9.5,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.5588235294117647
+ },
+ {
+  "team": "nyj",
+  "season": 2022,
+  "pre_w": 3.0,
+  "pre_g": 3.0,
+  "reg_w": 7.0,
+  "reg_g": 17.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.4117647058823529
+ },
+ {
+  "team": "phi",
+  "season": 2022,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 14.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.8235294117647058
+ },
+ {
+  "team": "pit",
+  "season": 2022,
+  "pre_w": 3.0,
+  "pre_g": 3.0,
+  "reg_w": 9.0,
+  "reg_g": 17.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.5294117647058824
+ },
+ {
+  "team": "sea",
+  "season": 2022,
+  "pre_w": 0.0,
+  "pre_g": 3.0,
+  "reg_w": 9.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.0,
+  "reg_pct": 0.5294117647058824
+ },
+ {
+  "team": "sf",
+  "season": 2022,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 13.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.7647058823529411
+ },
+ {
+  "team": "tb",
+  "season": 2022,
+  "pre_w": 0.0,
+  "pre_g": 3.0,
+  "reg_w": 8.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.0,
+  "reg_pct": 0.47058823529411764
+ },
+ {
+  "team": "ten",
+  "season": 2022,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 7.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.4117647058823529
+ },
+ {
+  "team": "wsh",
+  "season": 2022,
+  "pre_w": 0.0,
+  "pre_g": 3.0,
+  "reg_w": 8.5,
+  "reg_g": 17.0,
+  "pre_pct": 0.0,
+  "reg_pct": 0.5
+ },
+ {
+  "team": "ari",
+  "season": 2023,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 4.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.23529411764705882
+ },
+ {
+  "team": "atl",
+  "season": 2023,
+  "pre_w": 1.5,
+  "pre_g": 3.0,
+  "reg_w": 7.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.4117647058823529
+ },
+ {
+  "team": "bal",
+  "season": 2023,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 13.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.7647058823529411
+ },
+ {
+  "team": "buf",
+  "season": 2023,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 11.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.6470588235294118
+ },
+ {
+  "team": "car",
+  "season": 2023,
+  "pre_w": 0.0,
+  "pre_g": 3.0,
+  "reg_w": 2.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.0,
+  "reg_pct": 0.11764705882352941
+ },
+ {
+  "team": "chi",
+  "season": 2023,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 7.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.4117647058823529
+ },
+ {
+  "team": "cin",
+  "season": 2023,
+  "pre_w": 0.5,
+  "pre_g": 3.0,
+  "reg_w": 9.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.16666666666666666,
+  "reg_pct": 0.5294117647058824
+ },
+ {
+  "team": "cle",
+  "season": 2023,
+  "pre_w": 1.5,
+  "pre_g": 4.0,
+  "reg_w": 11.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.375,
+  "reg_pct": 0.6470588235294118
+ },
+ {
+  "team": "dal",
+  "season": 2023,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 12.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.7058823529411765
+ },
+ {
+  "team": "den",
+  "season": 2023,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 8.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.47058823529411764
+ },
+ {
+  "team": "det",
+  "season": 2023,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 12.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.7058823529411765
+ },
+ {
+  "team": "gb",
+  "season": 2023,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 9.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.5294117647058824
+ },
+ {
+  "team": "hou",
+  "season": 2023,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 10.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.5882352941176471
+ },
+ {
+  "team": "ind",
+  "season": 2023,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 9.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.5294117647058824
+ },
+ {
+  "team": "jax",
+  "season": 2023,
+  "pre_w": 3.0,
+  "pre_g": 3.0,
+  "reg_w": 9.0,
+  "reg_g": 17.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.5294117647058824
+ },
+ {
+  "team": "kc",
+  "season": 2023,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 11.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.6470588235294118
+ },
+ {
+  "team": "lac",
+  "season": 2023,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 5.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.29411764705882354
+ },
+ {
+  "team": "lar",
+  "season": 2023,
+  "pre_w": 0.0,
+  "pre_g": 3.0,
+  "reg_w": 10.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.0,
+  "reg_pct": 0.5882352941176471
+ },
+ {
+  "team": "lv",
+  "season": 2023,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 8.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.47058823529411764
+ },
+ {
+  "team": "mia",
+  "season": 2023,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 11.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.6470588235294118
+ },
+ {
+  "team": "min",
+  "season": 2023,
+  "pre_w": 0.0,
+  "pre_g": 3.0,
+  "reg_w": 7.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.0,
+  "reg_pct": 0.4117647058823529
+ },
+ {
+  "team": "ne",
+  "season": 2023,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 4.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.23529411764705882
+ },
+ {
+  "team": "no",
+  "season": 2023,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 9.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.5294117647058824
+ },
+ {
+  "team": "nyg",
+  "season": 2023,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 6.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.35294117647058826
+ },
+ {
+  "team": "nyj",
+  "season": 2023,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 7.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.4117647058823529
+ },
+ {
+  "team": "phi",
+  "season": 2023,
+  "pre_w": 0.5,
+  "pre_g": 3.0,
+  "reg_w": 11.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.16666666666666666,
+  "reg_pct": 0.6470588235294118
+ },
+ {
+  "team": "pit",
+  "season": 2023,
+  "pre_w": 3.0,
+  "pre_g": 3.0,
+  "reg_w": 10.0,
+  "reg_g": 17.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.5882352941176471
+ },
+ {
+  "team": "sea",
+  "season": 2023,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 9.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.5294117647058824
+ },
+ {
+  "team": "sf",
+  "season": 2023,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 12.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.7058823529411765
+ },
+ {
+  "team": "tb",
+  "season": 2023,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 9.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.5294117647058824
+ },
+ {
+  "team": "ten",
+  "season": 2023,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 6.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.35294117647058826
+ },
+ {
+  "team": "wsh",
+  "season": 2023,
+  "pre_w": 3.0,
+  "pre_g": 3.0,
+  "reg_w": 4.0,
+  "reg_g": 17.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.23529411764705882
+ },
+ {
+  "team": "ari",
+  "season": 2024,
+  "pre_w": 0.0,
+  "pre_g": 3.0,
+  "reg_w": 8.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.0,
+  "reg_pct": 0.47058823529411764
+ },
+ {
+  "team": "atl",
+  "season": 2024,
+  "pre_w": 0.0,
+  "pre_g": 3.0,
+  "reg_w": 8.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.0,
+  "reg_pct": 0.47058823529411764
+ },
+ {
+  "team": "bal",
+  "season": 2024,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 12.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.7058823529411765
+ },
+ {
+  "team": "buf",
+  "season": 2024,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 13.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.7647058823529411
+ },
+ {
+  "team": "car",
+  "season": 2024,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 5.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.29411764705882354
+ },
+ {
+  "team": "chi",
+  "season": 2024,
+  "pre_w": 4.0,
+  "pre_g": 4.0,
+  "reg_w": 5.0,
+  "reg_g": 17.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.29411764705882354
+ },
+ {
+  "team": "cin",
+  "season": 2024,
+  "pre_w": 0.0,
+  "pre_g": 3.0,
+  "reg_w": 9.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.0,
+  "reg_pct": 0.5294117647058824
+ },
+ {
+  "team": "cle",
+  "season": 2024,
+  "pre_w": 0.0,
+  "pre_g": 3.0,
+  "reg_w": 3.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.0,
+  "reg_pct": 0.17647058823529413
+ },
+ {
+  "team": "dal",
+  "season": 2024,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 7.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.4117647058823529
+ },
+ {
+  "team": "den",
+  "season": 2024,
+  "pre_w": 3.0,
+  "pre_g": 3.0,
+  "reg_w": 10.0,
+  "reg_g": 17.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.5882352941176471
+ },
+ {
+  "team": "det",
+  "season": 2024,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 15.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.8823529411764706
+ },
+ {
+  "team": "gb",
+  "season": 2024,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 11.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.6470588235294118
+ },
+ {
+  "team": "hou",
+  "season": 2024,
+  "pre_w": 3.0,
+  "pre_g": 4.0,
+  "reg_w": 10.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.75,
+  "reg_pct": 0.5882352941176471
+ },
+ {
+  "team": "ind",
+  "season": 2024,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 8.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.47058823529411764
+ },
+ {
+  "team": "jax",
+  "season": 2024,
+  "pre_w": 3.0,
+  "pre_g": 3.0,
+  "reg_w": 4.0,
+  "reg_g": 17.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.23529411764705882
+ },
+ {
+  "team": "kc",
+  "season": 2024,
+  "pre_w": 0.0,
+  "pre_g": 3.0,
+  "reg_w": 15.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.0,
+  "reg_pct": 0.8823529411764706
+ },
+ {
+  "team": "lac",
+  "season": 2024,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 11.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.6470588235294118
+ },
+ {
+  "team": "lar",
+  "season": 2024,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 10.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.5882352941176471
+ },
+ {
+  "team": "lv",
+  "season": 2024,
+  "pre_w": 0.5,
+  "pre_g": 3.0,
+  "reg_w": 4.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.16666666666666666,
+  "reg_pct": 0.23529411764705882
+ },
+ {
+  "team": "mia",
+  "season": 2024,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 8.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.47058823529411764
+ },
+ {
+  "team": "min",
+  "season": 2024,
+  "pre_w": 3.0,
+  "pre_g": 3.0,
+  "reg_w": 14.0,
+  "reg_g": 17.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.8235294117647058
+ },
+ {
+  "team": "ne",
+  "season": 2024,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 4.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.23529411764705882
+ },
+ {
+  "team": "no",
+  "season": 2024,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 5.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.29411764705882354
+ },
+ {
+  "team": "nyg",
+  "season": 2024,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 3.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.17647058823529413
+ },
+ {
+  "team": "nyj",
+  "season": 2024,
+  "pre_w": 3.0,
+  "pre_g": 3.0,
+  "reg_w": 5.0,
+  "reg_g": 17.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.29411764705882354
+ },
+ {
+  "team": "phi",
+  "season": 2024,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 14.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.8235294117647058
+ },
+ {
+  "team": "pit",
+  "season": 2024,
+  "pre_w": 0.0,
+  "pre_g": 3.0,
+  "reg_w": 10.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.0,
+  "reg_pct": 0.5882352941176471
+ },
+ {
+  "team": "sea",
+  "season": 2024,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 10.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.5882352941176471
+ },
+ {
+  "team": "sf",
+  "season": 2024,
+  "pre_w": 1.5,
+  "pre_g": 3.0,
+  "reg_w": 6.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.35294117647058826
+ },
+ {
+  "team": "tb",
+  "season": 2024,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 10.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.5882352941176471
+ },
+ {
+  "team": "ten",
+  "season": 2024,
+  "pre_w": 3.0,
+  "pre_g": 3.0,
+  "reg_w": 3.0,
+  "reg_g": 17.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.17647058823529413
+ },
+ {
+  "team": "wsh",
+  "season": 2024,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 12.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.7058823529411765
+ },
+ {
+  "team": "ari",
+  "season": 2025,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 3.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.17647058823529413
+ },
+ {
+  "team": "atl",
+  "season": 2025,
+  "pre_w": 0.0,
+  "pre_g": 3.0,
+  "reg_w": 8.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.0,
+  "reg_pct": 0.47058823529411764
+ },
+ {
+  "team": "bal",
+  "season": 2025,
+  "pre_w": 3.0,
+  "pre_g": 3.0,
+  "reg_w": 8.0,
+  "reg_g": 17.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.47058823529411764
+ },
+ {
+  "team": "buf",
+  "season": 2025,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 12.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.7058823529411765
+ },
+ {
+  "team": "car",
+  "season": 2025,
+  "pre_w": 0.0,
+  "pre_g": 3.0,
+  "reg_w": 8.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.0,
+  "reg_pct": 0.47058823529411764
+ },
+ {
+  "team": "chi",
+  "season": 2025,
+  "pre_w": 2.5,
+  "pre_g": 3.0,
+  "reg_w": 11.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.8333333333333334,
+  "reg_pct": 0.6470588235294118
+ },
+ {
+  "team": "cin",
+  "season": 2025,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 6.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.35294117647058826
+ },
+ {
+  "team": "cle",
+  "season": 2025,
+  "pre_w": 3.0,
+  "pre_g": 3.0,
+  "reg_w": 5.0,
+  "reg_g": 17.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.29411764705882354
+ },
+ {
+  "team": "dal",
+  "season": 2025,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 7.5,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.4411764705882353
+ },
+ {
+  "team": "den",
+  "season": 2025,
+  "pre_w": 3.0,
+  "pre_g": 3.0,
+  "reg_w": 14.0,
+  "reg_g": 17.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.8235294117647058
+ },
+ {
+  "team": "det",
+  "season": 2025,
+  "pre_w": 1.0,
+  "pre_g": 4.0,
+  "reg_w": 9.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.25,
+  "reg_pct": 0.5294117647058824
+ },
+ {
+  "team": "gb",
+  "season": 2025,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 9.5,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.5588235294117647
+ },
+ {
+  "team": "hou",
+  "season": 2025,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 12.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.7058823529411765
+ },
+ {
+  "team": "ind",
+  "season": 2025,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 8.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.47058823529411764
+ },
+ {
+  "team": "jax",
+  "season": 2025,
+  "pre_w": 0.5,
+  "pre_g": 3.0,
+  "reg_w": 13.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.16666666666666666,
+  "reg_pct": 0.7647058823529411
+ },
+ {
+  "team": "kc",
+  "season": 2025,
+  "pre_w": 0.0,
+  "pre_g": 3.0,
+  "reg_w": 6.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.0,
+  "reg_pct": 0.35294117647058826
+ },
+ {
+  "team": "lac",
+  "season": 2025,
+  "pre_w": 2.0,
+  "pre_g": 4.0,
+  "reg_w": 11.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.6470588235294118
+ },
+ {
+  "team": "lar",
+  "season": 2025,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 12.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.7058823529411765
+ },
+ {
+  "team": "lv",
+  "season": 2025,
+  "pre_w": 0.5,
+  "pre_g": 3.0,
+  "reg_w": 3.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.16666666666666666,
+  "reg_pct": 0.17647058823529413
+ },
+ {
+  "team": "mia",
+  "season": 2025,
+  "pre_w": 2.5,
+  "pre_g": 3.0,
+  "reg_w": 7.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.8333333333333334,
+  "reg_pct": 0.4117647058823529
+ },
+ {
+  "team": "min",
+  "season": 2025,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 9.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.5294117647058824
+ },
+ {
+  "team": "ne",
+  "season": 2025,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 14.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.8235294117647058
+ },
+ {
+  "team": "no",
+  "season": 2025,
+  "pre_w": 0.5,
+  "pre_g": 3.0,
+  "reg_w": 6.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.16666666666666666,
+  "reg_pct": 0.35294117647058826
+ },
+ {
+  "team": "nyg",
+  "season": 2025,
+  "pre_w": 3.0,
+  "pre_g": 3.0,
+  "reg_w": 4.0,
+  "reg_g": 17.0,
+  "pre_pct": 1.0,
+  "reg_pct": 0.23529411764705882
+ },
+ {
+  "team": "nyj",
+  "season": 2025,
+  "pre_w": 1.0,
+  "pre_g": 3.0,
+  "reg_w": 3.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.3333333333333333,
+  "reg_pct": 0.17647058823529413
+ },
+ {
+  "team": "phi",
+  "season": 2025,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 11.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.6470588235294118
+ },
+ {
+  "team": "pit",
+  "season": 2025,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 10.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.5882352941176471
+ },
+ {
+  "team": "sea",
+  "season": 2025,
+  "pre_w": 1.5,
+  "pre_g": 3.0,
+  "reg_w": 14.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.5,
+  "reg_pct": 0.8235294117647058
+ },
+ {
+  "team": "sf",
+  "season": 2025,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 12.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.7058823529411765
+ },
+ {
+  "team": "tb",
+  "season": 2025,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 8.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.47058823529411764
+ },
+ {
+  "team": "ten",
+  "season": 2025,
+  "pre_w": 2.0,
+  "pre_g": 3.0,
+  "reg_w": 3.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.6666666666666666,
+  "reg_pct": 0.17647058823529413
+ },
+ {
+  "team": "wsh",
+  "season": 2025,
+  "pre_w": 0.0,
+  "pre_g": 3.0,
+  "reg_w": 5.0,
+  "reg_g": 17.0,
+  "pre_pct": 0.0,
+  "reg_pct": 0.29411764705882354
+ }
+]
