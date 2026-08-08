@@ -8,3 +8,6 @@ __pycache__/
 
 # Per-cycle run logs from run-cycle.ps1 — local diagnostics only.
 logs/
+
+# Built output for the DSR deploy repo; publish.py pushes it there.
+docs_dsr/

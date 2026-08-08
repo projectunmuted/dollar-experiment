@@ -7,20 +7,31 @@ stall waiting.
 
 ## Open
 
-### Buy the analysis site's domain (~$10/yr, your call between two)
+### Buy detroitsportsreporter.com and point it at GitHub Pages (~$10/yr + 3 minutes)
 
-You offered on 2026-08-08 (outside the $50 cap, your ruling). Availability
-checked via RDAP the same night:
+You picked it 2026-08-08 (and detroitsportsreporter@proton.me to match; both
+confirmed available). The site is already built and live at
+https://projectunmuted.github.io/detroitsportsreporter/ so this just gives it
+its real name:
 
-- **detroitsportsreport.com** — AVAILABLE, and it was your stated ideal.
-  Recommended: take it.
-- **motorcityreport.com** — AVAILABLE, the vaguer one with room to expand.
+1. Buy `detroitsportsreporter.com` at Cloudflare Registrar (at-cost; DNS
+   lands next to the other domain automatically).
+2. Create the Proton address `detroitsportsreporter@proton.me` if you want
+   the matching email (optional, no urgency).
+3. In Cloudflare DNS for the new domain, add — all **grey cloud / DNS
+   only** (orange breaks GitHub's certificate):
 
-Buy at Cloudflare Registrar (at-cost, DNS stays where the other domain
-already lives). Tell me which one and I'll plan the split: analysis brand on
-the new domain, process journal stays on project-unmuted.com, cross-linked.
-Names ruled out by you: anything with homer or receipts; scorecard is the
-approved fallback.
+   | Type | Name | Value |
+   |---|---|---|
+   | A | @ | 185.199.108.153 |
+   | A | @ | 185.199.109.153 |
+   | A | @ | 185.199.110.153 |
+   | A | @ | 185.199.111.153 |
+   | CNAME | www | projectunmuted.github.io |
+
+4. Tell me. I flip `DSR.custom_domain` in build.py, republish, set the
+   domain on the deploy repo, and enforce HTTPS — same playbook that moved
+   project-unmuted.com, which took minutes.
 
 ### Log the Project Unmuted Chrome profile into your sports Reddit account (~1 minute)
 

@@ -1,9 +1,17 @@
 #!/usr/bin/env python3
-"""Build the Project Unmuted site from markdown entries.
+"""Build both Project Unmuted sites from markdown entries.
 
-Zero dependencies on purpose: this has to run in a bare cloud sandbox with
-nothing but a stdlib Python. Output goes to docs/ because GitHub Pages can
-serve that directly off main with no build action.
+One repo, one receipt trail, two sites:
+
+  - The process journal  -> docs/      -> project-unmuted.com (this repo's Pages)
+  - Detroit Sports Reporter -> docs_dsr/ -> pushed to the deploy-only repo
+    projectunmuted/detroitsportsreporter by publish.py, serving
+    detroitsportsreporter.com once DNS lands (github.io until then).
+
+Entries route by frontmatter `track`: analysis -> DSR, process -> journal.
+Picks live in PICKS.md and render on the DSR homepage.
+
+Zero dependencies on purpose: this must run in a bare stdlib Python.
 
 Usage:  python build.py
 """
@@ -19,40 +27,91 @@ from pathlib import Path
 
 ROOT = Path(__file__).parent
 ENTRIES = ROOT / "entries"
-OUT = ROOT / "docs"
 
-SITE_TITLE = "Project Unmuted"
-SITE_TAGLINE = "An AI calling Detroit games before they happen — and trying to earn one dollar doing it."
 DEADLINE = date(2027, 2, 8)
 START = date(2026, 8, 8)
 REPO = "https://github.com/projectunmuted/dollar-experiment"
 KOFI = "https://ko-fi.com/projectunmuted"
 
-# Live since 2026-08-07: Cloudflare points the root at GitHub's four Pages IPs
-# and www at projectunmuted.github.io, both DNS-only (grey cloud — an orange one
-# proxies the traffic and blocks GitHub's certificate issuance). Setting this
-# writes docs/CNAME, which is what actually tells Pages to serve the domain.
-CUSTOM_DOMAIN: str | None = "project-unmuted.com"
-SITE_URL = f"https://{CUSTOM_DOMAIN}" if CUSTOM_DOMAIN else ""
-
-# IndexNow ownership key (public by design — the protocol proves control of the
-# domain by serving this value at /<key>.txt; knowing it only lets someone
-# submit *our* URLs for crawling). Search engines behind IndexNow: Bing,
-# DuckDuckGo's sources, Yandex, Seznam, Naver. Google is separate and needs
-# Search Console. Ping after deploying new pages:
-#   POST https://api.indexnow.org/indexnow  {host, key, urlList}
+# IndexNow ownership key (public by design; proves domain control by serving
+# this value at /<key>.txt). Ping api.indexnow.org after publishing new pages.
 INDEXNOW_KEY = "feb8794bd1ad04e35e0b665074c410f2"
 
 
+@dataclass
+class Site:
+    key: str                 # "journal" | "dsr"
+    title: str
+    tagline: str
+    out: Path
+    accent_light: str        # CSS accent, light scheme
+    accent_dark: str         # CSS accent, dark scheme
+    custom_domain: str | None
+    fallback_base: str       # canonical base until custom_domain is live
+    footer_html: str
+    indexnow: bool
+
+    @property
+    def base_url(self) -> str:
+        return f"https://{self.custom_domain}" if self.custom_domain else self.fallback_base
+
+
+JOURNAL = Site(
+    key="journal",
+    title="Project Unmuted",
+    tagline="An AI agent trying to earn one dollar. This is the lab notebook.",
+    out=ROOT / "docs",
+    accent_light="#8a4b2a",
+    accent_dark="#d9a06a",
+    # Live since 2026-08-07: Cloudflare A-records to GitHub's Pages IPs, www
+    # CNAME to projectunmuted.github.io, all DNS-only (grey cloud — orange
+    # breaks certificate issuance). Setting this writes docs/CNAME.
+    custom_domain="project-unmuted.com",
+    fallback_base="https://projectunmuted.github.io/dollar-experiment",
+    footer_html=(
+        f'<p>Written by Claude, an AI agent, working autonomously. Every entry, '
+        f'every number, and every failure is logged as it happened in the '
+        f'<a href="{REPO}">public repository</a> — the commit timestamps are the '
+        f'receipts. The sports side of this experiment lives at '
+        f'<a href="https://projectunmuted.github.io/detroitsportsreporter/">'
+        f'Detroit Sports Reporter</a>.</p>'
+        f'<p><a href="{KOFI}">Tip a dollar</a> if any of this was worth one.</p>'
+    ),
+    indexnow=True,
+)
+
+DSR = Site(
+    key="dsr",
+    title="Detroit Sports Reporter",
+    tagline="Every call made before the game. Every grade published after. No exceptions, no deletions.",
+    out=ROOT / "docs_dsr",
+    accent_light="#0b6bab",   # Honolulu-blue adjacent
+    accent_dark="#6db3e8",
+    # Flip to "detroitsportsreporter.com" once the human buys it and points
+    # Cloudflare DNS at GitHub Pages (same records as the journal domain).
+    custom_domain=None,
+    fallback_base="https://projectunmuted.github.io/detroitsportsreporter",
+    footer_html=(
+        f'<p>Written by an AI agent as part of an open experiment: earn one '
+        f'dollar from honest sports analysis in six months. Every pick is '
+        f'committed to a <a href="{REPO}">public repository</a> before the game '
+        f'starts — the timestamps are the receipts — and the '
+        f'<a href="https://project-unmuted.com/">process journal</a> records how '
+        f'it\'s going. Nothing here is betting advice.</p>'
+        f'<p><a href="{KOFI}">Tip a dollar</a> if a pick or a piece was worth one.</p>'
+    ),
+    indexnow=False,  # gets its own key once the domain is live
+)
+
+
 # --------------------------------------------------------------------------
-# A deliberately small markdown subset. Everything the journal actually uses,
-# nothing it doesn't. If an entry needs a feature that isn't here, add it here
-# rather than reaching for a dependency.
+# A deliberately small markdown subset. If an entry needs a feature that
+# isn't here, add it here rather than reaching for a dependency.
 # --------------------------------------------------------------------------
 
 def inline(text: str) -> str:
-    """Escape, then apply inline markdown. Order matters: code first, so that
-    markup inside backticks is left alone."""
+    """Escape, then apply inline markdown. Code first so markup inside
+    backticks is left alone."""
     placeholders: list[str] = []
 
     def stash(match: re.Match) -> str:
@@ -77,8 +136,7 @@ def render(md: str) -> str:
     i = 0
 
     while i < len(lines):
-        line = lines[i]
-        stripped = line.strip()
+        stripped = lines[i].strip()
 
         if not stripped:
             i += 1
@@ -204,20 +262,21 @@ def parse(path: Path) -> Entry:
     )
 
 
-CSS = """
+# ACCENT tokens are swapped per site; doubled braces would be worse to read.
+CSS_TEMPLATE = """
 *,*::before,*::after{box-sizing:border-box}
 :root{
   --bg:#fbfaf8; --fg:#1a1a19; --muted:#6b6a66; --rule:#e3e0d9;
-  --accent:#8a4b2a; --card:#ffffff; --code:#f2efe9;
+  --accent:__ACCENT__; --card:#ffffff; --code:#f2efe9;
 }
 @media (prefers-color-scheme:dark){
   :root{--bg:#14140f; --fg:#e8e6df; --muted:#96938a; --rule:#2e2d26;
-        --accent:#d9a06a; --card:#1c1b16; --code:#22211b}
+        --accent:__ACCENT_DARK__; --card:#1c1b16; --code:#22211b}
 }
 :root[data-theme="dark"]{--bg:#14140f;--fg:#e8e6df;--muted:#96938a;--rule:#2e2d26;
-  --accent:#d9a06a;--card:#1c1b16;--code:#22211b}
+  --accent:__ACCENT_DARK__;--card:#1c1b16;--code:#22211b}
 :root[data-theme="light"]{--bg:#fbfaf8;--fg:#1a1a19;--muted:#6b6a66;--rule:#e3e0d9;
-  --accent:#8a4b2a;--card:#ffffff;--code:#f2efe9}
+  --accent:__ACCENT__;--card:#ffffff;--code:#f2efe9}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--fg);
   font:17px/1.65 Georgia,"Iowan Old Style","Times New Roman",serif;
@@ -272,28 +331,25 @@ footer a{color:var(--muted)}
 """
 
 
-def page(title: str, body: str, depth: int = 0, path: str = "", description: str = "") -> str:
-    up = "../" * depth
-    desc = description or SITE_TAGLINE
-    canonical = f"{SITE_URL}/{path}" if CUSTOM_DOMAIN else ""
-    og = (
-        f'<link rel="canonical" href="{canonical}">\n'
-        if canonical
-        else ""
-    ) + (
-        f"""<meta property="og:type" content="website">
-<meta property="og:title" content="{html.escape(title)}">
-<meta property="og:description" content="{html.escape(desc)}">"""
-        + (f'\n<meta property="og:url" content="{canonical}">' if canonical else "")
-        + """
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content=\""""
-        + html.escape(title)
-        + """">
-<meta name="twitter:description" content=\""""
-        + html.escape(desc)
-        + '">'
+def css_for(site: Site) -> str:
+    return CSS_TEMPLATE.replace("__ACCENT_DARK__", site.accent_dark).replace(
+        "__ACCENT__", site.accent_light
     )
+
+
+def page(site: Site, title: str, body: str, depth: int = 0, path: str = "",
+         description: str = "") -> str:
+    up = "../" * depth
+    desc = description or site.tagline
+    canonical = f"{site.base_url}/{path}"
+    og = f"""<link rel="canonical" href="{canonical}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{html.escape(title)}">
+<meta property="og:description" content="{html.escape(desc)}">
+<meta property="og:url" content="{canonical}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{html.escape(title)}">
+<meta name="twitter:description" content="{html.escape(desc)}">"""
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -302,127 +358,166 @@ def page(title: str, body: str, depth: int = 0, path: str = "", description: str
 <title>{html.escape(title)}</title>
 <meta name="description" content="{html.escape(desc)}">
 {og}
-<style>{CSS}</style>
+<style>{css_for(site)}</style>
 </head>
 <body>
 <header><div class="wrap">
-<h1><a href="{up}index.html">{SITE_TITLE}</a></h1>
-<p class="tagline">{SITE_TAGLINE}</p>
+<h1><a href="{up}index.html">{site.title}</a></h1>
+<p class="tagline">{site.tagline}</p>
 </div></header>
 <main class="wrap">
 {body}
 </main>
 <footer><div class="wrap">
-<p>Written by Claude, an AI agent, working autonomously. Every entry, every
-number, and every failure is logged as it happened in the
-<a href="{REPO}">public repository</a> — the commit timestamps are the
-receipts.</p>
-<p><a href="{KOFI}">Tip a dollar</a> if any of this was worth one.</p>
+{site.footer_html}
 </div></footer>
 </body>
 </html>
 """
 
 
-def build() -> None:
-    if OUT.exists():
-        shutil.rmtree(OUT)
-    (OUT / "journal").mkdir(parents=True)
-
-    entries = sorted(
-        (parse(p) for p in ENTRIES.glob("*.md")),
-        key=lambda e: (e.day, e.slug),
-        reverse=True,
+def entry_item(e: Entry) -> str:
+    extra = f" &middot; {html.escape(e.cycle)}" if e.cycle else ""
+    return (
+        f'<li><a href="{e.url}"><span class="meta">{e.day.isoformat()}{extra}'
+        f'</span><span class="t">{html.escape(e.title)}</span>'
+        f'<span class="s">{html.escape(e.summary)}</span></a></li>'
     )
 
+
+def write_entry_pages(site: Site, entries: list[Entry]) -> None:
     for e in entries:
         body = (
             f'<a class="back" href="../index.html">&larr; All entries</a>'
             f'<p class="meta">{e.day.isoformat()}'
-            + (" &middot; Analysis" if e.track == "analysis" else " &middot; Process")
             + (f" &middot; {html.escape(e.cycle)}" if e.cycle else "")
             + f"</p><h2>{html.escape(e.title)}</h2>{render(e.body)}"
         )
-        (OUT / "journal" / f"{e.slug}.html").write_text(
-            page(
-                f"{e.title} — {SITE_TITLE}",
-                body,
-                depth=1,
-                path=e.url,
-                description=e.summary,
-            ),
+        (site.out / "journal" / f"{e.slug}.html").write_text(
+            page(site, f"{e.title} — {site.title}", body, depth=1,
+                 path=e.url, description=e.summary),
             encoding="utf-8",
         )
+
+
+def write_common(site: Site, entries: list[Entry], home: str) -> None:
+    (site.out / "index.html").write_text(
+        page(site, site.title, home, path=""), encoding="utf-8"
+    )
+    (site.out / ".nojekyll").write_text("", encoding="utf-8")
+    if site.custom_domain:
+        (site.out / "CNAME").write_text(f"{site.custom_domain}\n", encoding="utf-8")
+    if site.indexnow and INDEXNOW_KEY:
+        (site.out / f"{INDEXNOW_KEY}.txt").write_text(INDEXNOW_KEY, encoding="utf-8")
+
+    pages = [""] + [e.url for e in entries]
+    urls = "\n".join(f"  <url><loc>{site.base_url}/{p}</loc></url>" for p in pages)
+    (site.out / "sitemap.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        f"{urls}\n</urlset>\n",
+        encoding="utf-8",
+    )
+    (site.out / "robots.txt").write_text(
+        f"User-agent: *\nAllow: /\nSitemap: {site.base_url}/sitemap.xml\n",
+        encoding="utf-8",
+    )
+
+
+def tip_block(text: str) -> str:
+    return f"""<div class="tip">
+<p>{text}</p>
+<p><a class="btn" href="{KOFI}">Tip $1 on Ko-fi</a></p>
+</div>"""
+
+
+def build_journal(process: list[Entry]) -> None:
+    site = JOURNAL
+    if site.out.exists():
+        shutil.rmtree(site.out)
+    (site.out / "journal").mkdir(parents=True)
+
+    write_entry_pages(site, process)
 
     days_left = (DEADLINE - date.today()).days
     scoreboard = f"""<div class="scoreboard">
 <div class="stat"><span class="n">$0.00</span><span class="k">Earned</span></div>
 <div class="stat"><span class="n">$0.00</span><span class="k">Spent</span></div>
 <div class="stat"><span class="n">{days_left}</span><span class="k">Days left</span></div>
-<div class="stat"><span class="n">{len(entries)}</span><span class="k">Entries</span></div>
+<div class="stat"><span class="n">{len(process)}</span><span class="k">Entries</span></div>
 </div>"""
 
-    intro = (ROOT / "intro.md").read_text(encoding="utf-8")
+    intro = render((ROOT / "intro.md").read_text(encoding="utf-8"))
+    dsr_note = (
+        '<div class="note"><strong>Looking for the picks?</strong> The sports '
+        'side of this experiment is its own publication: '
+        f'<a href="{DSR.base_url}/">Detroit Sports Reporter</a> — every call '
+        "made before the game, every grade published after.</div>"
+    )
+    tip = tip_block(
+        "<strong>The whole goal is one dollar.</strong> Not a subscription, not "
+        "a business — one dollar, from one stranger, because something here was "
+        "worth it. If this experiment is worth following, that's the entire ask."
+    )
+    home = (
+        scoreboard + intro + dsr_note + tip
+        + "<h2>The process journal</h2>"
+        + f'<ul class="entry-list">{"".join(entry_item(e) for e in process)}</ul>'
+    )
+    write_common(site, process, home)
 
-    def item(e):
-        label = "Analysis" if e.track == "analysis" else "Process"
-        extra = f" &middot; {html.escape(e.cycle)}" if e.cycle else ""
-        return (
-            f'<li><a href="{e.url}"><span class="meta">{e.day.isoformat()}'
-            f" &middot; {label}{extra}"
-            f'</span><span class="t">{html.escape(e.title)}</span>'
-            f'<span class="s">{html.escape(e.summary)}</span></a></li>'
-        )
 
+def build_dsr(analysis: list[Entry]) -> None:
+    site = DSR
+    if site.out.exists():
+        shutil.rmtree(site.out)
+    (site.out / "journal").mkdir(parents=True)
+
+    write_entry_pages(site, analysis)
+
+    picks_md = (ROOT / "PICKS.md").read_text(encoding="utf-8")
+    # Drop the H1; the homepage supplies its own heading.
+    picks_html = render(re.sub(r"^# .*\n", "", picks_md, count=1))
+
+    about = (
+        '<div class="note">This site is run by an AI agent, openly, as part of '
+        'an experiment: earn one dollar from honest Detroit sports analysis in '
+        'six months. Every pick is committed to a '
+        f'<a href="{REPO}">public git repository</a> before first pitch — the '
+        'commit timestamp is the proof — and graded after the final out, win or '
+        'lose. The running record below is never edited, only added to. '
+        f'The experiment itself is journaled at '
+        '<a href="https://project-unmuted.com/">project-unmuted.com</a>.</div>'
+    )
+    tip = tip_block(
+        "<strong>If a pick or a piece was worth a dollar, that's the whole "
+        "ask.</strong> One dollar from one stranger is this experiment's entire "
+        "goal. No subscriptions, no paywall, nothing else for sale."
+    )
+    home = (
+        about
+        + "<h2>The record</h2>"
+        + picks_html
+        + "<h2>Analysis</h2>"
+        + f'<ul class="entry-list">{"".join(entry_item(e) for e in analysis)}</ul>'
+        + tip
+    )
+    write_common(site, analysis, home)
+
+
+def build() -> None:
+    entries = sorted(
+        (parse(p) for p in ENTRIES.glob("*.md")),
+        key=lambda e: (e.day, e.slug),
+        reverse=True,
+    )
     analysis = [e for e in entries if e.track == "analysis"]
     process = [e for e in entries if e.track != "analysis"]
 
-    sections = ""
-    if analysis:
-        sections += (
-            "<h2>The analysis</h2>"
-            "<p>Every pick committed before the game, graded after, no exceptions.</p>"
-            f'<ul class="entry-list">{"".join(item(e) for e in analysis)}</ul>'
-        )
-    sections += (
-        "<h2>The process journal</h2>"
-        "<p>What an AI trying to earn a dollar actually does all day.</p>"
-        f'<ul class="entry-list">{"".join(item(e) for e in process)}</ul>'
-    )
-
-    tip = f"""<div class="tip">
-<p><strong>The whole goal is one dollar.</strong> Not a subscription, not a
-business — one dollar, from one stranger, because something here was worth it.
-If a pick or a piece was worth a dollar to you, that's the entire experiment.</p>
-<p><a class="btn" href="{KOFI}">Tip $1 on Ko-fi</a></p>
-</div>"""
-
-    home = scoreboard + render(intro) + tip + sections
-    (OUT / "index.html").write_text(page(SITE_TITLE, home, path=""), encoding="utf-8")
-    (OUT / ".nojekyll").write_text("", encoding="utf-8")
-    if CUSTOM_DOMAIN:
-        (OUT / "CNAME").write_text(f"{CUSTOM_DOMAIN}\n", encoding="utf-8")
-    if INDEXNOW_KEY:
-        (OUT / f"{INDEXNOW_KEY}.txt").write_text(INDEXNOW_KEY, encoding="utf-8")
-
-    if SITE_URL:
-        pages = [""] + [e.url for e in entries]
-        urls = "\n".join(
-            f"  <url><loc>{SITE_URL}/{p}</loc></url>" for p in pages
-        )
-        (OUT / "sitemap.xml").write_text(
-            '<?xml version="1.0" encoding="UTF-8"?>\n'
-            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-            f"{urls}\n"
-            "</urlset>\n",
-            encoding="utf-8",
-        )
-        (OUT / "robots.txt").write_text(
-            "User-agent: *\nAllow: /\n" f"Sitemap: {SITE_URL}/sitemap.xml\n",
-            encoding="utf-8",
-        )
-
-    print(f"built {len(entries)} entries -> {OUT}")
+    build_journal(process)
+    build_dsr(analysis)
+    print(f"journal: {len(process)} entries -> {JOURNAL.out}")
+    print(f"dsr:     {len(analysis)} entries -> {DSR.out}")
 
 
 if __name__ == "__main__":

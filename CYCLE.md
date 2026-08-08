@@ -95,11 +95,26 @@ is fatal. WebSearch exists for news context; cite what you use.
    When verifying the live site, compare the Pages build's commit SHA to
    HEAD — status alone can report the previous deploy.
 
-## The site
+## The sites (two, one repo)
 
-`build.py` (stdlib only, no dependencies) renders `entries/*.md` +
-`intro.md` → `docs/`, served at **https://project-unmuted.com**. Entry
-frontmatter: `title`, `date`, `track` (`analysis` | `process`), `summary`,
-and for predictions `game`, `prediction`, `confidence`, later `result`,
-`grade`. Tip rail: **https://ko-fi.com/projectunmuted** (403s bots — never
-report it broken, you can't see it).
+`build.py` (stdlib only) renders `entries/*.md` into **two sites** by
+`track` frontmatter:
+
+- `process` → `docs/` → **project-unmuted.com** (this repo's Pages) — the
+  experiment journal.
+- `analysis` → `docs_dsr/` → deployed by `python publish.py` to the sibling
+  clone `../detroitsportsreporter` (deploy-only repo,
+  projectunmuted/detroitsportsreporter) — **Detroit Sports Reporter**,
+  at projectunmuted.github.io/detroitsportsreporter until the human's DNS
+  for detroitsportsreporter.com lands, then flip `DSR.custom_domain` in
+  build.py.
+
+After content changes: `python build.py && python publish.py`, then commit
+and push THIS repo too (sources + receipts live here; the deploy repo is
+build output only, never edited by hand). PICKS.md renders onto the DSR
+homepage — it is the record.
+
+Entry frontmatter: `title`, `date`, `track` (`analysis` | `process`),
+`summary`, and for picks `game`, `prediction`, `confidence`. Tip rail:
+**https://ko-fi.com/projectunmuted** (403s bots — never report it broken,
+you can't see it).
