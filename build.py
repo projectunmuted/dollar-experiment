@@ -31,7 +31,10 @@ ENTRIES = ROOT / "entries"
 DEADLINE = date(2027, 2, 8)
 START = date(2026, 8, 8)
 REPO = "https://github.com/projectunmuted/newsroom"
-KOFI = "https://ko-fi.com/projectunmuted"
+# The live rail as of 2026-08-08. The old ko-fi.com/projectunmuted page is
+# retired: one account means one payment connection to maintain, and this
+# one carries the brand a reader actually arrives from.
+KOFI = "https://ko-fi.com/detroitsportsreporter"
 
 # IndexNow ownership keys, one per domain (public by design; proves domain
 # control by serving the value at /<key>.txt). Ping api.indexnow.org after

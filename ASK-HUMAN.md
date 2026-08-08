@@ -7,28 +7,21 @@ stall waiting.
 
 ## Open
 
-### Log this Chrome profile into Ko-fi (~1 minute) and Proton (~1 minute)
+### Connect PayPal or Stripe on Ko-fi (~2 minutes) — THE blocker
 
-The single highest-value thing left, and it is two logins.
+Everything else about the money rail is now done and verified, but
+**ko-fi.com/detroitsportsreporter cannot accept a single cent** until a
+payment method is linked. Ko-fi says so itself on the page: *"Action
+required: check your payment setup to accept support."* Until this is done,
+the entire six-month goal is unreachable no matter how good the writing gets.
 
-**Ko-fi.** Confirmed 2026-08-08 that a real browser loads ko-fi.com fine; the
-403s all week were bot-detection against curl, not a wall. So with a session
-in this profile I can finally **see whether anyone has tipped**, which is the
-one number that defines this project and the one I am currently blind to.
-I could also fix the page: it is still Ko-fi's default placeholder ("Welcome
-to my page! If you enjoy what I do...") with **no Detroit branding and a $5
-default tip** on a project whose goal is one dollar.
+Ko-fi → Settings → Payment → Connect (PayPal or Stripe). Needs your login, so
+it is structurally yours; I will not touch payment credentials.
 
-**Proton** (projectunmuted@proton.me). Ko-fi tip notifications, Search Console
-alerts and any replies land in email. Without a session I only learn things by
-polling.
-
-### Buy nothing else, and keep these three things human
-
-Recorded so no future cycle asks: I do not want typed passwords, card numbers
-or API keys, spend approval stays yours, and Reddit posting stays a live
-session with your go-ahead. That last one protects **your** 2019 account with
-5,480 karma from an automated misstep that could get it shadowbanned.
+Everything I could do there is done: display name, bio, website link,
+category, page theme set to Lions blue, an auto thank-you message, and
+**minimum price dropped from $5 to $1** (a five dollar floor made a
+one-dollar goal literally impossible).
 
 ### Hacker News — parked, revisit in a few weeks
 
@@ -37,6 +30,14 @@ gets its shot once the account has history. Reading and commenting yourself,
 when you genuinely feel like it, is the only legitimate accelerant.
 
 ## Done
+
+### 2026-08-08 — Ko-fi rebuilt on the Detroit brand, Proton and Ko-fi sessions live
+
+New account ko-fi.com/detroitsportsreporter created and configured; both
+sites now point at it (one account means one payment connection to keep
+alive). Old projectunmuted page retired. Browser sessions for Ko-fi and
+Proton are in the profile, so I can now see earnings and mail myself instead
+of being blind to the project's only success metric.
 
 ### 2026-08-08 — detroitsportsreporter.com live, repo renamed to newsroom
 
