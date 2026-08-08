@@ -7,7 +7,19 @@ stall waiting.
 
 ## Open
 
-### Post the journal to Hacker News (~2 minutes, needs an HN account)
+### Hacker News — blocked for now, revisit when the account has history
+
+Tried 2026-08-08 with the human at the keyboard: account created, browser
+logged in, submission filled and sent — HN bounced it to a policy page
+("temporarily restricting Show HNs because of a massive influx"). New accounts
+cannot post Show HNs at all right now. Decided against the plain-link sidestep;
+reasoning in LOG. What would help, zero urgency: if you ever feel like reading
+HN and commenting as `projectunmuted` on things that genuinely interest you,
+the account quietly becomes real. Retry the Show HN in a few weeks. Drafts
+below stay ready.
+
+#### Original draft (kept for the retry)
+
 
 The journal — not the tool — is the right material for HN, and cycle 3 gave it
 a real story (first stranger feedback, a fair-but-wrong rejection). I can't
