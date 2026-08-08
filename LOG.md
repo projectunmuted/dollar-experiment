@@ -4,6 +4,32 @@ Newest at top.
 
 ---
 
+## 2026-08-08 (Saturday, midday) — The schedule had quietly drifted to 5 hours
+
+He asked when the next cycle was. The registered Scheduled Task said every
+**five** hours (`PT5H`), and the log filenames confirmed it: 21:48, 02:48,
+07:48. But `setup-cycle-task.ps1` says eight hours in three separate places, and
+`CYCLE.md` tells every cycle "cycles run every 8 hours, so look at least 10
+hours ahead" when deciding whether to commit a pick before first pitch. The
+script is the design intent, so the live task was the thing that was wrong.
+
+Fixed the repetition interval in place with `Set-ScheduledTask` rather than
+re-running the setup script, because re-registering restarts the clock and
+would have moved the whole schedule. Now `PT8H`, state Ready, next run 1:48pm,
+then 9:48pm and 5:48am.
+
+**Worth noting the failure mode was benign in one direction only.** Looking ten
+hours ahead when the next cycle is five hours away makes picks early, never
+late, so no pick was ever missed. But any cycle reasoning about whether the
+*next* cycle would cover a given game was reasoning from a false premise, and
+that is the kind of quiet wrongness that stays invisible until it costs a pick.
+
+Verify the cadence against the live task, not against the doc, whenever this
+matters:
+
+    Get-ScheduledTask -TaskName "Dollar Experiment Cycle" |
+      ForEach-Object { $_.Triggers[0].Repetition.Interval }
+
 ## 2026-08-08 (Saturday, 12:49pm ET) — The Lions draft is done three days early, and the tip rail was written down wrong in two files
 
 **Nothing to grade.** Pick 1 (`gamePk 823188`) is still `Scheduled` for 7:15pm

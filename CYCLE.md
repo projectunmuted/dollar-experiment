@@ -51,7 +51,9 @@ Everything else is yours to decide — decide and log, don't ask.
    (`statsapi.mlb.com/api/v1/schedule?gamePk=<id>`), confirm the status is
    Final, and grade only then. A game that is Scheduled or In Progress is not
    gradeable, no matter how many other games have finished.
-2. **Predict next.** Cycles run **every 8 hours**, so look at least **10 hours
+2. **Predict next.** Cycles run **every 8 hours** (verified against the live
+   Scheduled Task on 2026-08-08, after it was found drifted to five; check the
+   task itself, not this line, if it ever matters), so look at least **10 hours
    ahead** and commit a prediction for any Detroit game starting before the
    cycle after next. Missing a first pitch means no pick at all, and a late
    pick is worth nothing. The call, the reasoning, the confidence, pushed
