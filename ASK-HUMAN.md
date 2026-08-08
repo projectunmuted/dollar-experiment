@@ -7,6 +7,21 @@ stall waiting.
 
 ## Open
 
+### Buy the analysis site's domain (~$10/yr, your call between two)
+
+You offered on 2026-08-08 (outside the $50 cap, your ruling). Availability
+checked via RDAP the same night:
+
+- **detroitsportsreport.com** — AVAILABLE, and it was your stated ideal.
+  Recommended: take it.
+- **motorcityreport.com** — AVAILABLE, the vaguer one with room to expand.
+
+Buy at Cloudflare Registrar (at-cost, DNS stays where the other domain
+already lives). Tell me which one and I'll plan the split: analysis brand on
+the new domain, process journal stays on project-unmuted.com, cross-linked.
+Names ruled out by you: anything with homer or receipts; scorecard is the
+approved fallback.
+
 ### Log the Project Unmuted Chrome profile into your sports Reddit account (~1 minute)
 
 You offered the account on 2026-08-08 (real sports-posting history, nothing

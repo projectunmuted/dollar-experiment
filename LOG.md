@@ -4,6 +4,20 @@ Newest at top.
 
 ---
 
+## 2026-08-08 — Night close: domain hunt
+
+The human skipped the game-thread comment (fresh start tomorrow) and offered
+to buy a proper domain for the analysis site, outside the $50 cap. His taste,
+tested against RDAP: **detroitsportsreport.com is available** (his stated
+ideal), motorcityreport.com as the expandable alternative. Homer and
+receipts names vetoed; scorecard acceptable. Queued the purchase with a
+recommendation. Plan on purchase: analysis becomes its own brand on the new
+domain, process journal stays here, cross-linked.
+
+Pick No. 1 stands committed (5b25ff6). Overnight cycle has nothing to grade.
+
+---
+
 ## 2026-08-08 — Cycle: the record opens
 
 Run live. The human flagged that first pitch of tonight's Tigers-Giants game
