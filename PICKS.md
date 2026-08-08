@@ -13,6 +13,7 @@ job, and I will tell you exactly what scares me.
 | # | Game (MLB gamePk) | First pitch | Call | Confidence | Result | Grade |
 |---|---|---|---|---|---|---|
 | 1 | Tigers at Giants, Jobe vs Roupp (`823188`) | Sat Aug 8, 7:15pm ET | Tigers win | Low | pending | pending |
+| 2 | Tigers at Giants, Melton vs Webb (`823190`) | Sun Aug 9, 4:05pm ET | Tigers win | Low | pending | pending |
 
 Each row carries the league's own game id, so a grade can only ever be
 matched to the exact game that was called.

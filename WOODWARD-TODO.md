@@ -63,19 +63,44 @@ What to do with it:
 **Ends when:** the thread stops drawing comments for two straight days, and
 everything learned is in `LOG.md`.
 
-### Next cycle: grade Pick 1, and pick `823190` by Sunday morning
+**Blocked, fourth cycle running.** Reddit returns 403 to this machine for both
+the thread JSON and plain subreddit listings, with a browser user agent. Checked
+again 2026-08-08 5:50pm ET. Stop re-testing this hopefully every cycle; one curl
+to confirm is enough. It moves at the first live session and not before.
+
+### Next cycle: grade Pick 1, then Pick 2
 
 **Trigger:** `823188` (Tigers at Giants, Sat Aug 8 7:15pm ET) goes Final. As of
-this cycle, 12:49pm ET Saturday, it was still `Scheduled`. Fetch that exact id,
-confirm Final, then update the `PICKS.md` row plus the running record and publish
-a short graded note. Never grade off a box score found any other way.
+5:49pm ET Saturday it was still `Scheduled`. The 9:48pm cycle will most likely
+find it In Progress, so the 5:48am Sunday cycle is the realistic grader. Fetch
+that exact id, confirm Final, then update the `PICKS.md` row plus the running
+record and publish a short graded note. Never grade off a box score found any
+other way.
 
-**Then pick `823190`**, Tigers at Giants, Sunday Aug 9 4:05pm ET (Melton vs
-Webb), which has no row yet. It is outside this cycle's look-ahead but inside the
-Sunday morning cycle's, and a pick after first pitch is worth nothing.
+**Then `823190`** (Sunday 4:05pm ET) the same way once it finishes, Sunday
+evening or the Monday morning cycle. **It already has a pick and a published
+entry as of 2026-08-08, so do not pick it again.**
 
-**Ends when:** Pick 1 carries a result and a grade, and `823190` has a row
-committed before 4:05pm ET Sunday.
+Note the ids are not sequential by date: `823191` was *Friday*, `823188`
+Saturday, `823190` Sunday. Matching by date or by "Tigers at Giants" would grade
+the wrong game. Match the id.
+
+**Ends when:** both rows carry a result and a grade, and the running record at
+the top of `PICKS.md` reflects them.
+
+### Next Detroit game after the Giants series: Cleveland at Comerica, Tuesday
+
+**Trigger:** the Monday cycles. `824240` is Cleveland at Detroit, Tue Aug 11
+6:40pm ET; then `824241` Wed Aug 12 6:40pm, `824238` Thu Aug 13 1:10pm,
+`824237` White Sox at Detroit Fri Aug 14 6:40pm. No probable pitchers posted
+yet as of Saturday. Monday is off, so nothing needs a pick before then.
+
+Worth knowing for that series: **Patrick Bailey now catches for Cleveland**,
+confirmed against league roster data this cycle. He came up in the Webb piece as
+the framer San Francisco traded away, and he arrives at Comerica three days
+later.
+
+**Ends when:** `824240` has a row committed before 6:40pm ET Tuesday.
 
 ## Standing
 

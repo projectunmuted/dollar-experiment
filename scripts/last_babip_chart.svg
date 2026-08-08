@@ -1,0 +1,29 @@
+# Troy Melton: .191, rank 1 of 141, 74.0 IP, ERA 1.58
+# Logan Webb: .274, rank 49 of 141, 125.0 IP, ERA 3.74
+<svg viewBox="0 0 640 306" width="100%" role="img" aria-labelledby="babip-title" style="max-width:640px;height:auto;font-family:ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif">
+<title id="babip-title">Batting average on balls in play, distance from the median starting pitcher</title>
+<text x="0" y="16" fill="var(--fg)" font-size="13" font-weight="600">Batting average on balls in play, vs the median starter</text>
+<text x="0" y="34" fill="var(--muted)" font-size="11">141 pitchers with 70+ innings and 10+ starts in 2026. The line is the median, .287. Left of it, balls in play are finding gloves.</text>
+<line x1="367.0" y1="40" x2="367.0" y2="278.0" stroke="var(--rule)" stroke-width="2"/>
+<text x="126" y="61.0" text-anchor="end" fill="var(--fg)" font-size="12.5" font-weight="700">Troy Melton</text>
+<path d="M365.0,46H167.44444444444446A4.0,4.0 0 0 0 163.44444444444446,50.0V64.0A4.0,4.0 0 0 0 167.44444444444446,68H365.0Z" fill="var(--chart-pos)"><title>Troy Melton: BABIP .191 over 74.0 innings, ERA 1.58. Median is .287.</title></path>
+<text x="155.4" y="61.0" text-anchor="end" fill="var(--muted)" font-size="12" font-variant-numeric="tabular-nums" font-weight="700">.191</text>
+<text x="126" y="95.0" text-anchor="end" fill="var(--fg)" font-size="12.5">Yoshinobu Yamamoto</text>
+<path d="M365.0,80H222.57407407407408A4.0,4.0 0 0 0 218.57407407407408,84.0V98.0A4.0,4.0 0 0 0 222.57407407407408,102H365.0Z" fill="var(--chart-pos)" opacity="0.55"><title>Yoshinobu Yamamoto: BABIP .217 over 133.7 innings, ERA 2.76. Median is .287.</title></path>
+<text x="210.6" y="95.0" text-anchor="end" fill="var(--muted)" font-size="12" font-variant-numeric="tabular-nums">.217</text>
+<text x="126" y="129.0" text-anchor="end" fill="var(--fg)" font-size="12.5">Trey Yesavage</text>
+<path d="M365.0,114H224.69444444444446A4.0,4.0 0 0 0 220.69444444444446,118.0V132.0A4.0,4.0 0 0 0 224.69444444444446,136H365.0Z" fill="var(--chart-pos)" opacity="0.55"><title>Trey Yesavage: BABIP .218 over 93.7 innings, ERA 3.65. Median is .287.</title></path>
+<text x="212.7" y="129.0" text-anchor="end" fill="var(--muted)" font-size="12" font-variant-numeric="tabular-nums">.218</text>
+<text x="126" y="163.0" text-anchor="end" fill="var(--fg)" font-size="12.5">Jacob Misiorowski</text>
+<path d="M365.0,148H241.65740740740745A4.0,4.0 0 0 0 237.65740740740745,152.0V166.0A4.0,4.0 0 0 0 241.65740740740745,170H365.0Z" fill="var(--chart-pos)" opacity="0.55"><title>Jacob Misiorowski: BABIP .226 over 127.0 innings, ERA 1.63. Median is .287.</title></path>
+<text x="229.7" y="163.0" text-anchor="end" fill="var(--muted)" font-size="12" font-variant-numeric="tabular-nums">.226</text>
+<text x="126" y="197.0" text-anchor="end" fill="var(--fg)" font-size="12.5">Martín Pérez</text>
+<path d="M365.0,182H256.50000000000006A4.0,4.0 0 0 0 252.50000000000006,186.0V200.0A4.0,4.0 0 0 0 256.50000000000006,204H365.0Z" fill="var(--chart-pos)" opacity="0.55"><title>Martín Pérez: BABIP .233 over 100.3 innings, ERA 3.14. Median is .287.</title></path>
+<text x="244.5" y="197.0" text-anchor="end" fill="var(--muted)" font-size="12" font-variant-numeric="tabular-nums">.233</text>
+<text x="126" y="231.0" text-anchor="end" fill="var(--fg)" font-size="12.5">Keider Montero</text>
+<path d="M365.0,216H256.50000000000006A4.0,4.0 0 0 0 252.50000000000006,220.0V234.0A4.0,4.0 0 0 0 256.50000000000006,238H365.0Z" fill="var(--chart-pos)" opacity="0.55"><title>Keider Montero: BABIP .233 over 122.3 innings, ERA 3.38. Median is .287.</title></path>
+<text x="244.5" y="231.0" text-anchor="end" fill="var(--muted)" font-size="12" font-variant-numeric="tabular-nums">.233</text>
+<text x="126" y="265.0" text-anchor="end" fill="var(--fg)" font-size="12.5">Logan Webb</text>
+<path d="M365.0,250H343.4351851851853A4.0,4.0 0 0 0 339.4351851851853,254.0V268.0A4.0,4.0 0 0 0 343.4351851851853,272H365.0Z" fill="var(--chart-pos)" opacity="0.55"><title>Logan Webb: BABIP .274 over 125.0 innings, ERA 3.74. Median is .287.</title></path>
+<text x="331.4" y="265.0" text-anchor="end" fill="var(--muted)" font-size="12" font-variant-numeric="tabular-nums">.274</text>
+</svg>

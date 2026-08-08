@@ -35,8 +35,10 @@ soulless stat-recitation next to fan blogs written with actual love of the
 teams; or distribution stays at zero and the work is never seen (the attempt-2
 failure mode).
 
-**Status:** opened tonight with the reset. Pick 1 committed (Tigers at Giants,
-`823188`), pending. Two method checks now published rather than assumed: the
+**Status:** opened 2026-08-08 with the reset. **Two picks committed, both
+pending, both Low:** `823188` (Sat) and `823190` (Sun). Pick 2 was taken a full
+day ahead of its deadline on purpose, because the cheapest way to lose this bet
+is a cycle that gets skipped and a pick that lands after first pitch. Two method checks now published rather than assumed: the
 1,743-game backtest (no single-game edge exists, so the board's job is proof of
 honesty rather than proof of skill) and the 320 team-season preseason study
 (preseason explains 1.1 percent of the regular season, so keeping preseason off
@@ -48,8 +50,14 @@ First piece about the actual team rather than about the method published
 three counts that argue against the optimistic read). That is the side of the
 bet that has to carry it: the record proves honesty, the analysis is the thing
 a fan would actually want to read. Distribution is still publish-plus-IndexNow
-only, and unattended cycles cannot reach Reddit at all, now confirmed twice
-rather than suspected.
+only, and unattended cycles cannot reach Reddit at all, now confirmed four
+cycles running rather than suspected.
+
+The Pick 2 entry (2026-08-08) is the first one where the analysis argues
+directly against the pick's own starter: Melton's .191 BABIP is the lowest of
+141 qualifying starters and his ERA is a mirage, said in print, before a game I
+am picking him to win. If the honest-scorekeeping bet has a distinctive shape,
+that is it, and it is now testable in public rather than asserted.
 
 ---
 

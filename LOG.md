@@ -4,6 +4,84 @@ Newest at top.
 
 ---
 
+## 2026-08-08 (Saturday, 5:49pm ET) — Pick 2 is on the board a day early, and the pitcher I am counting on has the luckiest line in baseball
+
+**Nothing to grade.** `823188` was still `Scheduled` for 7:15pm ET, confirmed by
+fetching that exact id. The 9:48pm cycle will probably catch it In Progress; the
+5:48am Sunday cycle grades it.
+
+**So the cycle went to Pick 2 early: `823190`, Tigers at Giants, Sunday 4:05pm
+ET, Melton vs Webb. Tigers win, Low.** Strictly it was not due. Cadence is
+`PT8H` (verified against the live Scheduled Task again, not the doc), so the
+5:48am and 1:48pm Sunday cycles both land before first pitch. Taking it now
+costs a few hours of lineup information and buys immunity from a skipped cycle.
+That trade is worth making for a record whose entire value is that no pick was
+ever late.
+
+**The finding, and it is a good one.** Troy Melton is 7-1 with a **1.58 ERA**,
+a 0.91 WHIP and a **.170** opponent average, and his BABIP is **.191** — the
+**lowest of all 141 pitchers** in MLB with 70+ innings and 10+ starts. Median is
+.287. Second place is Yamamoto at .217, and the Melton-to-Yamamoto gap is nearly
+as wide as Yamamoto-to-twentieth. He strikes out 7.78 per nine, which is
+ordinary, and has already allowed 8 home runs in 74 innings. The 1.58 is not
+what he is.
+
+**So the piece argues against its own starter for a third of its length and
+takes Detroit anyway**, because Logan Webb is worse right now than the name
+suggests: **5.45 over his last six starts, 6.59 across all of July.** Knee
+bursitis in May, strikeout rate down to 20.2 percent, career worst 48.6 percent
+hard hit rate, and the framer who caught him traded to Cleveland. Underneath it
+all Detroit is a 66-win team by run differential (528 scored, 451 allowed) and
+San Francisco is 49-67.
+
+**Two Lows in two picks, and I wrote down the rule rather than letting it look
+like a tic.** High is reserved for an edge unusual enough that missing should
+embarrass me. A better team beating a worse team in one baseball game is a coin
+flip with a thumb on it. If every pick were High the label would be worth
+nothing by October.
+
+**Three things I got wrong on the way and caught before publishing:**
+
+- **I nearly cited the wrong article for a number I had computed myself.** The
+  draft attributed Webb's July ERA to an NBC Sports piece that was about his
+  *April*. Removed; the figure is computed from his game log and the sourcing
+  note now says so.
+- **The "7.54 July ERA" going around is four starts, not five.** A Yardbarker
+  piece published before his July 29 start had it, along with a "first winless
+  month of his career" angle. He then beat Milwaukee on July 29. Full July is
+  **6.59** and he went 1-2. Quoting the stale figure would have been a wrong
+  number in an honesty-branded publication, which is the one unrecoverable
+  mistake here.
+- **Melton is not a rookie** in the way a search summary implies, and I dropped
+  the word. 45.2 innings in 2025, debut July 23 that year. Called him what is
+  checkable instead: 25 years old, sixteen career starts.
+
+**Built `scripts/babip_chart.py`**, importing `bar_path` from `pythag_chart.py`
+rather than copying it. Same idea as the last chart: generated from live data
+every run, so a published number cannot drift from the number behind it. It
+takes `--highlight` and `--also` so a comparison pitcher can be pinned into the
+frame wherever he ranks, which is how Webb's .274 ended up in the same picture.
+
+**Distribution:** IndexNow accepted the homepage and the new entry (HTTP 200).
+Both are live on detroitsportsreporter.com and were fetched back to confirm the
+content, not just the status.
+
+**Failed this cycle, honestly:**
+
+- **Reddit is 403 from this machine, fourth cycle running.** Both the thread
+  JSON for `1viuuv9` and a plain subreddit listing, with a browser user agent.
+  The due item to read the comments on the live post could not be worked at all.
+  It is now noted in `WOODWARD-TODO.md` as blocked rather than pending, with an
+  instruction to stop re-testing hopefully.
+- **Which means the sweep was news only, not fanbase.** Half the intended
+  sweep is unavailable to every unattended cycle, and no entry has yet been
+  shaped by an actual reader objection.
+- **No probable pitchers are posted for the Cleveland series**, so nothing could
+  be pre-drafted for Tuesday beyond queuing the ids.
+
+**Next:** grade `823188`, then `823190`, then pick `824240` before 6:40pm ET
+Tuesday.
+
 ## 2026-08-08 (Saturday, midday) — The schedule had quietly drifted to 5 hours
 
 He asked when the next cycle was. The registered Scheduled Task said every
