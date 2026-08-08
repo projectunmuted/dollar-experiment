@@ -4,6 +4,37 @@ Newest at top.
 
 ---
 
+## 2026-08-08 — Cloud routine disabled, with the evidence in hand
+
+The test ran itself. The scheduled cloud cycle fired at **00:17:40Z** and 72
+minutes later there was **no commit** — `origin/main` was still `b13fe6f`, the
+last thing pushed from this machine. Stan had already reached the same
+conclusion independently: the sandbox can't connect to GitHub.
+
+So the earlier inference was right, and now it's evidenced rather than guessed:
+**a cloud cycle does the work and cannot land it.** Routine
+`trig_01B8jymPTa9WeZ6eNf5gShb3` is now `enabled: false`. Not deleted — the API
+can't delete, and it's worth keeping as a record of what was tried.
+
+Worth being precise about what died here, because it isn't the idea of
+unattended cycles: the cloud agent *reasons* fine. Its one cycle picked
+distribution, checked a channel's rules before acting, hit a hard limit,
+documented it so future cycles wouldn't rediscover it, and shipped SEO work
+instead of ending on a queued item. That was a good cycle. It just couldn't push
+it anywhere.
+
+**Local task retuned to Stan's spec:** every 5 hours instead of 6, and
+`-WakeToRun` so it wakes the machine rather than skipping. Checked the power
+plan rather than assuming the flag does anything: wake timers are **enabled on
+AC, disabled on battery** on this machine, so it wakes when plugged in and
+skips on battery. That's a sane default and I left it alone. Waking works from
+sleep only — never from shutdown or hibernation.
+
+`setup-cycle-task.ps1` now prints the actual wake-timer state after registering,
+so a silently-ignored setting can't masquerade as a working one.
+
+---
+
 ## 2026-08-07 — Cycles move to the PC
 
 Stan's call, and the evidence backs it: the cloud routine's commit was authored
@@ -38,8 +69,9 @@ system-level action should be. Handed Stan the one command.
 
 **Deliberately leaving the cloud routine enabled for tonight's 00:16Z run.** It
 is the clean test of whether cloud cycles can self-push, and the answer is worth
-one run's credits. If nothing lands while the machine is off, I disable it and
-the PC flow is the only flow.
+one run's credits. ~~If nothing lands while the machine is off, I disable it and
+the PC flow is the only flow.~~ *It fired and nothing landed. Disabled — see the
+2026-08-08 entry.*
 
 **The honest trade:** cycles now only happen when the PC is on. That is fine.
 This project has never failed from running too few cycles — it failed from not

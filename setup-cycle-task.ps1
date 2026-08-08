@@ -1,6 +1,6 @@
 <#
 Registers (or re-registers) the Windows Scheduled Task that runs one cycle of
-the Dollar Experiment every 6 hours.
+the Dollar Experiment every 5 hours.
 
     powershell -File setup-cycle-task.ps1
 
@@ -8,9 +8,13 @@ Deliberate choices:
 
 - LogonType Interactive: runs only while Stan is logged on. "Run whether user is
   logged on or not" needs a stored password, which I can't enter and wouldn't
-  want stored anyway.
-- No WakeToRun and no StartWhenAvailable-on-battery: this should never wake the
-  machine or drain it. If the PC is off at fire time, the cycle is skipped.
+  want stored anyway. A locked screen is still logged on, so this is compatible
+  with waking from sleep.
+- WakeToRun: wakes the machine to run the cycle (Stan asked for this on
+  2026-08-07). Two caveats worth knowing — it only wakes from *sleep*, never
+  from full shutdown or hibernation, and Windows ignores wake timers when the
+  power plan disables them, which is the default on battery for many laptops.
+  See the note this script prints after registering.
 - StartWhenAvailable: if the PC was off at fire time, run once at the next
   opportunity rather than silently skipping until the following window.
 - ExecutionTimeLimit 1 hour: a wedged cycle gets killed rather than blocking
@@ -33,12 +37,13 @@ $action = New-ScheduledTaskAction `
     -Argument "-NoProfile -NonInteractive -ExecutionPolicy Bypass -File `"$Script`"" `
     -WorkingDirectory $Repo
 
-# Every 6 hours, forever, starting 5 minutes from now.
+# Every 5 hours, forever, starting 5 minutes from now.
 $trigger = New-ScheduledTaskTrigger -Once -At (Get-Date).AddMinutes(5) `
-    -RepetitionInterval (New-TimeSpan -Hours 6)
+    -RepetitionInterval (New-TimeSpan -Hours 5)
 
 $settings = New-ScheduledTaskSettingsSet `
     -StartWhenAvailable `
+    -WakeToRun `
     -DontStopIfGoingOnBatteries `
     -AllowStartIfOnBatteries `
     -ExecutionTimeLimit (New-TimeSpan -Hours 1) `
@@ -60,3 +65,27 @@ $i = $t | Get-ScheduledTaskInfo
 Write-Output "registered '$TaskName'"
 Write-Output "  state:    $($t.State)"
 Write-Output "  next run: $($i.NextRunTime)"
+Write-Output "  every:    5 hours, wakes the machine from sleep"
+Write-Output ""
+
+# WakeToRun is only honoured if the active power plan allows wake timers. Report
+# the truth rather than letting a silently-ignored setting look like it worked.
+foreach ($ctx in @('AC', 'DC')) {
+    $q = powercfg /query SCHEME_CURRENT SUB_SLEEP RTCWAKE 2>$null
+    if (-not $q) { break }
+}
+$wake = powercfg /query SCHEME_CURRENT SUB_SLEEP RTCWAKE 2>$null
+if ($wake) {
+    $ac = ($wake | Select-String 'Current AC Power Setting Index:\s*(0x[0-9a-f]+)').Matches.Groups[1].Value
+    $dc = ($wake | Select-String 'Current DC Power Setting Index:\s*(0x[0-9a-f]+)').Matches.Groups[1].Value
+    $name = @{ '0x00000000' = 'Disabled'; '0x00000001' = 'Enabled'; '0x00000002' = 'Important events only' }
+    Write-Output "Wake timers - plugged in: $($name[$ac]); on battery: $($name[$dc])"
+    if ($ac -eq '0x00000000') {
+        Write-Output "  WARNING: wake timers are DISABLED while plugged in, so the task will"
+        Write-Output "  NOT wake this machine. Enable with:"
+        Write-Output "    powercfg /setacvalueindex SCHEME_CURRENT SUB_SLEEP RTCWAKE 1"
+        Write-Output "    powercfg /setactive SCHEME_CURRENT"
+    }
+}
+Write-Output ""
+Write-Output "Note: waking works from sleep only - never from shutdown or hibernation."
