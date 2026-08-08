@@ -4,6 +4,72 @@ Newest at top.
 
 ---
 
+## 2026-08-08 (Saturday, 12:49pm ET) — The Lions draft is done three days early, and the tip rail was written down wrong in two files
+
+**Nothing to grade.** Pick 1 (`gamePk 823188`) is still `Scheduled` for 7:15pm
+ET, confirmed by fetching that exact id. **Nothing new to pick.** The only other
+Detroit game on the board is `823190`, Sunday 4:05pm ET, roughly 27 hours out and
+therefore past the cycle after next; the Sunday morning cycle takes it with room.
+The one after that is Cleveland at Detroit Tuesday. Verified against the schedule
+endpoint, not assumed.
+
+**So the cycle went to the item due Tuesday: the condensed Lions post.** It is in
+`drafts/2026-08-08-lions-preseason.md` with a two-table PNG beside it, and the
+ask in `ASK-HUMAN.md` now says it is ready instead of saying it is coming.
+Finishing it Saturday rather than Tuesday matters more than it sounds: he posts
+it Wednesday or Thursday, and a draft that only exists on the due date has no
+slack in it if a cycle gets skipped or a number turns out to be wrong.
+
+**I re-derived every number instead of copying them out of the entry**, by
+re-running `scripts/preseason_signal.py`. All ten Detroit rows and all five
+group rows came back identical. That was the point of running it; copying is
+how a wrong figure survives into a second publication.
+
+**The post leads with the inversion and then argues against itself twice**,
+which is the only reason it is worth posting:
+
+- Undefeated-in-August teams went **.466**. Winless-in-August teams went
+  **.475**. Correlation +0.103, about one percent of the variance.
+- The long entry buried the mechanism, so the short version leads on it: good
+  teams have the least to figure out in August, rest their starters, and lose
+  games nobody remembers. Winning in August is mild evidence a roster needed the
+  reps.
+- **The inversion does not hold for Detroit specifically.** 2019 and 2021 were
+  the two worst Augusts on the table and also the two worst seasons. Saying so
+  costs the tidy version of the post and is the difference between analysis and
+  a stat someone found.
+
+**Built `scripts/make_lions_table_image.py`** on top of the existing
+`make_table_image.py` rather than forking it. The only change to the original
+was turning its single highlighted row into a set a caller can override, so the
+Tigers image still renders from the same code.
+
+**The thing I did not expect to find: the tip rail was written down wrong.**
+`build.py` renders `ko-fi.com/detroitsportsreporter`, which is the live page the
+human connected payments to. `CYCLE.md` and `README.md` both still named
+`ko-fi.com/projectunmuted`, which is dead. Nothing was broken on the site, but
+`CYCLE.md` is the brief a future cycle reads as authoritative, and a cycle that
+"fixed" `build.py` to match the brief would have pointed the only money rail in
+the project at a dead page and had no way to notice, since Ko-fi 403s this
+machine. Both files now name the live rail and say the old one is dead.
+
+**Failed this cycle, honestly:**
+
+- **Reddit is 403 from this machine, third cycle running.** The thread JSON for
+  `1viuuv9` came back 403 with a browser user agent too, so the due item to read
+  the comments on the live post could not be worked at all. That item stays open
+  and moves at the first live session. This is settled fact now, not a surprise
+  to re-discover: unattended cycles cannot read or post Reddit.
+- **Which means r/detroitlions' rules are still unchecked**, and the draft says
+  so in its own header rather than pretending otherwise. If the sub bans AI-made
+  content the way r/motorcitykitties Rule 5 does, it does not get posted there.
+- **No new distribution this cycle.** Nothing was published, so there was
+  nothing to ping IndexNow about.
+
+**Next:** grade `823188` once it goes Final, pick `823190` before 4:05pm ET
+Sunday, and read the r/motorcitykitties thread the first time a live session
+makes it possible.
+
 ## 2026-08-08 (Saturday afternoon) — Two queues instead of one, and the first post is live on Reddit
 
 **The human posted the Tigers xW-L piece to r/motorcitykitties himself.** Image

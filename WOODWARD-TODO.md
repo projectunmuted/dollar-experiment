@@ -63,34 +63,19 @@ What to do with it:
 **Ends when:** the thread stops drawing comments for two straight days, and
 everything learned is in `LOG.md`.
 
-### By Tuesday 2026-08-11: condensed Lions draft ready for r/detroitlions
+### Next cycle: grade Pick 1, and pick `823190` by Sunday morning
 
-**The sub is r/detroitlions, not r/Lions.** r/Lions is about the animal and its
-sidebar points football fans elsewhere. Checked 2026-08-08.
+**Trigger:** `823188` (Tigers at Giants, Sat Aug 8 7:15pm ET) goes Final. As of
+this cycle, 12:49pm ET Saturday, it was still `Scheduled`. Fetch that exact id,
+confirm Final, then update the `PICKS.md` row plus the running record and publish
+a short graded note. Never grade off a box score found any other way.
 
+**Then pick `823190`**, Tigers at Giants, Sunday Aug 9 4:05pm ET (Melton vs
+Webb), which has no row yet. It is outside this cycle's look-ahead but inside the
+Sunday morning cycle's, and a pick after first pitch is worth nothing.
 
-**Trigger:** due end of the Tuesday cycles. The human posts it Wednesday
-2026-08-12 or Thursday 2026-08-13. Thursday is the preseason opener at
-Cincinnati, 7:00pm ET, so a Thursday post lands the same day as the game.
-
-Source: `entries/2026-08-08-preseason-means-nothing.md`, the eleven-year
-preseason backtest. The human likes it and wants a short version.
-
-- Condense the way the Tigers post was condensed: the finding, the number, the
-  point. Preseason record explains about one percent of the regular season, and
-  the teams that went undefeated in August did worse than the teams that went
-  winless. That inversion is the whole post.
-- Consider the table-as-image treatment again; it worked
-  (`make_table_image.py` pattern, drafts folder).
-- **Do not post it.** Leave it in `drafts/` and tell the human it is ready.
-- **Check r/detroitlions rules in the session where it gets posted, not from
-  memory.** r/motorcitykitties, r/baseball and r/mlb all ban AI-written posts;
-  r/detroitlions has not been checked yet. If it bans them too, say so plainly and name the subs
-  that do not.
-- No em dashes, no percentages as confidence, no link to the site.
-
-**Ends when:** a dated draft file exists in `drafts/` and the human has been
-told.
+**Ends when:** Pick 1 carries a result and a grade, and `823190` has a row
+committed before 4:05pm ET Sunday.
 
 ## Standing
 
@@ -112,4 +97,26 @@ and what their rules say. He should never have to ask where the draft is.
 
 ## Done
 
-*(nothing yet; first items above were created 2026-08-08)*
+### 2026-08-11 item, finished early on 2026-08-08: condensed Lions draft for r/detroitlions
+
+Done three days ahead of the due date because the Saturday afternoon cycle had
+nothing to grade and nothing to pick. `drafts/2026-08-08-lions-preseason.md`
+plus `drafts/2026-08-08-lions-preseason-tables.png`, and the ask is queued for
+him.
+
+What came of it: the post leads on the inversion (undefeated-in-August teams
+went .466, winless-in-August teams went .475) and adds the mechanism, which the
+long entry buried, that good teams rest starters and lose meaningless games.
+Every figure was re-derived by re-running `scripts/preseason_signal.py` rather
+than copied out of the entry, and the Detroit table got a line saying the
+inversion does *not* hold for Detroit specifically, since 2019 and 2021 were the
+worst Augusts and also the worst seasons. Leaving that out would have been the
+cheap version.
+
+`scripts/make_lions_table_image.py` reuses `make_table_image.py`'s drawing code
+rather than forking it; the only change to the original was turning the
+single-row highlight into a set that a caller can override.
+
+**The rules check could not be done and the draft says so at the top.** Reddit
+403s this machine, so whoever posts it reads r/detroitlions' rules in the
+browser first, and does not post if the sub bans AI-made content.

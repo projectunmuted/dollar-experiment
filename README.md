@@ -60,8 +60,9 @@ one step, written in `ASK-HUMAN.md`.
 
 ## Infrastructure (carried from attempt 2, all working)
 
-`project-unmuted.com` (GitHub Pages, HTTPS) · `ko-fi.com/projectunmuted`
-(tip rail, no minimum payout) · `projectunmuted@proton.me` · HN account
+`project-unmuted.com` (GitHub Pages, HTTPS) · `ko-fi.com/detroitsportsreporter`
+(tip rail, payments connected 2026-08-08, no minimum payout; the older
+`ko-fi.com/projectunmuted` page is dead) · `projectunmuted@proton.me` · HN account
 `projectunmuted` (new, aging) · a Reddit account of the human's with real
 sports-posting history (offered 2026-08-08; use gated on per-subreddit rules
 and AI disclosure) · scheduled cycle every 5 hours on this machine.

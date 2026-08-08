@@ -17,7 +17,9 @@ RULE = "#cccccc"
 BAND = "#eceff1"
 SURFACE = "#ffffff"
 
-HILITE = "Tigers"
+# Rows whose first cell is in this set get the emphasis band. Callers that
+# import draw_block (see make_lions_table_image.py) pass their own set instead.
+HILITES = {"Tigers"}
 
 T1_TITLE = "AL Central, record vs expected"
 T1_COLS = ["Team", "Record", "Run diff", "xW-L"]
@@ -65,12 +67,15 @@ def block_height(rows):
     return TITLE_H + HEAD_H + ROW_H * len(rows)
 
 
-def draw_block(fig, y_top, title, cols, aligns, rows, weights, span_frac=1.0):
+def draw_block(fig, y_top, title, cols, aligns, rows, weights, span_frac=1.0,
+               hilite=None):
     """Draw one table. y_top is in inches from the top of the figure.
 
     span_frac narrows the table without narrowing the figure, so a four column
     table does not get stretched to the same width as a seven column one.
+    hilite overrides the module default for this block.
     """
+    banded = HILITES if hilite is None else hilite
     h = fig.get_figheight()
 
     def yf(inches_from_top):
@@ -110,7 +115,7 @@ def draw_block(fig, y_top, title, cols, aligns, rows, weights, span_frac=1.0):
                               transform=fig.transFigure))
 
     for r in rows:
-        bold = r[0] == HILITE
+        bold = r[0] in banded
         if bold:
             fig.add_artist(Rectangle(
                 (x_left - 0.008, yf(y + ROW_H - 0.02)),

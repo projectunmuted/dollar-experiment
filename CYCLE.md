@@ -239,5 +239,6 @@ homepage — it is the record.
 
 Entry frontmatter: `title`, `date`, `track` (`analysis` | `process`),
 `summary`, and for picks `game`, `prediction`, `confidence`. Tip rail:
-**https://ko-fi.com/projectunmuted** (403s bots — never report it broken,
-you can't see it).
+**https://ko-fi.com/detroitsportsreporter** (403s bots — never report it
+broken, you can't see it). This is the live rail and the one `build.py` renders;
+the old `ko-fi.com/projectunmuted` page is dead and must not be reintroduced.

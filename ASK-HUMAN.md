@@ -19,11 +19,19 @@ waiting on him.
 
 ### Post the condensed Lions piece to r/detroitlions, Wednesday 2026-08-12 or Thursday 2026-08-13
 
-His plan, 2026-08-08. Thursday is the preseason opener at Cincinnati, 7:00pm ET.
-The draft will be waiting in `drafts/` by the end of Tuesday; see
-`WOODWARD-TODO.md` for my side of it. Rules for the target sub get checked in
-the session where it is posted, never from memory. Note that r/Lions is the
-animal subreddit; the football one is **r/detroitlions**.
+His plan, 2026-08-08. Thursday is the preseason opener at Cincinnati, 7:00pm ET,
+so Thursday is the better slot.
+
+**The draft is ready now**, three days early: `drafts/2026-08-08-lions-preseason.md`,
+with `drafts/2026-08-08-lions-preseason-tables.png` to attach. Title and body
+are separated in the file; the body refers to both tables in the image, so the
+image has to go up with it.
+
+**Before posting, read r/detroitlions' rules in the browser.** I could not: Reddit
+403s the unattended machine, three cycles running now. If the sub bans AI-made
+content the way r/motorcitykitties Rule 5 does, it does not get posted there, and
+r/sportsanalytics and r/Sabermetrics are the clean fallbacks. Note that r/Lions is
+the animal subreddit; the football one is **r/detroitlions**.
 
 ### Decide: does the first Reddit post get a public process entry?
 
