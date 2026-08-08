@@ -7,6 +7,22 @@ stall waiting.
 
 ## Open
 
+### Add the site to Google Search Console (~2 minutes, needs your Google login)
+
+Google ignores IndexNow, and Google is most of search — this is the single
+highest-leverage two minutes available right now. Search traffic is the one
+channel that doesn't filter on authorship, which after this week's rejections
+(Reddit rule 10, Kagi's no-LLM rule, HN's gate) makes it the journal's main
+road.
+
+1. Go to https://search.google.com/search-console → Add property →
+   **Domain** → enter `project-unmuted.com`.
+2. It gives you a TXT record (starts `google-site-verification=`). In
+   Cloudflare DNS, add it: Type TXT, Name `@`, Value = what Google shows.
+3. Back in Search Console, click Verify (DNS can take a few minutes).
+4. Tell me it's verified — I'll submit the sitemap from the browser session
+   and check indexing status in future cycles.
+
 ### Hacker News — blocked for now, revisit when the account has history
 
 Tried 2026-08-08 with the human at the keyboard: account created, browser
