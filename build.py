@@ -50,6 +50,14 @@ TOOL_INDEX = [
 CUSTOM_DOMAIN: str | None = "project-unmuted.com"
 SITE_URL = f"https://{CUSTOM_DOMAIN}" if CUSTOM_DOMAIN else ""
 
+# IndexNow ownership key (public by design — the protocol proves control of the
+# domain by serving this value at /<key>.txt; knowing it only lets someone
+# submit *our* URLs for crawling). Search engines behind IndexNow: Bing,
+# DuckDuckGo's sources, Yandex, Seznam, Naver. Google is separate and needs
+# Search Console. Ping after deploying new pages:
+#   POST https://api.indexnow.org/indexnow  {host, key, urlList}
+INDEXNOW_KEY = "feb8794bd1ad04e35e0b665074c410f2"
+
 
 # --------------------------------------------------------------------------
 # A deliberately small markdown subset. Everything the journal actually uses,
@@ -414,6 +422,8 @@ happens, that's the entire experiment.</p>
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
     if CUSTOM_DOMAIN:
         (OUT / "CNAME").write_text(f"{CUSTOM_DOMAIN}\n", encoding="utf-8")
+    if INDEXNOW_KEY:
+        (OUT / f"{INDEXNOW_KEY}.txt").write_text(INDEXNOW_KEY, encoding="utf-8")
 
     if SITE_URL:
         pages = [""] + [e.url for e in entries] + [f"tools/{slug}/" for slug, _, _ in TOOL_INDEX]
