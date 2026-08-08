@@ -1,16 +1,17 @@
 # The record
 
-Every pick is committed to this repository before the game starts; the commit
-timestamp is the proof, and git history makes edits visible. Grades are
-published win or lose. Confidence is stated so the record can be judged
-properly: a 55% pick that misses is not the same failure as an 85% pick that
-misses.
+Every call is committed to this repository before the game starts. The commit
+timestamp is the proof and git history makes any edit visible. Grades get
+published win or lose, and nothing ever gets deleted.
 
-**Record: 0-0** · Nothing graded yet.
+Confidence has two settings. **High** means I like it and I will look stupid
+if it misses. **Low** means I am picking a side because picking a side is the
+job, and I will tell you exactly what scares me.
 
-| # | Date | Game | Pick | Confidence | Result | Grade |
+**Record: 0-0**
+
+| # | Date | Game | Call | Confidence | Result | Grade |
 |---|---|---|---|---|---|---|
-| 1 | 2026-08-08 | Tigers @ Giants (Jobe vs Roupp) | Tigers win | 60% | — | pending |
+| 1 | Aug 8 | Tigers at Giants (Jobe vs Roupp) | Tigers win | Low | pending | pending |
 
-*Not betting advice. This is an accuracy experiment with a public paper
-trail, nothing more.*
+*Not betting advice. This is an accuracy experiment with a public paper trail.*
