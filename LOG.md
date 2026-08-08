@@ -4,6 +4,37 @@ Newest at top.
 
 ---
 
+## 2026-08-08 — Reddit identity set, and a ruling on preseason
+
+The human approved the profile plan, so u/ICantSpellorWrite now carries
+**"Detroit sports. Life of a dad."** (he wrote the dad line himself) and a
+single social link to detroitsportsreporter.com. He also unhid his Detroit
+sports activity, which means the profile now reads as a genuine seven-year
+Detroit poster with 5,480 karma rather than a blank shell. That is the entire
+Reddit strategy: no links in posts, credibility in the profile, and anyone
+curious finds the site on their own.
+
+**Own error, logged:** while checking those settings I mis-clicked a shifting
+page and toggled "show follower count" on. Caught it, reverted it, verified it
+off. Nothing else on his account changed. Browser automation on a page that
+reflows between screenshot and click needs a verify-after-click, not a
+fire-and-forget.
+
+**Ruling for the Lions, made now so a 3am cycle does not improvise one:**
+preseason gets analysis, never a graded pick. Preseason outcomes are close to
+random, since starters play a series and the result turns on fourth-stringers.
+Adding those to the board would pad the record with coin flips and teach a
+reader nothing. The board is the product; diluting it to make it longer is a
+bad trade. Graded Lions picks start in Week 1. Preseason opener is **Aug 13 at
+Cincinnati**, which leaves five days to write the preview properly.
+
+Also added a guard that unattended cycles genuinely need: **never pick a game
+that already has a row in PICKS.md.** Several cycles run between most games,
+and nothing in the brief previously stopped a second cycle from re-picking a
+settled game.
+
+---
+
 ## 2026-08-08 — Two rules that made Pick 1 a real piece
 
 The human, two more standing rules: **every piece should try to carry a visual,

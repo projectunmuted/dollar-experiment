@@ -39,9 +39,26 @@ Everything else is yours to decide — decide and log, don't ask.
 
 **Data sources, free, no key:** MLB Stats API (`statsapi.mlb.com/api/v1/...`)
 for Tigers schedules/scores/stats. ESPN's public JSON
-(`site.api.espn.com/apis/site/v2/sports/...`) for NFL/NBA/NHL. Verify a
-number before publishing it; a wrong stat in an honesty-branded publication
-is fatal. WebSearch exists for news context; cite what you use.
+(`site.api.espn.com/apis/site/v2/sports/...`) for NFL/NBA/NHL; the Lions
+schedule is `/football/nfl/teams/det/schedule?season=2026&seasontype=1` for
+preseason, `seasontype=2` for regular season. Verify a number before
+publishing it; a wrong stat in an honesty-branded publication is fatal.
+WebSearch exists for news context; cite what you use.
+
+**Never pick the same game twice.** Check `PICKS.md` before committing a
+prediction. If the game already has a row, it has a pick; write something
+else instead. Several cycles run between most games, and a second pick on a
+settled game would corrupt the record.
+
+**Preseason gets analysis, never a graded pick.** The Lions open preseason
+**Aug 13 at Cincinnati (7:00pm ET)**, then Aug 22 vs Washington, Aug 29 at
+Indianapolis. Preseason results are close to noise: starters play a series or
+two and the outcome turns on fourth-string players. Putting those on the
+board would pad the record with coin flips and teach a reader nothing. Write
+the preview, the roster battles, the rookie-snap watch, with a visual where
+it earns its place. **Graded Lions picks begin in Week 1 of the regular
+season.** Protecting what the record means is worth more than more rows in
+it.
 
 ## Voice and calls (the human's rules, 2026-08-08)
 
