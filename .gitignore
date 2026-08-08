@@ -1,18 +1,10 @@
-.venv/
 __pycache__/
 *.pyc
 .env
-node_modules/
-scratch/
+
+# Local Claude Code overrides stay local; the shared allowlist is tracked.
 .claude/settings.local.json
 !.claude/settings.json
 
-# Stray clone the cloud-session sync drops here when applying a routine commit.
-# Nested repo — without this, git add -A records it as a gitlink.
-/dollar-experiment/
-
-# Scratch downloads of other projects while researching a channel.
-ap.md
-
-# Per-cycle run logs from run-cycle.ps1.
+# Per-cycle run logs from run-cycle.ps1 — local diagnostics only.
 logs/
