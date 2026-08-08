@@ -33,9 +33,10 @@ START = date(2026, 8, 8)
 REPO = "https://github.com/projectunmuted/dollar-experiment"
 KOFI = "https://ko-fi.com/projectunmuted"
 
-# IndexNow ownership key (public by design; proves domain control by serving
-# this value at /<key>.txt). Ping api.indexnow.org after publishing new pages.
-INDEXNOW_KEY = "feb8794bd1ad04e35e0b665074c410f2"
+# IndexNow ownership keys, one per domain (public by design; proves domain
+# control by serving the value at /<key>.txt). Ping api.indexnow.org after
+# publishing new pages. Covers Bing, DuckDuckGo's sources, Yandex, Seznam,
+# Naver. Google is separate and uses Search Console.
 
 
 @dataclass
@@ -49,7 +50,7 @@ class Site:
     custom_domain: str | None
     fallback_base: str       # canonical base until custom_domain is live
     footer_html: str
-    indexnow: bool
+    indexnow_key: str | None
     # Google Search Console HTML-file verification token, e.g.
     # "googleXXXX.html". Emitted at the site root; Google fetches it to prove
     # ownership. Must never be removed or verification lapses.
@@ -77,11 +78,11 @@ JOURNAL = Site(
         f'every number, and every failure is logged as it happened in the '
         f'<a href="{REPO}">public repository</a> — the commit timestamps are the '
         f'receipts. The sports side of this experiment lives at '
-        f'<a href="https://projectunmuted.github.io/detroitsportsreporter/">'
+        f'<a href="https://detroitsportsreporter.com/">'
         f'Detroit Sports Reporter</a>.</p>'
         f'<p><a href="{KOFI}">Tip a dollar</a> if any of this was worth one.</p>'
     ),
-    indexnow=True,
+    indexnow_key="feb8794bd1ad04e35e0b665074c410f2",
     google_verify="googleda5d6072f735384c.html",
 )
 
@@ -92,20 +93,23 @@ DSR = Site(
     out=ROOT / "docs_dsr",
     accent_light="#0b6bab",   # Honolulu-blue adjacent
     accent_dark="#6db3e8",
-    # Flip to "detroitsportsreporter.com" once the human buys it and points
-    # Cloudflare DNS at GitHub Pages (same records as the journal domain).
-    custom_domain=None,
+    # Live since 2026-08-08: apex A-records to GitHub's four Pages IPs,
+    # DNS-only (grey cloud). Setting this writes docs_dsr/CNAME, which is what
+    # tells Pages to serve the domain.
+    custom_domain="detroitsportsreporter.com",
     fallback_base="https://projectunmuted.github.io/detroitsportsreporter",
+    # Deliberately no AI or experiment framing here (the human's call,
+    # 2026-08-08: it muddies the read for a sports audience). The repository
+    # link stays because it is the product's proof, not a disclaimer. It is
+    # what makes "called before the game" verifiable, and anyone who follows
+    # it finds the whole story. Never announce unprompted, never deny if asked.
     footer_html=(
-        f'<p>Written by an AI agent as part of an open experiment: earn one '
-        f'dollar from honest sports analysis in six months. Every pick is '
-        f'committed to a <a href="{REPO}">public repository</a> before the game '
-        f'starts — the timestamps are the receipts — and the '
-        f'<a href="https://project-unmuted.com/">process journal</a> records how '
-        f'it\'s going. Nothing here is betting advice.</p>'
-        f'<p><a href="{KOFI}">Tip a dollar</a> if a pick or a piece was worth one.</p>'
+        f'<p>Every pick is committed to a <a href="{REPO}">public repository</a> '
+        f'before the game starts and graded after the final out. The commit '
+        f'timestamps are the receipts. Nothing here is betting advice.</p>'
+        f'<p><a href="{KOFI}">Leave a tip</a> if a pick or a piece was worth it.</p>'
     ),
-    indexnow=False,  # gets its own key once the domain is live
+    indexnow_key="ab1ce51275719ae3374e8b349b967087",
 )
 
 
@@ -412,8 +416,10 @@ def write_common(site: Site, entries: list[Entry], home: str) -> None:
     (site.out / ".nojekyll").write_text("", encoding="utf-8")
     if site.custom_domain:
         (site.out / "CNAME").write_text(f"{site.custom_domain}\n", encoding="utf-8")
-    if site.indexnow and INDEXNOW_KEY:
-        (site.out / f"{INDEXNOW_KEY}.txt").write_text(INDEXNOW_KEY, encoding="utf-8")
+    if site.indexnow_key:
+        (site.out / f"{site.indexnow_key}.txt").write_text(
+            site.indexnow_key, encoding="utf-8"
+        )
     if site.google_verify:
         token_line = "google-site-verification: " + site.google_verify
         (site.out / site.google_verify).write_text(token_line + "\n", encoding="utf-8")
@@ -488,19 +494,15 @@ def build_dsr(analysis: list[Entry]) -> None:
     picks_html = render(re.sub(r"^# .*\n", "", picks_md, count=1))
 
     about = (
-        '<div class="note">This site is run by an AI agent, openly, as part of '
-        'an experiment: earn one dollar from honest Detroit sports analysis in '
-        'six months. Every pick is committed to a '
-        f'<a href="{REPO}">public git repository</a> before first pitch — the '
-        'commit timestamp is the proof — and graded after the final out, win or '
-        'lose. The running record below is never edited, only added to. '
-        f'The experiment itself is journaled at '
-        '<a href="https://project-unmuted.com/">project-unmuted.com</a>.</div>'
+        '<div class="note">Every call goes on the board before the game starts, '
+        f'committed to a <a href="{REPO}">public repository</a> so the timestamp '
+        'proves it, and graded after the final out whether it hits or not. The '
+        'record below is never edited, only added to.</div>'
     )
     tip = tip_block(
-        "<strong>If a pick or a piece was worth a dollar, that's the whole "
-        "ask.</strong> One dollar from one stranger is this experiment's entire "
-        "goal. No subscriptions, no paywall, nothing else for sale."
+        "<strong>Free, and staying that way.</strong> No subscriptions, no "
+        "paywall, nothing for sale. If a call or a piece was worth something to "
+        "you, the tip jar is open."
     )
     home = (
         about

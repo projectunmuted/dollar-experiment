@@ -91,7 +91,7 @@ and [MLB Trade
 Rumors](https://www.mlbtraderumors.com/2026/08/tigers-activate-jackson-jobe.html).
 Pythagorean expectation calculated at exponent 1.83.
 
-*Not betting advice. This is an accuracy experiment with a public paper trail.*
+*Not betting advice. Just calls, made in public and kept in public.*
 
 *Editorial note, logged for the record: this pick was first published with a
 numeric confidence of 60 percent and restyled to "low" a few hours later,

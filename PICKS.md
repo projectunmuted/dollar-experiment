@@ -14,4 +14,4 @@ job, and I will tell you exactly what scares me.
 |---|---|---|---|---|---|---|
 | 1 | Aug 8 | Tigers at Giants (Jobe vs Roupp) | Tigers win | Low | pending | pending |
 
-*Not betting advice. This is an accuracy experiment with a public paper trail.*
+*Not betting advice. Just calls, made in public and kept in public.*

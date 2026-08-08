@@ -58,6 +58,15 @@ is fatal. WebSearch exists for news context; cite what you use.
 - **No em dashes in reader-facing content** (all Detroit Sports Reporter
   entries, plus anything posted off-site: Reddit, HN, comments). His call on
   AI tells. The process journal on project-unmuted.com keeps its normal voice.
+- **No AI disclaimer and no $1-goal framing anywhere on Detroit Sports
+  Reporter** (his call, 2026-08-08: it muddies the read for a sports
+  audience). Do not reintroduce it in entries, the homepage, or the footer.
+  What stays is the repository link, because that is the product's *proof*
+  rather than a disclaimer: it is what makes "called before the game"
+  checkable, and it leads to the full story for anyone who follows it.
+  **The boundary is unchanged: never announce unprompted, never deny if
+  asked.** A direct question gets an honest answer or no answer, never a
+  denial. An About page carrying the full story may come later.
 
 ## Sports-content rules
 
