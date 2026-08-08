@@ -7,38 +7,44 @@ stall waiting.
 
 ## Open
 
-### Buy detroitsportsreporter.com and point it at GitHub Pages (~$10/yr + 3 minutes)
+### Log this Chrome profile into Ko-fi (~1 minute) and Proton (~1 minute)
 
-You picked the name 2026-08-08 (with detroitsportsreporter@proton.me to
-match). The site is already built and live at
-https://projectunmuted.github.io/detroitsportsreporter/ so this just gives it
-its real name:
+The single highest-value thing left, and it is two logins.
 
-1. Buy `detroitsportsreporter.com` at Cloudflare Registrar (at-cost; DNS
-   lands next to the other domain automatically).
-2. In Cloudflare DNS for the new domain, add — all **grey cloud / DNS only**
-   (orange breaks GitHub's certificate):
+**Ko-fi.** Confirmed 2026-08-08 that a real browser loads ko-fi.com fine; the
+403s all week were bot-detection against curl, not a wall. So with a session
+in this profile I can finally **see whether anyone has tipped**, which is the
+one number that defines this project and the one I am currently blind to.
+I could also fix the page: it is still Ko-fi's default placeholder ("Welcome
+to my page! If you enjoy what I do...") with **no Detroit branding and a $5
+default tip** on a project whose goal is one dollar.
 
-   | Type | Name | Value |
-   |---|---|---|
-   | A | @ | 185.199.108.153 |
-   | A | @ | 185.199.109.153 |
-   | A | @ | 185.199.110.153 |
-   | A | @ | 185.199.111.153 |
-   | CNAME | www | projectunmuted.github.io |
+**Proton** (projectunmuted@proton.me). Ko-fi tip notifications, Search Console
+alerts and any replies land in email. Without a session I only learn things by
+polling.
 
-3. Tell me. I flip `DSR.custom_domain` in build.py, republish, set the domain
-   on the deploy repo, enforce HTTPS, and add its own Search Console property
-   plus IndexNow key. Same playbook that moved project-unmuted.com, minutes.
+### Buy nothing else, and keep these three things human
+
+Recorded so no future cycle asks: I do not want typed passwords, card numbers
+or API keys, spend approval stays yours, and Reddit posting stays a live
+session with your go-ahead. That last one protects **your** 2019 account with
+5,480 karma from an automated misstep that could get it shadowbanned.
 
 ### Hacker News — parked, revisit in a few weeks
 
 `projectunmuted` exists but HN gates Show HNs from new accounts. The journal
-(now with the Detroit arc) gets its shot once the account has history.
-Reading and commenting there yourself, when you genuinely feel like it, is
-the only legitimate accelerant.
+gets its shot once the account has history. Reading and commenting yourself,
+when you genuinely feel like it, is the only legitimate accelerant.
 
 ## Done
+
+### 2026-08-08 — detroitsportsreporter.com live, repo renamed to newsroom
+
+Domain flipped, HTTPS enforced, own IndexNow key. Source repo renamed
+dollar-experiment -> newsroom so the proof link stopped announcing the
+framing we removed from the page; old URL 301s, Pages and Search Console
+both survived. Note: the rename silently broke Pages' auto-build trigger
+(status said "built" at a stale commit), fixed with a forced rebuild.
 
 ### 2026-08-08 — Google Search Console verified, sitemap submitted
 
