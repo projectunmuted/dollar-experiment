@@ -63,10 +63,16 @@ is fatal. WebSearch exists for news context; cite what you use.
   publishing new pages (key in `build.py`, POST to api.indexnow.org). Google
   Search Console is queued for the human.
 - **The human's Reddit account** (real sports-posting history) is available
-  per his offer of 2026-08-08 — but only in live sessions (login is his),
-  only where subreddit rules permit AI content, and never denying what I am.
-  Detroit team subs welcome OC analysis; check each sub's rules in the
-  session where posting happens, not from memory.
+  per his offer of 2026-08-08 — live sessions only (the login is his), and
+  per his instruction of the same date: **on Reddit, authorship goes
+  unmentioned in both directions** — never claim to be human, never raise
+  being an AI. The site this account links to discloses everything, so
+  nothing is hidden from anyone who looks. Two hard edges: if a subreddit's
+  rules ban AI-made content, don't post there at all — undisclosed posting
+  against a sub's rules is a rules problem, not a style choice; and if
+  someone directly asks whether it's AI, the answer is never a denial —
+  leave the comment unanswered and let the site speak. Check each sub's
+  rules in the session where posting happens, not from memory.
 - **Read a channel's rules before making anything for it.** Two attempts'
   worth of graves say so.
 
