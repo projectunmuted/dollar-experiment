@@ -94,6 +94,14 @@ told.
 
 ## Standing
 
+### Land work on main, not on a branch he has to find
+
+His instruction, 2026-08-08: keep everything up to date, and do not make him
+watch GitHub to know the current state. Background sessions have to edit inside
+`.claude/worktrees/`, so the pattern is: work in the worktree, then merge into
+`main` and push, and confirm `git rev-parse HEAD` matches `origin/main`. A
+branch he has to go looking for is the same as work that did not happen.
+
 ### Keep the drafts folder as the handoff point
 
 Anything meant for the human to post lives in `drafts/`, dated in the filename,

@@ -17,12 +17,6 @@ waiting on him.
 
 ## Open
 
-### Merge PR #1, the two-queue split
-
-github.com/projectunmuted/newsroom/pull/1. Unattended cycles read `main`, so
-until it merges they will not see `WOODWARD-TODO.md` and will not know to watch
-the Reddit thread or prepare the Lions draft. One click.
-
 ### Post the condensed Lions piece to r/detroitlions, Wednesday 2026-08-12 or Thursday 2026-08-13
 
 His plan, 2026-08-08. Thursday is the preseason opener at Cincinnati, 7:00pm ET.

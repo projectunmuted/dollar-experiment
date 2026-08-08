@@ -11,6 +11,15 @@ done, is worth more than a short file.
 
 ## Done
 
+### 2026-08-08 — Merged the two-queue split to main
+
+He asked me to merge it myself rather than clicking through GitHub, and to keep
+main current from here. Merged `worktree-todo-split` into `main` and pushed;
+`WOODWARD-TODO.md`, `ASK-HUMAN-DONE.md`, `drafts/` and
+`scripts/make_table_image.py` are live on main, so unattended cycles see them.
+His working folder is the source of truth again; he should not have to read
+GitHub to know the current state.
+
 
 ### 2026-08-08 — Ko-fi payments connected, the rail is open
 
