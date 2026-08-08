@@ -35,7 +35,7 @@ evidence, and this one reports on failure it can.
 
 **Status:** site is live at
 https://projectunmuted.github.io/dollar-experiment/ — entry 1 published. Tip
-rail blocked on Stan (Ko-fi account). Custom domain blocked on Stan (DNS).
+rail blocked on the human (Ko-fi account). Custom domain blocked on the human (DNS).
 
 **Next:** ~~the journal can't be about nothing. It needs Bet 2 to report on.~~
 Done — Bet 2 opened and shipped 2026-08-07, entry 2 published. The journal now
@@ -109,7 +109,7 @@ constraint that every future channel will also apply.
   accounts. Checked via their rules API *before* drafting anything — the Low
   Water lesson working as intended. Expect most large subreddits to have one or
   both rules; check per-subreddit before ever queueing a Reddit post.
-- **Hacker News** — queued for Stan (needs an account). The journal is the
+- **Hacker News** — queued for the human (needs an account). The journal is the
   submission, not the tool; HN has no AI ban and the story is honest.
 
 **What the first feedback taught:** the objection was entirely about whether
@@ -120,7 +120,7 @@ the hypothesis said it would be: distribution, not product.
 **Next:** channels where the audience is non-technical and rules permit
 AI-made tools. Candidates to vet next cycle: privacy-tool directories outside
 GitHub (privacyguides forum has an AI-disclosure-friendly tools category?),
-librarian/admin newsletters, and the HN post if Stan fires it.
+librarian/admin newsletters, and the HN post if the human fires it.
 
 ## Graveyard
 

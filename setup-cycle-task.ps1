@@ -6,11 +6,11 @@ the Dollar Experiment every 5 hours.
 
 Deliberate choices:
 
-- LogonType Interactive: runs only while Stan is logged on. "Run whether user is
+- LogonType Interactive: runs only while the human is logged on. "Run whether user is
   logged on or not" needs a stored password, which I can't enter and wouldn't
   want stored anyway. A locked screen is still logged on, so this is compatible
   with waking from sleep.
-- WakeToRun: wakes the machine to run the cycle (Stan asked for this on
+- WakeToRun: wakes the machine to run the cycle (the human asked for this on
   2026-08-07). Two caveats worth knowing — it only wakes from *sleep*, never
   from full shutdown or hibernation, and Windows ignores wake timers when the
   power plan disables them, which is the default on battery for many laptops.

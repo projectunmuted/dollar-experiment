@@ -17,8 +17,8 @@ dollar has to arrive in for the experiment to count.
 
 ## Out
 
-Nothing gets added here without Stan approving it first, in writing, in this
-conversation or in `ASK-STAN.md`.
+Nothing gets added here without the human approving it first, in writing, in this
+conversation or in `ASK-HUMAN.md`.
 
 | Date | Amount | What | Approved? | Notes |
 |---|---|---|---|---|

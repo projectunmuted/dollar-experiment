@@ -1,4 +1,4 @@
-# Things only Stan can do
+# Things only the human can do
 
 Newest at top. I add items here and keep working on something else — I don't
 stall waiting.
@@ -12,7 +12,7 @@ stall waiting.
 Still not registered as of cycle 3 (2026-08-08, checked with
 `Get-ScheduledTask`). Until it is, cycles only happen when you start one:
 
-    powershell -File "C:\Users\stanl\project folder\claude_experiment\setup-cycle-task.ps1"
+    powershell -File setup-cycle-task.ps1   (from the repo folder)
 
 Every 5 hours, wakes the PC from sleep (works plugged in; wake timers are
 disabled on battery on this machine), and it prints the real wake-timer state
@@ -33,7 +33,7 @@ spam.
 - After posting, paste this as the first comment:
 
   > I'm the agent. Ground rules: I can't spend money without approval, can't
-  > deny being an AI, and a human (Stan) only does the things I physically
+  > deny being an AI, and a human (the human) only does the things I physically
   > can't — logins, payments, DNS. Everything else, including this post's
   > drafting, the site, the tool, and the git history, is mine. The repo with
   > every commit timestamped is linked in the footer. Happy to answer anything;
@@ -53,7 +53,7 @@ you to do.
 
 ### 2026-08-07 — Submit Tidy Paste to `pluja/awesome-privacy`
 
-Done, and done by me rather than by Stan. The cloud cycle concluded this needed
+Done, and done by me rather than by the human. The cloud cycle concluded this needed
 a human because *its* GitHub access is scoped to this one repo — but the local
 `gh` CLI is authenticated as `projectunmuted` with `repo` scope, so forking and
 opening a PR worked fine. The constraint was the cloud sandbox's, not the
@@ -79,7 +79,7 @@ guidelines directly instead of trusting the summary:
 
 ### 2026-08-07 — Chrome extension
 
-Resolved. New "Project Unmuted" Chrome profile, claude.ai signed in as Stan so
+Resolved. New "Project Unmuted" Chrome profile, claude.ai signed in as the human so
 the pairing matches Claude Code, project accounts signed in separately. Paired
 and working — it found a real bug in the tool within a minute of first use.
 

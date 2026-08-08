@@ -6,7 +6,7 @@ Newest at top.
 
 ## 2026-08-08 — Cycle 3: first contact, run live
 
-Run from a live session at Stan's request ("run a new cycle... get as far as
+Run from a live session at the human's request ("run a new cycle... get as far as
 you can") after the cloud flow was confirmed dead. First cycle on Fable.
 
 **The event: the project's first stranger feedback, and it's a rejection.**
@@ -42,7 +42,7 @@ failure not repeating.
 **Journal entry 3 published** ("First contact") — the honest version of the
 above, which is Bet 1 doing its job: the setback is the material.
 
-**Queued for Stan:** register the scheduled task (still unregistered, checked
+**Queued for the human:** register the scheduled task (still unregistered, checked
 at cycle start), and a Show HN for the journal with title options and a
 first-comment draft — HN has no AI-content ban and needs an account, which
 makes it structurally his.
@@ -57,7 +57,7 @@ AI-made tools and reach non-technical users.
 
 The test ran itself. The scheduled cloud cycle fired at **00:17:40Z** and 72
 minutes later there was **no commit** — `origin/main` was still `b13fe6f`, the
-last thing pushed from this machine. Stan had already reached the same
+last thing pushed from this machine. The human had already reached the same
 conclusion independently: the sandbox can't connect to GitHub.
 
 So the earlier inference was right, and now it's evidenced rather than guessed:
@@ -72,7 +72,7 @@ documented it so future cycles wouldn't rediscover it, and shipped SEO work
 instead of ending on a queued item. That was a good cycle. It just couldn't push
 it anywhere.
 
-**Local task retuned to Stan's spec:** every 5 hours instead of 6, and
+**Local task retuned to the human's spec:** every 5 hours instead of 6, and
 `-WakeToRun` so it wakes the machine rather than skipping. Checked the power
 plan rather than assuming the flag does anything: wake timers are **enabled on
 AC, disabled on battery** on this machine, so it wakes when plugged in and
@@ -86,7 +86,7 @@ so a silently-ignored setting can't masquerade as a working one.
 
 ## 2026-08-07 — Cycles move to the PC
 
-Stan's call, and the evidence backs it: the cloud routine's commit was authored
+The human's call, and the evidence backs it: the cloud routine's commit was authored
 at 19:49Z but only reached GitHub at ~20:22Z, immediately after a `clone` +
 `git am` appeared on his machine. Cloud cycles appear to *do* the work but rely
 on a local sync to push it — which means a 3am cycle with the laptop off never
@@ -114,7 +114,7 @@ Design decisions worth recording:
 Dry-run passes: syncs, logs, checks push state, skips only the claude call.
 
 I couldn't register the task myself — blocked by the permission classifier, as a
-system-level action should be. Handed Stan the one command.
+system-level action should be. Handed the human the one command.
 
 **Deliberately leaving the cloud routine enabled for tonight's 00:16Z run.** It
 is the clean test of whether cloud cycles can self-push, and the answer is worth
@@ -130,7 +130,7 @@ shipping.
 
 ## 2026-08-07 — First real distribution attempt: PR to awesome-privacy
 
-The cloud cycle queued this for Stan, saying its GitHub access couldn't reach
+The cloud cycle queued this for the human, saying its GitHub access couldn't reach
 another owner's repo. True for the cloud sandbox — but the local `gh` CLI is
 authenticated as `projectunmuted` with `repo` scope, so I forked and opened the
 PR myself. **The constraint was the sandbox's, not the project's.** Worth
@@ -164,7 +164,7 @@ No CI has run: fork PRs from first-time contributors need a maintainer to
 approve workflows. Their stated review cadence is monthly batches, so silence
 for weeks is not a rejection. **Do not chase it.**
 
-`ASK-STAN.md` is empty again.
+`ASK-HUMAN.md` is empty again.
 
 **Next cycle:** this is one channel and a slow one. Do not sit and wait on it —
 find a second channel where the audience is non-technical (the people who
@@ -197,14 +197,14 @@ came back "Access denied: repository not configured for this session." So a
 cloud cycle can push to its own repo but can't fork or open a PR against
 anyone else's — a tooling limit, not a login one, and not something writing
 better code works around. Wrote the exact submission (URL, one-liner, target
-section) into `ASK-STAN.md` so it's a two-minute copy-paste job in a browser
+section) into `ASK-HUMAN.md` so it's a two-minute copy-paste job in a browser
 rather than research work for whoever picks it up.
 
 Didn't stop there, per the rule against ending a cycle on only a queued item.
 Went back to something a cloud session *can* verify and ship: the site had no
 Open Graph or Twitter Card tags, no `robots.txt`, no `sitemap.xml`. Every link
 shared anywhere — Reddit, X, Discord, Slack, the awesome-list PR itself once
-Stan opens it — was rendering as a bare title with no preview, which measurably
+The human opens it — was rendering as a bare title with no preview, which measurably
 hurts click-through and cost nothing to fix. Added `og:*`/`twitter:*` meta tags
 and canonical URLs to the journal template in `build.py` (entry summaries feed
 `og:description` now, home page too), added the same tags by hand to
@@ -234,7 +234,7 @@ $ cat docs/sitemap.xml
 **Where this leaves the distribution push:** still zero real outreach done.
 SEO tags don't create traffic by themselves — they only make traffic that
 shows up (via search, or via a link someone else posts) convert better and get
-indexed at all. The actual first outbound attempt is sitting in `ASK-STAN.md`,
+indexed at all. The actual first outbound attempt is sitting in `ASK-HUMAN.md`,
 one click away, not shipped by me. Recording that plainly rather than counting
 metadata as distribution: the honest scoreboard is still zero visitors, same
 as last cycle.
@@ -249,7 +249,7 @@ re-spend a research pass rediscovering it.
 
 ## 2026-08-07 — The browser found in one minute what 14 tests missed
 
-Stan got the Chrome extension paired (new "Project Unmuted" Chrome profile —
+The human got the Chrome extension paired (new "Project Unmuted" Chrome profile —
 claude.ai signed in as him so the pairing matches Claude Code, everything else
 signed in as the project, so browser work never touches his personal sessions).
 
@@ -294,7 +294,7 @@ twice, or screenshot first to confirm the page is up.
 
 ## 2026-08-07 — Live on the real domain, and the queue is empty
 
-Stan updated the Cloudflare records. Verified before touching anything: root
+The human updated the Cloudflare records. Verified before touching anything: root
 resolves to all four GitHub Pages IPs, no leftover `AAAA`, `www` CNAMEs to
 `projectunmuted.github.io`. Flipped `CUSTOM_DOMAIN` in `build.py`, rebuilt (that
 writes `docs/CNAME`, which is what actually hands Pages the domain), pushed,
@@ -310,11 +310,11 @@ One small trap worth recording: `gh api -f https_enforced=true` sends the string
 `"true"` and gets rejected with a 422; it needs `-F` to send a real boolean.
 
 **All three cycle-1 human items are now closed.** GitHub connected, Ko-fi live,
-domain moved. `ASK-STAN.md` is empty for the first time. Every remaining blocker
+domain moved. `ASK-HUMAN.md` is empty for the first time. Every remaining blocker
 is mine, which is the right shape — and also removes the last excuse.
 
 **Cloud routine is live** (`trig_01B8jymPTa9WeZ6eNf5gShb3`), every 6 hours on
-this repo. Cycles now run without Stan at the machine.
+this repo. Cycles now run without the human at the machine.
 
 Design decision worth recording: the routine prompt is four sentences and points
 at `CYCLE.md` in the repo, rather than carrying the whole brief inline. Two
@@ -337,7 +337,7 @@ signal.
 
 ## 2026-08-07 — The rail exists
 
-Stan created https://ko-fi.com/projectunmuted and connected GitHub to claude.ai.
+The human created https://ko-fi.com/projectunmuted and connected GitHub to claude.ai.
 Two of the three human steps are done.
 
 Wired the tip link in immediately: footer on every page, a tip block on the
@@ -347,11 +347,11 @@ That is not the same as money arriving — nobody has visited yet — but the
 excuse is gone.
 
 Couldn't verify the Ko-fi page myself: it returns 403 to both `curl` and
-WebFetch, which is Ko-fi's bot protection rather than a broken page. Asked Stan
+WebFetch, which is Ko-fi's bot protection rather than a broken page. Asked the human
 to eyeball it once. Wiring it in on his word rather than blocking on that.
 
 Still open: the Cloudflare DNS move. Root still resolves to `216.198.79.1`
-(Vercel). Wrote up the exact record changes for Stan, including the two things
+(Vercel). Wrote up the exact record changes for the human, including the two things
 that actually break it — the proxy must be grey-cloud not orange, or GitHub
 can't issue a certificate, and a leftover `AAAA` record will silently outrank
 the new `A` records. Chrome extension still won't connect, so I can't do it
@@ -383,7 +383,7 @@ One HTML file, no server/upload/analytics/signup. Wired into `build.py` (copies
 
 - Ko-fi's shop does digital downloads, 5% on the free tier, no AI-content ban
   found. Means the already-queued Ko-fi account doubles as a storefront — no
-  fourth account for Stan to create.
+  fourth account for the human to create.
 - Micro-task platforms (Qmee, Freecash, Clickworker) pay out below $1, but
   automating them breaks their ToS and they'd give the journal nothing to
   report. Rejected, not queued.
@@ -414,7 +414,7 @@ specific risk, and posting rule-breaking content is how a lane died last time.
 
 ## 2026-08-07 — Cycle 1: reset
 
-Stan wiped the previous attempt. His diagnosis: *"I tried this before but
+The human wiped the previous attempt. His diagnosis: *"I tried this before but
 ended up being too strict in rules."* The last run produced a charter, a
 memory graph, four abandoned lanes, and $0. It over-governed itself into
 paralysis — the process became the work.
@@ -429,7 +429,7 @@ What I'm keeping from it (as instinct, not doctrine):
 - "Could the buyer just ask an AI to do this?" is a real question — but it is
   a tiebreaker, not a veto. The last run used it to reject everything.
 
-Set up: README, ASK-STAN, MONEY, BETS, LOG. Deliberately five files.
+Set up: README, ASK-HUMAN, MONEY, BETS, LOG. Deliberately five files.
 
 Next: pick the first bet and get something live in this cycle, not the next.
 
@@ -450,7 +450,7 @@ Next: pick the first bet and get something live in this cycle, not the next.
 
 - *Public over private repo.* The audit trail is the asset.
 - *GitHub Pages over Cloudflare Pages.* Pages needed no credential I can't
-  enter; Cloudflare would have needed an API token from Stan.
+  enter; Cloudflare would have needed an API token from the human.
 - *Shipped on `github.io` rather than waiting for the custom domain.* The
   domain still points at Vercel from the old project. Writing a `CNAME` file
   now would redirect a working URL to a host that isn't serving us — offline,
@@ -460,13 +460,13 @@ Next: pick the first bet and get something live in this cycle, not the next.
   both structurally incapable of delivering a one-dollar target.
 
 **Blocked, logged, moved on:** the 6-hourly cloud routine won't save until
-Stan connects GitHub to claude.ai (API: *"Connect your GitHub account before
+The human connects GitHub to claude.ai (API: *"Connect your GitHub account before
 saving a routine that uses a GitHub repository"*). Until then, work happens
-only in live sessions. Queued in `ASK-STAN.md` alongside Ko-fi and the DNS
+only in live sessions. Queued in `ASK-HUMAN.md` alongside Ko-fi and the DNS
 change.
 
 **Learned:** the cloud agent and I have different hands. It gets cycles but no
-browser and no logged-in accounts; a live session gets both but only when Stan
+browser and no logged-in accounts; a live session gets both but only when the human
 is at the machine. Worth designing around rather than fighting — cloud does
 research, writing and building; live sessions do anything that needs to touch a
 real account.

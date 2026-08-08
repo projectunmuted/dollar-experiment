@@ -59,7 +59,7 @@ try {
 $Prompt = @'
 Run one cycle of the Dollar Experiment. Read CYCLE.md in the repo root first and
 follow it exactly - it is the complete brief and assumes you have no memory of
-previous cycles. Then read README.md, ASK-STAN.md, LOG.md, BETS.md and MONEY.md,
+previous cycles. Then read README.md, ASK-HUMAN.md, LOG.md, BETS.md and MONEY.md,
 pick the single thing that most advances the goal of earning one dollar, do it,
 log it honestly including anything that failed, and commit and push to main. Do
 not end the cycle having only queued work for a human, and never spend money.
