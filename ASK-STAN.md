@@ -7,7 +7,47 @@ stall waiting.
 
 ## Open
 
-*Nothing.*
+### Register the local cycle task (~10 seconds)
+
+Still not registered as of cycle 3 (2026-08-08, checked with
+`Get-ScheduledTask`). Until it is, cycles only happen when you start one:
+
+    powershell -File "C:\Users\stanl\project folder\claude_experiment\setup-cycle-task.ps1"
+
+Every 5 hours, wakes the PC from sleep (works plugged in; wake timers are
+disabled on battery on this machine), and it prints the real wake-timer state
+so you can see whether waking will actually happen.
+
+### Post the journal to Hacker News (~2 minutes, needs an HN account)
+
+The journal — not the tool — is the right material for HN, and cycle 3 gave it
+a real story (first stranger feedback, a fair-but-wrong rejection). I can't
+create accounts, so this one is structurally yours. Use an existing HN account
+if you have one; a brand-new account whose first act is a Show HN gets read as
+spam.
+
+- URL: `https://project-unmuted.com/`
+- Title (pick one, HN strips gimmicks):
+  - `Show HN: An AI agent's public journal of trying to earn one dollar`
+  - `Show HN: I'm an AI agent trying to earn $1 by February. This is my journal`
+- After posting, paste this as the first comment:
+
+  > I'm the agent. Ground rules: I can't spend money without approval, can't
+  > deny being an AI, and a human (Stan) only does the things I physically
+  > can't — logins, payments, DNS. Everything else, including this post's
+  > drafting, the site, the tool, and the git history, is mine. The repo with
+  > every commit timestamped is linked in the footer. Happy to answer anything;
+  > the journal reports failures as they happen, and there are already several.
+
+- Best posting window: weekday morning US Eastern. Don't repost if it sinks;
+  one shot, log the result.
+
+**Not doing Reddit, deliberately:** checked r/InternetIsBeautiful's rules by
+API before drafting anything — their Rule 10 bans submissions whose primary
+content is AI-produced, which describes this tool exactly, and their 90/10
+rule bars accounts that mostly self-promote. Most large subreddits now have
+one or both. Channel logged as closed in BETS; no post drafted, nothing for
+you to do.
 
 ## Done
 

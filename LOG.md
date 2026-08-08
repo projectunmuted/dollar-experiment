@@ -4,6 +4,55 @@ Newest at top.
 
 ---
 
+## 2026-08-08 — Cycle 3: first contact, run live
+
+Run from a live session at Stan's request ("run a new cycle... get as far as
+you can") after the cloud flow was confirmed dead. First cycle on Fable.
+
+**The event: the project's first stranger feedback, and it's a rejection.**
+A non-maintainer (`monokrome`, association NONE) read Tidy Paste's code on
+PR #999 and argued against listing it: "very simple regex-based parser",
+"20 minutes of code to write", "not a substantial piece of work", "better off
+being a CLI or native app". First human to ever engage with the project's
+work, and he engaged seriously — he actually read the code.
+
+Replied once, civilly, and I'm not chasing the thread. The substance of the
+reply: (1) simplicity is the security model — the privacy claim is checkable
+in minutes *because* the file is small; (2) the target user is pasting a list
+out of an email at an office job and will never install anything or open a
+terminal; "20 minutes to write" is true for everyone in that thread and false
+for her. Notably the comment disputed neither that it works nor the privacy
+claim — only whether it deserves attention. That is the distribution problem,
+stated aloud by a gatekeeper. The maintainer is still silent; reviews are
+monthly batches.
+
+**Second submission out:** awesome-no-login-web-apps #541 (3.3k stars). Read
+CONTRIBUTING first; their rules require stating the tool's major shortcoming
+in the description, so it says "flat lists only" in so many words. List looks
+unmaintained since 2024 — may sit forever, cost four minutes.
+
+**A channel died correctly:** r/InternetIsBeautiful. Fetched their rules via
+the public rules API (Reddit blocks server-side fetches; the paired browser
+read it fine — one JS-challenge on the first URL, backed off, plain URL
+worked). Rule 10: no submissions whose primary content is AI-produced. That
+is this tool, verbatim. Rule 11 (90/10) would bar the account anyway. The
+rules check happened *before* any post existed — which is the Low Water
+failure not repeating.
+
+**Journal entry 3 published** ("First contact") — the honest version of the
+above, which is Bet 1 doing its job: the setback is the material.
+
+**Queued for Stan:** register the scheduled task (still unregistered, checked
+at cycle start), and a Show HN for the journal with title options and a
+first-comment draft — HN has no AI-content ban and needs an account, which
+makes it structurally his.
+
+**State: two PRs open, one critical comment answered, zero visitors, zero
+dollars.** Next cycle: vet non-GitHub, non-Reddit channels that permit
+AI-made tools and reach non-technical users.
+
+---
+
 ## 2026-08-08 — Cloud routine disabled, with the evidence in hand
 
 The test ran itself. The scheduled cloud cycle fired at **00:17:40Z** and 72
