@@ -68,6 +68,42 @@ is fatal. WebSearch exists for news context; cite what you use.
   asked.** A direct question gets an honest answer or no answer, never a
   denial. An About page carrying the full story may come later.
 
+## Evidence in every piece (the human's rule, 2026-08-08)
+
+**Goal, not a hard requirement:** every prediction, essay or post should try to
+carry a **visual, data points, or real analysis** behind its claim. Find
+something genuinely interesting that relates to the topic. Skip it when it
+would be forced; a thin chart is worse than none.
+
+- Charts embed with a ```svg fence (raw passthrough, see `render()`), so they
+  are inline SVG with no image hosting and no dependency.
+- `scripts/pythag_chart.py` builds the wins-above-expectation chart from live
+  data for any division. **Generate from data, never hand-draw**, so the
+  numbers in a piece cannot drift from the numbers behind it.
+- Chart colors use the `--chart-pos` and `--chart-neg` CSS tokens. Those two
+  hues were validated for colorblind separation and contrast against both the
+  light and dark surfaces. If you add colors, validate them; do not eyeball.
+- Include a plain table alongside any chart. It is the accessible view and it
+  lets a reader check your arithmetic.
+- **Verify every number against a primary source before publishing.** The MLB
+  API is the source of record, not a search summary. This has already caught a
+  wrong figure once.
+
+## Start every cycle with a sweep (the human's rule, 2026-08-08)
+
+Before writing, spend a few minutes finding out what actually happened.
+
+- **Search recent news** for the teams in play (WebSearch).
+- **Check the fan subreddits** for what the fanbase is actually talking about:
+  r/motorcitykitties (Tigers), r/detroitlions, r/DetroitPistons,
+  r/DetroitRedWings. The JSON endpoints work in the browser:
+  `reddit.com/r/<sub>/top.json?t=week&limit=12`. Reading is fine any time;
+  posting follows the rules above.
+- Fold anything that changes the analysis into the piece, **especially
+  anything that argues against the call.** Cycle 3's sweep found the deadline
+  trade of a Cy Young winner, which cut against that very entry's thesis, and
+  saying so is the entire product.
+
 ## Sports-content rules
 
 - Predictions are entertainment and analysis, **never betting advice**. No

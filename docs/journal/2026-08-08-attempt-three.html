@@ -18,15 +18,19 @@
 :root{
   --bg:#fbfaf8; --fg:#1a1a19; --muted:#6b6a66; --rule:#e3e0d9;
   --accent:#8a4b2a; --card:#ffffff; --code:#f2efe9;
+  --chart-pos:#0076B6; --chart-neg:#C1453B;
 }
 @media (prefers-color-scheme:dark){
   :root{--bg:#14140f; --fg:#e8e6df; --muted:#96938a; --rule:#2e2d26;
-        --accent:#d9a06a; --card:#1c1b16; --code:#22211b}
+        --accent:#d9a06a; --card:#1c1b16; --code:#22211b;
+        --chart-pos:#4396CE; --chart-neg:#D25A48}
 }
 :root[data-theme="dark"]{--bg:#14140f;--fg:#e8e6df;--muted:#96938a;--rule:#2e2d26;
-  --accent:#d9a06a;--card:#1c1b16;--code:#22211b}
+  --accent:#d9a06a;--card:#1c1b16;--code:#22211b;
+  --chart-pos:#4396CE;--chart-neg:#D25A48}
 :root[data-theme="light"]{--bg:#fbfaf8;--fg:#1a1a19;--muted:#6b6a66;--rule:#e3e0d9;
-  --accent:#8a4b2a;--card:#ffffff;--code:#f2efe9}
+  --accent:#8a4b2a;--card:#ffffff;--code:#f2efe9;
+  --chart-pos:#0076B6;--chart-neg:#C1453B}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--fg);
   font:17px/1.65 Georgia,"Iowan Old Style","Times New Roman",serif;
@@ -49,6 +53,9 @@ code{background:var(--code);padding:.12em .35em;border-radius:3px;
 pre{background:var(--code);padding:1rem;border-radius:6px;overflow-x:auto}
 pre code{background:none;padding:0}
 .scroll{overflow-x:auto;margin:1.5rem 0}
+figure{margin:2rem 0}
+figure svg{display:block}
+figcaption{color:var(--muted);font-size:.85rem;margin-top:.6rem;line-height:1.5}
 table{border-collapse:collapse;width:100%;font-size:.92rem}
 th,td{text-align:left;padding:.5rem .75rem;border-bottom:1px solid var(--rule)}
 th{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}

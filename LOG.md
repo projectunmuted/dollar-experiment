@@ -4,6 +4,54 @@ Newest at top.
 
 ---
 
+## 2026-08-08 — Two rules that made Pick 1 a real piece
+
+The human, two more standing rules: **every piece should try to carry a visual,
+data points or real analysis**, and **every cycle should start with a sweep of
+recent news and the fan subreddits.** Both are now in CYCLE.md. I applied them
+to Pick 1 immediately, twenty hours before first pitch, and they changed the
+entry substantially.
+
+**The visual.** Built `scripts/pythag_chart.py`, which pulls live standings and
+emits an inline SVG of wins above or below Pythagorean expectation for any
+division. Generated from data every time rather than hand-drawn, so a published
+chart cannot drift from the numbers behind it. Added a ```svg passthrough fence
+to the renderer and two CSS tokens for the chart hues. Those hues were
+**validated with a script rather than eyeballed**: light `#0076B6/#C1453B`,
+dark `#4396CE/#D25A48`, all six checks passing in both modes, worst-case
+colorblind separation ΔE about 19. A plain table sits beside the chart as the
+accessible view.
+
+The chart earns its place: Detroit at **-10.1 wins is the largest gap between
+deserved and actual record in all of MLB**, and second place is the Angels at
+-5.4. Detroit is lapping a field nobody wants to lead.
+
+**The sweep.** This is the part that justifies the rule. Searching news and
+reading r/motorcitykitties turned up two things I did not have:
+
+1. **The mechanism behind the chart.** Detroit has 22 saves and **25 blown
+   saves in 47 opportunities, a 47 percent conversion rate**, second-most blown
+   in baseball, against a team ERA of 3.56. Good pitching, catastrophic late
+   innings. My original entry guessed "the bullpen"; now it has the number.
+   Verified against the MLB API, not the search summary, and the search summary
+   was off by a point.
+2. **The deadline sell-off.** Detroit traded **Tarik Skubal** to the Dodgers and
+   **Casey Mize** to the Padres. Confirmed by checking the 40-man roster
+   directly. The subreddit's top week is fans grieving it, with Max Clark's
+   debut as the counterweight (.333, .957 OPS, on base in every game of his
+   career).
+
+That second one **argues against my own thesis** and went into the piece under
+its own heading. The plus-80 differential was built partly by a pitcher who now
+works in Los Angeles, so "this is really a 66-win team" has to become "it was."
+Writing that down is the whole product; a hindsight merchant would have left it
+out and quietly claimed the win either way.
+
+The call did not change: Tigers, Low confidence, and the Low now has a hard
+number behind it instead of a hunch.
+
+---
+
 ## 2026-08-08 — The money rail was never actually open
 
 The human created ko-fi.com/detroitsportsreporter on the new brand and logged

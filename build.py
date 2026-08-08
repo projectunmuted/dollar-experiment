@@ -54,6 +54,7 @@ class Site:
     fallback_base: str       # canonical base until custom_domain is live
     footer_html: str
     indexnow_key: str | None
+    title_sep: str = " — "
     # Google Search Console HTML-file verification token, e.g.
     # "googleXXXX.html". Emitted at the site root; Google fetches it to prove
     # ownership. Must never be removed or verification lapses.
@@ -113,6 +114,7 @@ DSR = Site(
         f'<p><a href="{KOFI}">Leave a tip</a> if a pick or a piece was worth it.</p>'
     ),
     indexnow_key="ab1ce51275719ae3374e8b349b967087",
+    title_sep=" | ",   # no em dashes anywhere reader-facing on DSR
 )
 
 
@@ -155,13 +157,18 @@ def render(md: str) -> str:
             continue
 
         if stripped.startswith("```"):
+            info = stripped[3:].strip().lower()
             i += 1
             block = []
             while i < len(lines) and not lines[i].strip().startswith("```"):
                 block.append(lines[i])
                 i += 1
             i += 1
-            out.append(f"<pre><code>{html.escape(chr(10).join(block))}</code></pre>")
+            body = chr(10).join(block)
+            if info in ("svg", "html"):
+                out.append(body)          # trusted: authored here, not user input
+            else:
+                out.append(f"<pre><code>{html.escape(body)}</code></pre>")
             continue
 
         if re.match(r"^(-{3,}|\*{3,})$", stripped):
@@ -280,15 +287,19 @@ CSS_TEMPLATE = """
 :root{
   --bg:#fbfaf8; --fg:#1a1a19; --muted:#6b6a66; --rule:#e3e0d9;
   --accent:__ACCENT__; --card:#ffffff; --code:#f2efe9;
+  --chart-pos:#0076B6; --chart-neg:#C1453B;
 }
 @media (prefers-color-scheme:dark){
   :root{--bg:#14140f; --fg:#e8e6df; --muted:#96938a; --rule:#2e2d26;
-        --accent:__ACCENT_DARK__; --card:#1c1b16; --code:#22211b}
+        --accent:__ACCENT_DARK__; --card:#1c1b16; --code:#22211b;
+        --chart-pos:#4396CE; --chart-neg:#D25A48}
 }
 :root[data-theme="dark"]{--bg:#14140f;--fg:#e8e6df;--muted:#96938a;--rule:#2e2d26;
-  --accent:__ACCENT_DARK__;--card:#1c1b16;--code:#22211b}
+  --accent:__ACCENT_DARK__;--card:#1c1b16;--code:#22211b;
+  --chart-pos:#4396CE;--chart-neg:#D25A48}
 :root[data-theme="light"]{--bg:#fbfaf8;--fg:#1a1a19;--muted:#6b6a66;--rule:#e3e0d9;
-  --accent:__ACCENT__;--card:#ffffff;--code:#f2efe9}
+  --accent:__ACCENT__;--card:#ffffff;--code:#f2efe9;
+  --chart-pos:#0076B6;--chart-neg:#C1453B}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--fg);
   font:17px/1.65 Georgia,"Iowan Old Style","Times New Roman",serif;
@@ -311,6 +322,9 @@ code{background:var(--code);padding:.12em .35em;border-radius:3px;
 pre{background:var(--code);padding:1rem;border-radius:6px;overflow-x:auto}
 pre code{background:none;padding:0}
 .scroll{overflow-x:auto;margin:1.5rem 0}
+figure{margin:2rem 0}
+figure svg{display:block}
+figcaption{color:var(--muted);font-size:.85rem;margin-top:.6rem;line-height:1.5}
 table{border-collapse:collapse;width:100%;font-size:.92rem}
 th,td{text-align:left;padding:.5rem .75rem;border-bottom:1px solid var(--rule)}
 th{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
@@ -406,7 +420,7 @@ def write_entry_pages(site: Site, entries: list[Entry]) -> None:
             + f"</p><h2>{html.escape(e.title)}</h2>{render(e.body)}"
         )
         (site.out / "journal" / f"{e.slug}.html").write_text(
-            page(site, f"{e.title} — {site.title}", body, depth=1,
+            page(site, f"{e.title}{site.title_sep}{site.title}", body, depth=1,
                  path=e.url, description=e.summary),
             encoding="utf-8",
         )

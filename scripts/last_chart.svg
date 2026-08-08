@@ -1,0 +1,21 @@
+<svg viewBox="0 0 640 238" width="100%" role="img" aria-labelledby="pythag-title" style="max-width:640px;height:auto;font-family:ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif">
+<title id="pythag-title">Wins above or below Pythagorean expectation, AL Central</title>
+<text x="0" y="16" fill="var(--fg)" font-size="13" font-weight="600">Wins above or below expectation</text>
+<text x="0" y="34" fill="var(--muted)" font-size="11">Based on runs scored and allowed. Zero means the record matches the run differential.</text>
+<line x1="489.2" y1="40" x2="489.2" y2="210.0" stroke="var(--rule)" stroke-width="2"/>
+<text x="106" y="61.0" text-anchor="end" fill="var(--fg)" font-size="12.5">Twins</text>
+<path d="M491.24632738196124,46H574.7894817591769A4.0,4.0 0 0 1 578.7894817591769,50.0V64.0A4.0,4.0 0 0 1 574.7894817591769,68H491.24632738196124Z" fill="var(--chart-pos)"><title>Twins: 58-59, expected 55.4 wins from 547 runs scored and 580 allowed (+2.6 wins)</title></path>
+<text x="586.8" y="61.0" text-anchor="start" fill="var(--muted)" font-size="12" font-variant-numeric="tabular-nums">+2.6</text>
+<text x="106" y="95.0" text-anchor="end" fill="var(--fg)" font-size="12.5">Guardians</text>
+<path d="M491.24632738196124,80H552.0001119385756A4.0,4.0 0 0 1 556.0001119385756,84.0V98.0A4.0,4.0 0 0 1 552.0001119385756,102H491.24632738196124Z" fill="var(--chart-pos)"><title>Guardians: 58-59, expected 56.0 wins from 467 runs scored and 489 allowed (+2.0 wins)</title></path>
+<text x="564.0" y="95.0" text-anchor="start" fill="var(--muted)" font-size="12" font-variant-numeric="tabular-nums">+2.0</text>
+<text x="106" y="129.0" text-anchor="end" fill="var(--fg)" font-size="12.5">Royals</text>
+<path d="M487.24632738196124,114H485.77808758900096V136H487.24632738196124Z" fill="var(--chart-neg)"><title>Royals: 48-69, expected 48.1 wins from 484 runs scored and 589 allowed (-0.1 wins)</title></path>
+<text x="477.8" y="129.0" text-anchor="end" fill="var(--muted)" font-size="12" font-variant-numeric="tabular-nums">-0.1</text>
+<text x="106" y="163.0" text-anchor="end" fill="var(--fg)" font-size="12.5">White Sox</text>
+<path d="M487.24632738196124,148H436.2968011899146A4.0,4.0 0 0 0 432.2968011899146,152.0V166.0A4.0,4.0 0 0 0 436.2968011899146,170H487.24632738196124Z" fill="var(--chart-neg)"><title>White Sox: 59-56, expected 60.7 wins from 546 runs scored and 514 allowed (-1.7 wins)</title></path>
+<text x="424.3" y="163.0" text-anchor="end" fill="var(--muted)" font-size="12" font-variant-numeric="tabular-nums">-1.7</text>
+<text x="106" y="197.0" text-anchor="end" fill="var(--fg)" font-size="12.5">Tigers</text>
+<path d="M487.24632738196124,182H149.21051824082306A4.0,4.0 0 0 0 145.21051824082306,186.0V200.0A4.0,4.0 0 0 0 149.21051824082306,204H487.24632738196124Z" fill="var(--chart-neg)"><title>Tigers: 56-59, expected 66.1 wins from 526 runs scored and 446 allowed (-10.1 wins)</title></path>
+<text x="137.2" y="197.0" text-anchor="end" fill="var(--muted)" font-size="12" font-variant-numeric="tabular-nums">-10.1</text>
+</svg>
