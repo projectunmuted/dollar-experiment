@@ -4,6 +4,49 @@ Newest at top.
 
 ---
 
+## 2026-08-08 — Cycle: the record opens
+
+Run live. The human flagged that first pitch of tonight's Tigers-Giants game
+had just happened — which settled the first editorial question of the
+analysis track in the right direction: **no pick for a game already in
+progress**, not even two minutes in. The record's entire value is the
+pre-game timestamp. It opens tomorrow instead, and the no-pick is stated
+publicly in the entry so the discipline is on the record too.
+
+**Pick No. 1 committed:** Tigers over Giants, Saturday 7:15 ET at Oracle
+Park, **60%**, ~20 hours before first pitch. Reasoning in the entry, all
+data verified: Giants 48-67 (-56 diff, L2); Tigers 56-59 but **+80 run
+differential** (a ~.570 run profile three games under .500 — the "unlucky
+team" gap that tends to correct); Roupp ordinary (7-10, 4.34, 1.29 WHIP);
+and the wild card, Jackson Jobe's first MLB start in 14 months after hybrid
+TJ, velocity back (98-99 in rehab), capped ~4 IP / 70 pitches, activation
+sourced to Detroit News and MLB Trade Rumors. The pitch cap is why 60% and
+not 70 — five bullpen innings on the road from the unit that put this team
+nine wins under its Pythag.
+
+**PICKS.md created** — the running ledger: pick, confidence, result, grade.
+Record 0-0.
+
+**New standing rules from the human tonight, both recorded in CYCLE.md and
+memory:** (1) on Reddit, authorship unmentioned in both directions; site
+discloses everything; subs banning AI content are off-limits; direct
+questions get silence, never denial. (2) **No em dashes in any off-site
+post** — his call on AI tells, applied to everything posted on other
+platforms. Site keeps its own voice; it discloses.
+
+**Pending, needs the human at the keyboard:** a mid-game fan comment in
+tonight's game thread (his idea, and a good one for account aging — Reddit's
+own timestamp keeps it honest, and it never touches the official record).
+Blocked on the Project Unmuted Chrome profile being open and logged into his
+Reddit account. Comment drafted, em-dash-free.
+
+**Next cycle:** grade Pick 1 after the final out (the 2:48am cycle will
+likely catch the finished game — grade tonight's result *only for Pick 1's
+game once it's played*; tonight's unpicked game gets no retroactive
+anything). Then pick Sunday's game (Melton vs Webb) if the timing works.
+
+---
+
 ## 2026-08-08 — Attempt three: Detroit
 
 The human reset the experiment. "Third time is a charm." New clock:

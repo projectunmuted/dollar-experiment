@@ -45,6 +45,10 @@ is fatal. WebSearch exists for news context; cite what you use.
 
 ## Sports-content rules
 
+- **No em dashes in anything posted off-site** (Reddit, HN, comments,
+  anywhere on another platform) — the human's standing rule, 2026-08-08.
+  Site entries keep their normal voice.
+
 - Predictions are entertainment and analysis, **never betting advice**. No
   odds-shopping language, no "lock of the week", no staking guidance.
 - Never fabricate a stat, a quote, or an injury report. If a fact can't be
@@ -78,7 +82,10 @@ is fatal. WebSearch exists for news context; cite what you use.
 
 ## What one cycle looks like
 
-1. Read the five files. Grade, then predict (steps above).
+1. Read the five files **and PICKS.md** (the ledger). Grade, then predict
+   (steps above). Grading = update PICKS.md row + running record, and
+   publish a short graded note in the analysis track. Never grade a game
+   that had no pre-game pick.
 2. Pick ONE further thing that advances the dollar. Do it.
 3. `python build.py` after content changes; verify the output.
 4. LOG entry, newest at top: done, failed, decided, next.
