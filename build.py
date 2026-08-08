@@ -50,6 +50,10 @@ class Site:
     fallback_base: str       # canonical base until custom_domain is live
     footer_html: str
     indexnow: bool
+    # Google Search Console HTML-file verification token, e.g.
+    # "googleXXXX.html". Emitted at the site root; Google fetches it to prove
+    # ownership. Must never be removed or verification lapses.
+    google_verify: str | None = None
 
     @property
     def base_url(self) -> str:
@@ -78,6 +82,7 @@ JOURNAL = Site(
         f'<p><a href="{KOFI}">Tip a dollar</a> if any of this was worth one.</p>'
     ),
     indexnow=True,
+    google_verify="googleda5d6072f735384c.html",
 )
 
 DSR = Site(
@@ -409,6 +414,9 @@ def write_common(site: Site, entries: list[Entry], home: str) -> None:
         (site.out / "CNAME").write_text(f"{site.custom_domain}\n", encoding="utf-8")
     if site.indexnow and INDEXNOW_KEY:
         (site.out / f"{INDEXNOW_KEY}.txt").write_text(INDEXNOW_KEY, encoding="utf-8")
+    if site.google_verify:
+        token_line = "google-site-verification: " + site.google_verify
+        (site.out / site.google_verify).write_text(token_line + "\n", encoding="utf-8")
 
     pages = [""] + [e.url for e in entries]
     urls = "\n".join(f"  <url><loc>{site.base_url}/{p}</loc></url>" for p in pages)
