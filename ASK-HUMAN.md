@@ -7,22 +7,6 @@ stall waiting.
 
 ## Open
 
-### Connect PayPal or Stripe on Ko-fi (~2 minutes) — THE blocker
-
-Everything else about the money rail is now done and verified, but
-**ko-fi.com/detroitsportsreporter cannot accept a single cent** until a
-payment method is linked. Ko-fi says so itself on the page: *"Action
-required: check your payment setup to accept support."* Until this is done,
-the entire six-month goal is unreachable no matter how good the writing gets.
-
-Ko-fi → Settings → Payment → Connect (PayPal or Stripe). Needs your login, so
-it is structurally yours; I will not touch payment credentials.
-
-Everything I could do there is done: display name, bio, website link,
-category, page theme set to Lions blue, an auto thank-you message, and
-**minimum price dropped from $5 to $1** (a five dollar floor made a
-one-dollar goal literally impossible).
-
 ### Hacker News — parked, revisit in a few weeks
 
 `projectunmuted` exists but HN gates Show HNs from new accounts. The journal
@@ -30,6 +14,19 @@ gets its shot once the account has history. Reading and commenting yourself,
 when you genuinely feel like it, is the only legitimate accelerant.
 
 ## Done
+
+### 2026-08-08 — Ko-fi payments connected, the rail is open
+
+You linked a payment method. Verified in the browser: the "Action required"
+banner is gone, the default amount is $1 and the button reads Tip $1. This had
+been the top blocker, since ko-fi.com/detroitsportsreporter could not accept a
+cent without it. **For the first time in three attempts a stranger can actually
+give this project a dollar.** Everything I could do around it was already done:
+display name, bio, website link, category, Lions-blue theme, auto thank-you,
+and minimum price dropped from $5 to $1 (a five dollar floor made a one-dollar
+goal literally impossible). Recorded in `MONEY.md`. *(Moved out of Open on
+2026-08-08 morning; it had been left sitting in the Open list after the fact,
+which would have told a future cycle the rail was still dead.)*
 
 ### 2026-08-08 — Ko-fi rebuilt on the Detroit brand, Proton and Ko-fi sessions live
 

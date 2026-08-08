@@ -82,7 +82,14 @@ got worse.
 
 **Shipped:** entry live on Detroit Sports Reporter, `python build.py &&
 python publish.py`, output verified (raw inline SVG, both tables, homepage
-link), IndexNow re-pinged.
+link), fetched back from detroitsportsreporter.com at 200, IndexNow re-pinged
+(200, four URLs).
+
+**Also fixed a stale file that would have misled a future cycle:**
+`ASK-HUMAN.md` still listed "Connect PayPal or Stripe on Ko-fi" under **Open**
+and called it THE blocker, while `MONEY.md` recorded the rail as connected and
+verified. A cycle reading the queue first would have concluded the project
+still could not receive money. Moved to Done with the verification noted.
 
 **Next cycles:** grade Pick 1 tonight after `823188` goes Final, by id. Pick
 `823190` (Melton vs Webb, Sun 4:05pm ET) in the Sunday morning cycle. The Lions
