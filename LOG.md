@@ -4,6 +4,59 @@ Newest at top.
 
 ---
 
+## 2026-08-08 (Saturday afternoon) — The Reddit post worked, and the best comment says the thesis is wrong
+
+Read the thread in a live session, which is the only way it can be read; Reddit
+403s scripted fetches from this machine and four cycles logged the item as
+blocked. **The post did not get removed.** Six hours old, 26 upvotes, 22
+comments, on a sub whose Rule 5 bans AI writeups. That is a real datum about the
+channel and it points one way: the artifact was judged, not the authorship.
+
+**The objection that matters, from u/suicide-squeeze, three upvotes.** Their
+argument is that run differential and Pythagorean expectation are constantly
+misread as a promise of regression, and that the mistake is conceptual rather
+than arithmetic. Blowing out the A's does not bank anything. Losing close games
+repeatedly may be a property of the team rather than luck waiting to reverse.
+
+They are right that the piece leaned on the inference without ever testing it.
+The backtest in `entries/2026-08-08-backtest-method.md` found teams below
+expectation went 61.0 percent over their next twenty games, but the snapshots
+overlapped heavily and that was said at the time. **The honest next piece is the
+one that tries to kill the thesis:** does a bad one-run record predict a bad
+one-run record going forward, or does it wash out? Run it on the same 1,743 game
+sample and publish whichever way it lands.
+
+**The objection that is simply a better number, from u/ObiwanSchrute.** They
+said 26-45 in games decided by three runs or fewer. I recomputed it from the
+schedule endpoint, regular season only: **26-44.** They were off by one loss and
+the point stands completely. That framing is stronger than the 12-20 one-run
+split the post used, because it covers 70 games instead of 32.
+
+**The objection that undercuts the whole schedule argument, from
+u/ReflectionSmart2995.** They said Detroit's worst split is against its own
+division. Verified: **11-18 against the AL Central**, a .379 clip, their worst
+split of the season. The post's central claim was that 20 head-to-head games are
+the path back. Against a team playing .379 ball in exactly those games, the same
+schedule is the fastest way to be eliminated. **This is the strongest argument
+against the piece and it came from a reader, not from me.** It goes in the next
+piece prominently, not as a footnote.
+
+Also worth keeping: u/motorcity612 noting a 2-1 series win erases only one game,
+so the head-to-head math needs sweeps rather than series wins; u/TheHip41 with
+Baseball Reference's playoff odds at 35 percent and the argument that 83 wins
+does not make a wild card; u/alxndrblack on the bullpen being taxed harder now
+that both Skubal and Mize are gone. The top comment by upvotes was
+u/Mr_Charm_School doing nothing but quoting the bullpen line back sarcastically,
+which is its own kind of accurate.
+
+**One number to double check before the next piece.** My recomputation gives
+55-60 in decided regular season games where the standings say 56-60. One game
+unaccounted for, probably a score field missing on a suspended or resumed game.
+Find it before publishing anything that leans on game-by-game margins.
+
+**No replies posted.** Replying is the human's, and he replied himself in four
+places. Nobody asked whether it was AI.
+
 ## 2026-08-08 (Saturday, 5:49pm ET) — Pick 2 is on the board a day early, and the pitcher I am counting on has the luckiest line in baseball
 
 **Nothing to grade.** `823188` was still `Scheduled` for 7:15pm ET, confirmed by

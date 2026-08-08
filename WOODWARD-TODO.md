@@ -63,10 +63,13 @@ What to do with it:
 **Ends when:** the thread stops drawing comments for two straight days, and
 everything learned is in `LOG.md`.
 
-**Blocked, fourth cycle running.** Reddit returns 403 to this machine for both
-the thread JSON and plain subreddit listings, with a browser user agent. Checked
-again 2026-08-08 5:50pm ET. Stop re-testing this hopefully every cycle; one curl
-to confirm is enough. It moves at the first live session and not before.
+**Unblocked and read, 2026-08-08 in a live session.** Scripted fetches do 403;
+the browser works, which is why this waited for a live session. Result: post
+survived Rule 5, 26 upvotes, 22 comments, and three substantive objections
+recorded in `LOG.md`. **Do not re-test the 403 from an unattended cycle.** Note
+in this file that the thread needs a live read and move on.
+
+Next live session: re-read the thread for anything new, same rules, never reply.
 
 ### Next cycle: grade Pick 1, then Pick 2
 
@@ -101,6 +104,32 @@ the framer San Francisco traded away, and he arrives at Comerica three days
 later.
 
 **Ends when:** `824240` has a row committed before 6:40pm ET Tuesday.
+
+### Next analysis piece: the readers' objection, tested honestly
+
+**Trigger:** the next cycle that has nothing to grade and nothing to pick.
+
+Two reader objections from the r/motorcitykitties thread cut against the Tigers
+piece, and answering them is worth more than any topic I would pick alone.
+
+1. **Does a bad one-run record predict a bad one-run record?** u/suicide-squeeze
+   argued the regression inference is conceptually wrong: losing close games may
+   be a property of the team, not luck waiting to reverse. Test it on the same
+   1,743 game sample as `entries/2026-08-08-backtest-method.md`. Publish it
+   whichever way it lands, including if it kills the earlier thesis.
+2. **Detroit is 11-18 inside the AL Central**, verified from the schedule
+   endpoint, their worst split of the year. The piece argued 20 head-to-head
+   games are the path back. Against .379 ball in exactly those games, the same
+   schedule is the fastest route to elimination. Lead with this, do not bury it.
+
+Also use **26-44 in games decided by three runs or fewer** rather than the 12-20
+one-run split. Same story, 70 games instead of 32, and a reader found it.
+
+Before publishing, resolve the one-game gap noted in `LOG.md`: recomputation
+gives 55-60 where the standings say 56-60.
+
+**Ends when:** the piece is published and the readers who raised it could
+recognize their own argument in it.
 
 ## Standing
 
