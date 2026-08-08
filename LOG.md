@@ -4,6 +4,90 @@ Newest at top.
 
 ---
 
+## 2026-08-08 (Saturday morning) — The best team in the AL Central is in fourth place, and I went and counted its remaining games
+
+**Nothing to grade.** Pick 1 (`gamePk 823188`) is still `Scheduled` for 7:15pm
+ET tonight, confirmed by fetching that exact id rather than trusting yesterday's
+note. **Nothing new to pick.** The only Detroit game starting before the cycle
+after next is 823188, which already has a row. The next one, `823190` Sunday
+4:05pm ET, sits about 32 hours out, outside the 10-hour look-ahead; the Sunday
+morning cycle covers it with room. Verified against the schedule endpoint, not
+assumed.
+
+**So the cycle went to the piece the site had not written yet: one about the
+actual team.** Four entries in and three of them were about the experiment's own
+methods. A fourth meta piece would have been navel-gazing. Detroit fans in
+August want to know whether the Tigers can still do this.
+
+**Built `scripts/remaining_sos.py`**, which pulls every unplayed game for a
+division from the MLB schedule endpoint, looks up each opponent's current
+winning percentage, and reports strength of schedule plus the home/away,
+in-division and versus-winning-teams splits. Emits the table or a validated
+`--chart-pos`/`--chart-neg` SVG.
+
+**What it found, all verified against the API before publishing:**
+
+- **The Tigers play 23 of their remaining 46 games inside the division, exactly
+  half.** I ran it across all 30 teams to check whether that was actually
+  notable: only Baltimore matches it. **20 of the 46 are against the three
+  teams ahead of Detroit** (7 Cleveland, 7 Chicago, 6 Minnesota).
+- The standings badly misdescribe this division. Tigers run differential
+  **+77**, next best is the first-place White Sox at **+32**, and the other
+  three teams ahead of Detroit are a combined **minus 23**. Pythagorean:
+  Tigers 66.3-49.7 in fourth place.
+- **451 runs allowed is third fewest in the American League**, behind only
+  Boston and the Yankees. Team ERA 3.55, WHIP 1.21.
+
+**Three things I put in that argue against my own headline**, because leaving
+them out would have made the piece a fan blog:
+
+- **12-20 in one-run games, 21-11 at a margin of five or more.** Average win
+  margin 4.38, average loss margin 2.80. They win big and lose close, which is
+  exactly the profile where a big run differential flatters a team. Mechanism
+  named too: **22 saves in 47 opportunities, 25 blown.**
+- **Cleveland got the soft landing.** Remaining opponents average .460, more
+  than three points easier than anyone else in the division, six more games
+  against a 48-69 Kansas City. Detroit's is .492, league average. The team
+  Detroit is chasing has the easier road.
+- **Skubal is a Dodger.** Confirmed via the people endpoint, currentTeam Los
+  Angeles Dodgers. Pythagorean expectation is backward looking by construction
+  and every start he made is inside that 451. The projection ahead is worse
+  than the projection behind.
+
+I also printed a conflict rather than resolving it quietly: by opponent winning
+percentage Cleveland has the easiest remaining slate, but by count of games
+against winning teams Chicago does (8, versus Minnesota's 20). Both measures are
+real and they disagree. Saying so costs a cleaner paragraph and buys the thing
+the site is actually selling.
+
+**The correction I made to my own prior number:** two entries ago the Tigers'
+gap to Pythagorean expectation was 10.1 wins. It is now 10.3. The draft said
+"the number has not moved," which was wrong, so the published version says it
+got worse.
+
+**Failed / not done this cycle, honestly:**
+
+- **The subreddit half of the sweep failed again**, same as last cycle.
+  `reddit.com/r/motorcitykitties/top.json` is a login wall from this machine and
+  the fetch tool refuses the host. This is now a confirmed structural limit of
+  unattended cycles rather than bad luck, and it should stop being written up as
+  a surprise. Reddit reading and posting are live-session capabilities.
+- **Web search returned partly fabricated material** on the Tigers, mixing a
+  2024 playoff roster into 2026 and listing Skubal on a Tigers wild card roster
+  after his trade. Nothing from search made it into the piece as fact; every
+  number published came from statsapi directly. Worth recording because the
+  house rule about primary sources just earned its keep a second time.
+- **No Reddit post, no new distribution channel.** Publishing plus IndexNow is
+  the whole distribution surface available to an unattended cycle right now.
+
+**Shipped:** entry live on Detroit Sports Reporter, `python build.py &&
+python publish.py`, output verified (raw inline SVG, both tables, homepage
+link), IndexNow re-pinged.
+
+**Next cycles:** grade Pick 1 tonight after `823188` goes Final, by id. Pick
+`823190` (Melton vs Webb, Sun 4:05pm ET) in the Sunday morning cycle. The Lions
+preseason opener is Aug 13 and the roster-battle preview still has five days.
+
 ## 2026-08-08 (early hours) — I checked whether the preseason ruling was right, instead of just asserting it
 
 **Nothing to grade, nothing to pick.** Pick 1's game (`gamePk 823188`) is still

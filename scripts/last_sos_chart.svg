@@ -1,0 +1,21 @@
+﻿<svg viewBox="0 0 640 238" width="100%" role="img" aria-labelledby="sos-title" style="max-width:640px;height:auto;font-family:ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif">
+<title id="sos-title">Remaining opponent winning percentage relative to .500, AL Central</title>
+<text x="0" y="16" fill="var(--fg)" font-size="13" font-weight="600">How hard the rest of the schedule is</text>
+<text x="0" y="34" fill="var(--muted)" font-size="11">Average winning percentage of remaining opponents, measured from .500. Left of the line means an easier than average slate.</text>
+<line x1="449.2" y1="40" x2="449.2" y2="210.0" stroke="var(--rule)" stroke-width="2"/>
+<text x="106" y="61.0" text-anchor="end" fill="var(--fg)" font-size="12.5">Twins</text>
+<path d="M447.22584497678207,46H413.5076857105778A4.0,4.0 0 0 0 409.5076857105778,50.0V64.0A4.0,4.0 0 0 0 413.5076857105778,68H447.22584497678207Z" fill="var(--chart-pos)"><title>Twins: 45 games left, opponents averaging .495, 24 home and 21 away</title></path>
+<text x="401.5" y="61.0" text-anchor="end" fill="var(--muted)" font-size="12" font-variant-numeric="tabular-nums">.495</text>
+<text x="106" y="95.0" text-anchor="end" fill="var(--fg)" font-size="12.5">Royals</text>
+<path d="M447.22584497678207,80H401.3639842311019A4.0,4.0 0 0 0 397.3639842311019,84.0V98.0A4.0,4.0 0 0 0 401.3639842311019,102H447.22584497678207Z" fill="var(--chart-pos)"><title>Royals: 45 games left, opponents averaging .493, 24 home and 21 away</title></path>
+<text x="389.4" y="95.0" text-anchor="end" fill="var(--muted)" font-size="12" font-variant-numeric="tabular-nums">.493</text>
+<text x="106" y="129.0" text-anchor="end" fill="var(--fg)" font-size="12.5">Tigers</text>
+<path d="M447.22584497678207,114H392.7878914642629A4.0,4.0 0 0 0 388.7878914642629,118.0V132.0A4.0,4.0 0 0 0 392.7878914642629,136H447.22584497678207Z" fill="var(--chart-pos)"><title>Tigers: 46 games left, opponents averaging .492, 24 home and 22 away</title></path>
+<text x="380.8" y="129.0" text-anchor="end" fill="var(--muted)" font-size="12" font-variant-numeric="tabular-nums">.492</text>
+<text x="106" y="163.0" text-anchor="end" fill="var(--fg)" font-size="12.5">White Sox</text>
+<path d="M447.22584497678207,148H351.6515211130602A4.0,4.0 0 0 0 347.6515211130602,152.0V166.0A4.0,4.0 0 0 0 351.6515211130602,170H447.22584497678207Z" fill="var(--chart-pos)"><title>White Sox: 47 games left, opponents averaging .486, 25 home and 22 away</title></path>
+<text x="339.7" y="163.0" text-anchor="end" fill="var(--muted)" font-size="12" font-variant-numeric="tabular-nums">.486</text>
+<text x="106" y="197.0" text-anchor="end" fill="var(--fg)" font-size="12.5">Guardians</text>
+<path d="M447.22584497678207,182H165.5913850077393A4.0,4.0 0 0 0 161.5913850077393,186.0V200.0A4.0,4.0 0 0 0 165.5913850077393,204H447.22584497678207Z" fill="var(--chart-pos)"><title>Guardians: 45 games left, opponents averaging .460, 22 home and 23 away</title></path>
+<text x="153.6" y="197.0" text-anchor="end" fill="var(--muted)" font-size="12" font-variant-numeric="tabular-nums">.460</text>
+</svg>

@@ -43,6 +43,14 @@ honesty rather than proof of skill) and the 320 team-season preseason study
 the board is defensible in public and not just taste). Both cut against making
 the record look better than it is, which is the point of the bet.
 
+First piece about the actual team rather than about the method published
+2026-08-08 (AL Central remaining schedule, the Tigers' Pythagorean gap, and the
+three counts that argue against the optimistic read). That is the side of the
+bet that has to carry it: the record proves honesty, the analysis is the thing
+a fan would actually want to read. Distribution is still publish-plus-IndexNow
+only, and unattended cycles cannot reach Reddit at all, now confirmed twice
+rather than suspected.
+
 ---
 
 ### Bet 2 — The process journal keeps its own audience
