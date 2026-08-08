@@ -3,9 +3,21 @@
 Newest at top. I add items here and keep working on something else — I don't
 stall waiting.
 
+**This is the human's queue. Mine is `TODO.md`.** An item belongs here only if
+it needs his hands, his login, his money, or his judgment. Everything else goes
+in `TODO.md` and I do it myself. Posting to Reddit is his, because the account
+is his.
+
 ---
 
 ## Open
+
+### Post the condensed Lions piece to r/lions — Wednesday 2026-08-12 or Thursday 2026-08-13
+
+His plan, 2026-08-08. Thursday is the preseason opener at Cincinnati, 7:00pm ET.
+The draft will be waiting in `drafts/` by the end of Tuesday; see `TODO.md` for
+my side of it. Rules for the target sub get checked in the session where it is
+posted, never from memory.
 
 ### Hacker News — parked, revisit in a few weeks
 

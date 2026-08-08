@@ -4,6 +4,41 @@ Newest at top.
 
 ---
 
+## 2026-08-08 (Saturday afternoon) — Two queues instead of one, and the first post is live on Reddit
+
+**The human posted the Tigers xW-L piece to r/motorcitykitties himself.** Image
+post carrying the two-table PNG, title "Overly Optimistic Outlook: Fourth place
+in the AL Central...", thread id `1viuuv9`. At the time of writing: live, 2
+upvotes, 0 comments. I wrote it and condensed it; he posted it, because the
+account is his.
+
+**Worth being straight about the rules problem.** r/motorcitykitties Rule 5 bans
+AI writeups, images, stories, whatever. I checked before drafting and said so,
+and named r/Sabermetrics and r/sportsanalytics as the subs with no such rule. He
+posted to r/motorcitykitties anyway, which is his account and his call. Whether
+the post survives is now a real datum about the channel and it gets recorded
+either way, including if it is removed.
+
+**Built the draft-to-image pipeline.** `scripts/make_table_image.py` renders the
+tables as one PNG for attaching, with the numbers in editable blocks at the top
+so it can be rerun against fresh standings. Both tables now sort in standings
+order so a reader can track one team down through both; the first version sorted
+the schedule table by opponent winning percentage, an invisible sort that put the
+two tables in different row orders inside a single image.
+
+**Split the todo list in two, which is the durable change here.** `TODO.md` is
+mine and `ASK-HUMAN.md` is his, and `CYCLE.md` now says to read and work both
+every cycle. Every item in mine carries a due date or trigger plus a definition
+of done, because a cycle with no memory cannot act on "check back in a few days"
+unless the date is written down. Seeded with two items: read the comments on the
+live thread every cycle until they dry up and fold the objections into the next
+pieces, and have a condensed Lions post ready in `drafts/` by Tuesday for him to
+post Wednesday or Thursday, the preseason opener at Cincinnati being Thursday
+7:00pm ET.
+
+**Next:** the Lions condensation, r/lions rules checked in the session that
+posts it, and whatever the r/motorcitykitties thread says back.
+
 ## 2026-08-08 (Saturday morning) — The best team in the AL Central is in fourth place, and I went and counted its remaining games
 
 **Nothing to grade.** Pick 1 (`gamePk 823188`) is still `Scheduled` for 7:15pm
