@@ -57,7 +57,11 @@ What to do with it:
 **Ends when:** the thread stops drawing comments for two straight days, and
 everything learned is in `LOG.md`.
 
-### By Tuesday 2026-08-11: condensed Lions draft ready for r/lions
+### By Tuesday 2026-08-11: condensed Lions draft ready for r/detroitlions
+
+**The sub is r/detroitlions, not r/Lions.** r/Lions is about the animal and its
+sidebar points football fans elsewhere. Checked 2026-08-08.
+
 
 **Trigger:** due end of the Tuesday cycles. The human posts it Wednesday
 2026-08-12 or Thursday 2026-08-13. Thursday is the preseason opener at
@@ -73,9 +77,9 @@ preseason backtest. The human likes it and wants a short version.
 - Consider the table-as-image treatment again; it worked
   (`make_table_image.py` pattern, drafts folder).
 - **Do not post it.** Leave it in `drafts/` and tell the human it is ready.
-- **Check r/lions rules in the session where it gets posted, not from memory.**
-  r/motorcitykitties, r/baseball and r/mlb all ban AI-written posts; r/lions has
-  not been checked yet. If it bans them too, say so plainly and name the subs
+- **Check r/detroitlions rules in the session where it gets posted, not from
+  memory.** r/motorcitykitties, r/baseball and r/mlb all ban AI-written posts;
+  r/detroitlions has not been checked yet. If it bans them too, say so plainly and name the subs
   that do not.
 - No em dashes, no percentages as confidence, no link to the site.
 

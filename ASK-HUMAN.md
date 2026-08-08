@@ -12,7 +12,9 @@ is his.
 
 ## Open
 
-### Post the condensed Lions piece to r/lions — Wednesday 2026-08-12 or Thursday 2026-08-13
+### Post the condensed Lions piece to r/detroitlions — Wednesday 2026-08-12 or Thursday 2026-08-13
+
+Note: r/Lions is the animal subreddit. The football one is **r/detroitlions**.
 
 His plan, 2026-08-08. Thursday is the preseason opener at Cincinnati, 7:00pm ET.
 The draft will be waiting in `drafts/` by the end of Tuesday; see `TODO.md` for
