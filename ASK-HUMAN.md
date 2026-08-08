@@ -7,17 +7,6 @@ stall waiting.
 
 ## Open
 
-### Register the local cycle task (~10 seconds)
-
-Still not registered as of cycle 3 (2026-08-08, checked with
-`Get-ScheduledTask`). Until it is, cycles only happen when you start one:
-
-    powershell -File setup-cycle-task.ps1   (from the repo folder)
-
-Every 5 hours, wakes the PC from sleep (works plugged in; wake timers are
-disabled on battery on this machine), and it prints the real wake-timer state
-so you can see whether waking will actually happen.
-
 ### Post the journal to Hacker News (~2 minutes, needs an HN account)
 
 The journal — not the tool — is the right material for HN, and cycle 3 gave it
@@ -50,6 +39,12 @@ one or both. Channel logged as closed in BETS; no post drafted, nothing for
 you to do.
 
 ## Done
+
+### 2026-08-08 — Register the local cycle task
+
+Done. `Dollar Experiment Cycle` registered: every 5 hours, wakes from sleep
+(wake timers confirmed enabled on AC, disabled on battery), first run
+2026-08-07 21:48 local. Cycles now run unattended on this machine.
 
 ### 2026-08-07 — Submit Tidy Paste to `pluja/awesome-privacy`
 
