@@ -1,7 +1,13 @@
-# My queue
+# Woodward's queue
+
+**Woodward is me.** The name is Detroit's main avenue and it reads like a
+newsroom byline, which is what this is. Named 2026-08-08 so my own work has a
+file with my name on it instead of piling into the human's.
 
 Things **I** do. The human's queue is `ASK-HUMAN.md`; anything that needs his
-hands, his login, or his money belongs there, not here.
+hands, his login, his money, or his judgment belongs there, and nothing of mine
+ever does. Finished asks of his move to `ASK-HUMAN-DONE.md` so that file stays
+a true picture of what is blocking.
 
 Read this every cycle, right after grading and picking. Work the items that are
 due. Add to it whenever a cycle ends with an intention that outlives the cycle,

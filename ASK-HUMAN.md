@@ -1,83 +1,46 @@
 # Things only the human can do
 
-Newest at top. I add items here and keep working on something else — I don't
-stall waiting.
+**Live asks only.** Finished ones move to `ASK-HUMAN-DONE.md` the moment they
+are done, so a glance at this file tells the truth about what is actually
+blocking. A stale Done pile here once told a cycle the money rail was still dead
+when it had been open for days.
 
-**This is the human's queue. Mine is `TODO.md`.** An item belongs here only if
-it needs his hands, his login, his money, or his judgment. Everything else goes
-in `TODO.md` and I do it myself. Posting to Reddit is his, because the account
-is his.
+**This is his queue. Mine is `WOODWARD-TODO.md`.** An item belongs here only if
+it needs his hands, his login, his money, or his judgment. Everything else is
+mine to do, and my own work never goes in this file. Posting to Reddit is his,
+because the account is his.
+
+Newest at top. I add an item and keep working on something else; I never stall
+waiting on him.
 
 ---
 
 ## Open
 
-### Post the condensed Lions piece to r/detroitlions — Wednesday 2026-08-12 or Thursday 2026-08-13
+### Merge PR #1, the two-queue split
 
-Note: r/Lions is the animal subreddit. The football one is **r/detroitlions**.
+github.com/projectunmuted/newsroom/pull/1. Unattended cycles read `main`, so
+until it merges they will not see `WOODWARD-TODO.md` and will not know to watch
+the Reddit thread or prepare the Lions draft. One click.
+
+### Post the condensed Lions piece to r/detroitlions, Wednesday 2026-08-12 or Thursday 2026-08-13
 
 His plan, 2026-08-08. Thursday is the preseason opener at Cincinnati, 7:00pm ET.
-The draft will be waiting in `drafts/` by the end of Tuesday; see `TODO.md` for
-my side of it. Rules for the target sub get checked in the session where it is
-posted, never from memory.
+The draft will be waiting in `drafts/` by the end of Tuesday; see
+`WOODWARD-TODO.md` for my side of it. Rules for the target sub get checked in
+the session where it is posted, never from memory. Note that r/Lions is the
+animal subreddit; the football one is **r/detroitlions**.
 
-### Hacker News — parked, revisit in a few weeks
+### Decide: does the first Reddit post get a public process entry?
+
+Asked 2026-08-08. The journal on project-unmuted is where anything about
+posting, channels and rules belongs, never Detroit Sports Reporter. The honest
+version of that entry says r/motorcitykitties Rule 5 bans AI writeups and he
+posted it there anyway. That is his account and his call, so I am not publishing
+it without a yes. Nothing is written yet.
+
+### Hacker News, parked, revisit in a few weeks
 
 `projectunmuted` exists but HN gates Show HNs from new accounts. The journal
-gets its shot once the account has history. Reading and commenting yourself,
-when you genuinely feel like it, is the only legitimate accelerant.
-
-## Done
-
-### 2026-08-08 — Ko-fi payments connected, the rail is open
-
-You linked a payment method. Verified in the browser: the "Action required"
-banner is gone, the default amount is $1 and the button reads Tip $1. This had
-been the top blocker, since ko-fi.com/detroitsportsreporter could not accept a
-cent without it. **For the first time in three attempts a stranger can actually
-give this project a dollar.** Everything I could do around it was already done:
-display name, bio, website link, category, Lions-blue theme, auto thank-you,
-and minimum price dropped from $5 to $1 (a five dollar floor made a one-dollar
-goal literally impossible). Recorded in `MONEY.md`. *(Moved out of Open on
-2026-08-08 morning; it had been left sitting in the Open list after the fact,
-which would have told a future cycle the rail was still dead.)*
-
-### 2026-08-08 — Ko-fi rebuilt on the Detroit brand, Proton and Ko-fi sessions live
-
-New account ko-fi.com/detroitsportsreporter created and configured; both
-sites now point at it (one account means one payment connection to keep
-alive). Old projectunmuted page retired. Browser sessions for Ko-fi and
-Proton are in the profile, so I can now see earnings and mail myself instead
-of being blind to the project's only success metric.
-
-### 2026-08-08 — detroitsportsreporter.com live, repo renamed to newsroom
-
-Domain flipped, HTTPS enforced, own IndexNow key. Source repo renamed
-dollar-experiment -> newsroom so the proof link stopped announcing the
-framing we removed from the page; old URL 301s, Pages and Search Console
-both survived. Note: the rename silently broke Pages' auto-build trigger
-(status said "built" at a stale commit), fixed with a forced rebuild.
-
-### 2026-08-08 — Google Search Console verified, sitemap submitted
-
-Done end to end from the browser, no DNS needed. Property added as **URL
-prefix** rather than Domain specifically because Domain requires DNS
-verification (your hands) while URL prefix allows HTML-file verification
-(mine): Google names a token file, `build.py` emits it every build so it can
-never silently vanish, Pages serves it, Google fetched it. Ownership
-verified, `sitemap.xml` submitted and accepted. Google now crawls alongside
-the IndexNow engines. This had been the top queued item for a day.
-
-### 2026-08-08 — Browser and accounts connected
-
-Claude extension installed in the Work profile and paired. The diagnosis that
-unstuck it: Chrome extensions are per-profile, and the profile you had moved
-to was the only one without it. Reddit confirmed as **u/ICantSpellorWrite**
-(created 2019, 5,480 karma, verified email, no suspensions) — a genuinely
-aged account, which is the one thing a new account cannot fake. Nothing
-posted.
-
-### 2026-08-08 — Attempt 2 closeout
-
-All three tool submissions closed politely; see LOG. Ko-fi, domain, HN
-account, scheduled task, Chrome profile all carried into attempt 3.
+gets its shot once the account has history. Reading and commenting himself, when
+he genuinely feels like it, is the only legitimate accelerant.
