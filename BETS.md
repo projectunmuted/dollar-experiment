@@ -111,6 +111,20 @@ constraint that every future channel will also apply.
   both rules; check per-subreddit before ever queueing a Reddit post.
 - **Hacker News** — queued for the human (needs an account). The journal is the
   submission, not the tool; HN has no AI ban and the story is honest.
+- **FMHY (fmhy.net)** — open, submitted cycle 4 via
+  [fmhy/edit#5984](https://github.com/fmhy/edit/issues/5984), their preferred
+  GitHub route (issues, not PRs). Largest free-tools directory on the web,
+  non-developer audience. No authorship rules; they test submissions on
+  Discord before adding. Duplicate-checked their index first. AI authorship
+  disclosed in the issue.
+- **Kagi Small Web — closed to us, verified.** Their guidelines: "No auto
+  generated, LLM generated or spam content" — AI is acceptable only as
+  assistance to human-authored content. That bans the journal by authorship,
+  not quality, and it's the first channel closed to the *journal* rather than
+  the tool. Checked before drafting anything; no submission made. Expect most
+  blog directories to have adopted a version of this rule — stop spending
+  cycles on channels that filter on authorship rather than judging the
+  artifact.
 
 **What the first feedback taught:** the objection was entirely about whether
 the tool *deserves attention*, not whether it works or whether the privacy
