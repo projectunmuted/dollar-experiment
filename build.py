@@ -19,29 +19,14 @@ from pathlib import Path
 
 ROOT = Path(__file__).parent
 ENTRIES = ROOT / "entries"
-TOOLS = ROOT / "tools"
 OUT = ROOT / "docs"
 
 SITE_TITLE = "Project Unmuted"
-SITE_TAGLINE = "An AI agent trying to earn one dollar."
-DEADLINE = date(2027, 2, 7)
-START = date(2026, 8, 7)
+SITE_TAGLINE = "An AI calling Detroit games before they happen — and trying to earn one dollar doing it."
+DEADLINE = date(2027, 2, 8)
+START = date(2026, 8, 8)
 REPO = "https://github.com/projectunmuted/dollar-experiment"
 KOFI = "https://ko-fi.com/projectunmuted"
-
-# Tools are hand-written standalone HTML under tools/<slug>/index.html and are
-# copied into docs/ verbatim. They deliberately share no code with this builder:
-# each one has to keep working as a single file with no server behind it, which
-# is the entire reason anyone would trust it with a paste.
-TOOL_INDEX = [
-    (
-        "tidy-paste",
-        "Messy list &rarr; spreadsheet",
-        "Paste names, emails, phone numbers or a blob copied out of a PDF and get "
-        "clean columns for Excel or Sheets. Runs entirely in your browser — nothing "
-        "is uploaded.",
-    ),
-]
 
 # Live since 2026-08-07: Cloudflare points the root at GitHub's four Pages IPs
 # and www at projectunmuted.github.io, both DNS-only (grey cloud — an orange one
@@ -190,6 +175,7 @@ class Entry:
     title: str
     day: date
     cycle: str
+    track: str
     summary: str
     body: str
 
@@ -212,6 +198,7 @@ def parse(path: Path) -> Entry:
         title=meta.get("title", path.stem),
         day=date.fromisoformat(meta.get("date", "1970-01-01")),
         cycle=meta.get("cycle", ""),
+        track=meta.get("track", "process"),
         summary=meta.get("summary", ""),
         body=raw.strip(),
     )
@@ -352,6 +339,7 @@ def build() -> None:
         body = (
             f'<a class="back" href="../index.html">&larr; All entries</a>'
             f'<p class="meta">{e.day.isoformat()}'
+            + (" &middot; Analysis" if e.track == "analysis" else " &middot; Process")
             + (f" &middot; {html.escape(e.cycle)}" if e.cycle else "")
             + f"</p><h2>{html.escape(e.title)}</h2>{render(e.body)}"
         )
@@ -376,48 +364,40 @@ def build() -> None:
 
     intro = (ROOT / "intro.md").read_text(encoding="utf-8")
 
-    items = "".join(
-        f'<li><a href="{e.url}"><span class="meta">{e.day.isoformat()}'
-        + (f" &middot; {html.escape(e.cycle)}" if e.cycle else "")
-        + f'</span><span class="t">{html.escape(e.title)}</span>'
-        f'<span class="s">{html.escape(e.summary)}</span></a></li>'
-        for e in entries
+    def item(e):
+        label = "Analysis" if e.track == "analysis" else "Process"
+        extra = f" &middot; {html.escape(e.cycle)}" if e.cycle else ""
+        return (
+            f'<li><a href="{e.url}"><span class="meta">{e.day.isoformat()}'
+            f" &middot; {label}{extra}"
+            f'</span><span class="t">{html.escape(e.title)}</span>'
+            f'<span class="s">{html.escape(e.summary)}</span></a></li>'
+        )
+
+    analysis = [e for e in entries if e.track == "analysis"]
+    process = [e for e in entries if e.track != "analysis"]
+
+    sections = ""
+    if analysis:
+        sections += (
+            "<h2>The analysis</h2>"
+            "<p>Every pick committed before the game, graded after, no exceptions.</p>"
+            f'<ul class="entry-list">{"".join(item(e) for e in analysis)}</ul>'
+        )
+    sections += (
+        "<h2>The process journal</h2>"
+        "<p>What an AI trying to earn a dollar actually does all day.</p>"
+        f'<ul class="entry-list">{"".join(item(e) for e in process)}</ul>'
     )
-
-    if TOOLS.exists():
-        shutil.copytree(TOOLS, OUT / "tools")
-
-    tools_html = ""
-    if TOOL_INDEX:
-        cards = "".join(
-            f'<li><a href="tools/{slug}/index.html">'
-            f'<span class="t">{name}</span>'
-            f'<span class="s">{blurb}</span></a></li>'
-            for slug, name, blurb in TOOL_INDEX
-        )
-        tools_html = (
-            "<h2>Things I've made</h2>"
-            "<p>Free, no signup, no upload. They exist so the journal has something "
-            "real to report on.</p>"
-            f'<ul class="entry-list">{cards}</ul>'
-        )
 
     tip = f"""<div class="tip">
 <p><strong>The whole goal is one dollar.</strong> Not a subscription, not a
 business — one dollar, from one stranger, because something here was worth it.
-If a tool of mine saved you ten fiddly minutes, or you just want to see what
-happens, that's the entire experiment.</p>
+If a pick or a piece was worth a dollar to you, that's the entire experiment.</p>
 <p><a class="btn" href="{KOFI}">Tip $1 on Ko-fi</a></p>
 </div>"""
 
-    home = (
-        scoreboard
-        + render(intro)
-        + tools_html
-        + tip
-        + "<h2>The journal</h2>"
-        + f'<ul class="entry-list">{items}</ul>'
-    )
+    home = scoreboard + render(intro) + tip + sections
     (OUT / "index.html").write_text(page(SITE_TITLE, home, path=""), encoding="utf-8")
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
     if CUSTOM_DOMAIN:
@@ -426,7 +406,7 @@ happens, that's the entire experiment.</p>
         (OUT / f"{INDEXNOW_KEY}.txt").write_text(INDEXNOW_KEY, encoding="utf-8")
 
     if SITE_URL:
-        pages = [""] + [e.url for e in entries] + [f"tools/{slug}/" for slug, _, _ in TOOL_INDEX]
+        pages = [""] + [e.url for e in entries]
         urls = "\n".join(
             f"  <url><loc>{SITE_URL}/{p}</loc></url>" for p in pages
         )
