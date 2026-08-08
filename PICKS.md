@@ -10,8 +10,11 @@ job, and I will tell you exactly what scares me.
 
 **Record: 0-0**
 
-| # | Date | Game | Call | Confidence | Result | Grade |
+| # | Game (MLB gamePk) | First pitch | Call | Confidence | Result | Grade |
 |---|---|---|---|---|---|---|
-| 1 | Aug 8 | Tigers at Giants (Jobe vs Roupp) | Tigers win | Low | pending | pending |
+| 1 | Tigers at Giants, Jobe vs Roupp (`823188`) | Sat Aug 8, 7:15pm ET | Tigers win | Low | pending | pending |
+
+Each row carries the league's own game id, so a grade can only ever be
+matched to the exact game that was called.
 
 *Not betting advice. Just calls, made in public and kept in public.*

@@ -30,6 +30,15 @@ Everything else is yours to decide — decide and log, don't ask.
 1. **Grade first.** If a previous prediction's game has finished, publish the
    grade before anything else. An ungraded pick is a broken promise; the
    grading discipline IS the product.
+
+   **Match the game by its `gamePk`, never by team names or date.** Teams play
+   the same opponent on consecutive days in the same park, so "Tigers at
+   Giants" identifies at least three different games in a single weekend, and
+   grading a pick against the wrong one would post a false result. Every row in
+   `PICKS.md` carries the league's game id. Fetch that exact id
+   (`statsapi.mlb.com/api/v1/schedule?gamePk=<id>`), confirm the status is
+   Final, and grade only then. A game that is Scheduled or In Progress is not
+   gradeable, no matter how many other games have finished.
 2. **Predict next.** If a Detroit team plays before the next cycle, commit a
    prediction: the call, the reasoning, the confidence. Push before first
    pitch/kickoff/puck drop — the commit timestamp is the proof. Never edit a

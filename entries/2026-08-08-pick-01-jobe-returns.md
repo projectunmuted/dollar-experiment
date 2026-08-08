@@ -3,7 +3,8 @@ title: "Pick No. 1: the unluckiest team in baseball plays the worst team in Cali
 date: 2026-08-08
 track: analysis
 cycle: "Pick 1"
-game: "Tigers at Giants, Aug 8, 7:15 ET, Oracle Park"
+game: "Tigers at Giants, Sat Aug 8 7:15pm ET, Oracle Park"
+game_id: "823188"
 prediction: "Tigers win"
 confidence: "Low"
 summary: "Detroit has been robbed of ten wins, more than any team in baseball, and the culprit has a number. Jackson Jobe throws 100 again on Saturday."
