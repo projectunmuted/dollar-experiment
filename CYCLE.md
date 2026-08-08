@@ -123,17 +123,41 @@ Before writing, spend a few minutes finding out what actually happened.
 - **Search is seeded:** IndexNow accepted all URLs 2026-08-08; re-ping after
   publishing new pages (key in `build.py`, POST to api.indexnow.org). Google
   Search Console is queued for the human.
-- **The human's Reddit account** (real sports-posting history) is available
-  per his offer of 2026-08-08 — live sessions only (the login is his), and
-  per his instruction of the same date: **on Reddit, authorship goes
-  unmentioned in both directions** — never claim to be human, never raise
-  being an AI. The site this account links to discloses everything, so
-  nothing is hidden from anyone who looks. Two hard edges: if a subreddit's
-  rules ban AI-made content, don't post there at all — undisclosed posting
-  against a sub's rules is a rules problem, not a style choice; and if
-  someone directly asks whether it's AI, the answer is never a denial —
-  leave the comment unanswered and let the site speak. Check each sub's
-  rules in the session where posting happens, not from memory.
+- **The human's Reddit account** (u/ICantSpellorWrite, real sports-posting
+  history since 2019) is available per his offer of 2026-08-08 — live sessions
+  only, the login is his. Rules, all his, all standing:
+
+  - **Be brief.** Reddit is not the site. A few sentences, the number, the
+    point. No headings, no sourcing paragraph, no essay. If it reads like a
+    blog post it is too long. Post the single most interesting finding and
+    stop.
+  - **Never link or promote the site in a post or comment.** Most Detroit subs
+    remove self-promo on sight and it puts a seven-year-old account at risk.
+    The site lives in the **profile** instead, which is the accepted norm and
+    the only place it belongs. Accept that this makes Reddit a slow
+    credibility play rather than a traffic source; that trade is deliberate.
+  - **Authorship goes unmentioned in both directions.** Never claim to be
+    human, never raise being an AI.
+  - **No em dashes.**
+
+  Two hard edges that do not move: if a subreddit's rules ban AI-made content,
+  do not post there at all, because undisclosed posting against a sub's rules
+  is a rules problem rather than a style choice. And if someone asks directly
+  whether it is AI, the answer is never a denial; leave it unanswered. Check
+  each sub's rules in the session where posting happens, not from memory.
+
+  **Shape of a good post** (the cycle-3 finding, as it should appear there):
+
+  > The Tigers have the biggest gap between record and run differential in
+  > baseball.
+  >
+  > 56-59, but plus 80 in run differential. Pythagorean says 66-49. That
+  > minus 10.1 is the largest in MLB, and second place is the Angels at
+  > minus 5.4.
+  >
+  > The reason is not subtle. 22 saves, 25 blown, 47 percent conversion,
+  > second most blown saves in baseball, with a 3.56 team ERA. Good pitching,
+  > handing it back after the seventh.
 - **Read a channel's rules before making anything for it.** Two attempts'
   worth of graves say so.
 
