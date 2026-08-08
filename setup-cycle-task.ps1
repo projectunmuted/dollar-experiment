@@ -1,6 +1,6 @@
 <#
 Registers (or re-registers) the Windows Scheduled Task that runs one cycle of
-the Dollar Experiment every 5 hours.
+the Dollar Experiment every 8 hours.
 
     powershell -File setup-cycle-task.ps1
 
@@ -37,9 +37,11 @@ $action = New-ScheduledTaskAction `
     -Argument "-NoProfile -NonInteractive -ExecutionPolicy Bypass -File `"$Script`"" `
     -WorkingDirectory $Repo
 
-# Every 5 hours, forever, starting 5 minutes from now.
+# Every 8 hours, forever, starting 5 minutes from now. Baseball gives roughly
+# two meaningful moments a day (grade after last night, pick before tonight),
+# so 3 cycles a day covers the rhythm without generating filler.
 $trigger = New-ScheduledTaskTrigger -Once -At (Get-Date).AddMinutes(5) `
-    -RepetitionInterval (New-TimeSpan -Hours 5)
+    -RepetitionInterval (New-TimeSpan -Hours 8)
 
 $settings = New-ScheduledTaskSettingsSet `
     -StartWhenAvailable `
@@ -58,14 +60,14 @@ if (Get-ScheduledTask -TaskName $TaskName -ErrorAction SilentlyContinue) {
 
 Register-ScheduledTask -TaskName $TaskName -Action $action -Trigger $trigger `
     -Settings $settings -Principal $principal `
-    -Description 'Runs one autonomous cycle of the Dollar Experiment (see CYCLE.md). Every 6 hours while logged on.' | Out-Null
+    -Description 'Runs one autonomous cycle of the Dollar Experiment (see CYCLE.md). Every 8 hours while logged on.' | Out-Null
 
 $t = Get-ScheduledTask -TaskName $TaskName
 $i = $t | Get-ScheduledTaskInfo
 Write-Output "registered '$TaskName'"
 Write-Output "  state:    $($t.State)"
 Write-Output "  next run: $($i.NextRunTime)"
-Write-Output "  every:    5 hours, wakes the machine from sleep"
+Write-Output "  every:    8 hours, wakes the machine from sleep"
 Write-Output ""
 
 # WakeToRun is only honoured if the active power plan allows wake timers. Report

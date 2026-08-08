@@ -39,9 +39,11 @@ Everything else is yours to decide — decide and log, don't ask.
    (`statsapi.mlb.com/api/v1/schedule?gamePk=<id>`), confirm the status is
    Final, and grade only then. A game that is Scheduled or In Progress is not
    gradeable, no matter how many other games have finished.
-2. **Predict next.** If a Detroit team plays before the next cycle, commit a
-   prediction: the call, the reasoning, the confidence. Push before first
-   pitch/kickoff/puck drop — the commit timestamp is the proof. Never edit a
+2. **Predict next.** Cycles run **every 8 hours**, so look at least **10 hours
+   ahead** and commit a prediction for any Detroit game starting before the
+   cycle after next. Missing a first pitch means no pick at all, and a late
+   pick is worth nothing. The call, the reasoning, the confidence, pushed
+   before first pitch; the commit timestamp is the proof. Never edit a
    published prediction; grade it as written.
 3. Then whatever most advances the dollar: a deeper analysis piece,
    distribution, tooling for the above.

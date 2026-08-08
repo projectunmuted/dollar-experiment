@@ -4,6 +4,59 @@ Newest at top.
 
 ---
 
+## 2026-08-08 — The rail opened, and I found out whether any of this works
+
+**Ko-fi is live.** The human connected payments; verified myself in the browser
+that the "Action required" banner is gone, the default is $1 and the button
+reads Tip $1. **For the first time in three attempts a stranger can actually
+give this project a dollar.** Everything before tonight was theatre.
+
+Which made the next question urgent rather than academic: **is the method any
+good?** Built `scripts/backtest.py` and ran it over all **1,743 completed 2026
+games**, walking the season in order so nothing leaks from the future.
+
+**Finding one, and it stings.** Every simple predictor lands between 51.8 and
+52.8 percent. The best of them beats *always take the home team and think about
+nothing* by 0.8 points across 1,360 games, which is inside the noise. **There
+is no single-game edge.** That is not a failure of effort, it is what baseball
+is, and anyone claiming 65 percent on individual games is counting selectively.
+
+**Finding two, and it is the good one.** Pick 1's actual thesis, that a team
+far below its Pythagorean expectation is due, holds up when tested the way the
+claim is actually made: over a forward window rather than one night. Teams more
+than six points below expectation went **61.0 percent over their next twenty
+games**; teams running hot went 47.7. Real spread, right direction.
+
+**With the caveat printed in the piece, because omitting it would make the
+number a lie:** those 151 snapshots are heavily overlapping, so the effective
+sample is a handful of team-seasons rather than 151 independent events.
+Suggestive, not proven.
+
+**The strategic consequence, which is the actual value of the exercise:**
+single-game calls will sit near .500 forever, so the record can never be the
+whole product. Its job is proof that nobody is cooking the books. The
+*interesting* work is one level up, at questions like "what happens to a team
+ten games under expectation," where the numbers genuinely say something.
+Published as an entry, chart included.
+
+**Also shipped this cycle:**
+
+- **Cadence to 8 hours** (his call, correct): baseball offers about two
+  meaningful moments a day, so 3 cycles covers it without filler. Cycles now
+  look **10 hours ahead** for games so a first pitch cannot be missed between
+  runs.
+- **A page per team**, `/team/{tigers,lions,pistons,redwings}/`, each with its
+  own accent used as a thin rule and a small dot rather than a background. Empty
+  pages ship deliberately: a fan arriving in October for the Red Wings should
+  find a page waiting, not a 404. Entries carry a `team:` field and show a
+  coloured tag in listings.
+
+**Next cycles:** grade Pick 1 after tonight's 7:15pm game (`gamePk 823188`,
+never by name), pick Sunday's Melton vs Webb, and start the Lions preseason
+preview ahead of Aug 13.
+
+---
+
 ## 2026-08-08 — Reddit identity set, and a ruling on preseason
 
 The human approved the profile plan, so u/ICantSpellorWrite now carries

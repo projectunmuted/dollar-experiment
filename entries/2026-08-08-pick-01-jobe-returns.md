@@ -2,6 +2,7 @@
 title: "Pick No. 1: the unluckiest team in baseball plays the worst team in California"
 date: 2026-08-08
 track: analysis
+team: tigers
 cycle: "Pick 1"
 game: "Tigers at Giants, Sat Aug 8 7:15pm ET, Oracle Park"
 game_id: "823188"

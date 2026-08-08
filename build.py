@@ -246,6 +246,23 @@ def table(rows: list[str]) -> str:
 # --------------------------------------------------------------------------
 
 
+# The four teams. Each gets its own page and a single accent used sparingly:
+# a thin rule and a small dot, never a background or a heading colour. Team
+# identity should be recognisable at a glance and never shouty. Dark values are
+# lightened so they hold contrast on the dark surface.
+TEAMS = [
+    ("tigers",   "Tigers",    "Detroit Tigers",    "#0C2340", "#7FA8D9"),
+    ("lions",    "Lions",     "Detroit Lions",     "#0076B6", "#5FB0E5"),
+    ("pistons",  "Pistons",   "Detroit Pistons",   "#C8102E", "#E8697D"),
+    ("redwings", "Red Wings", "Detroit Red Wings", "#CE1126", "#EC6A78"),
+]
+TEAM_BY_SLUG = {t[0]: t for t in TEAMS}
+
+
+def team_of(entry) -> tuple | None:
+    return TEAM_BY_SLUG.get(entry.team)
+
+
 @dataclass
 class Entry:
     slug: str
@@ -253,6 +270,7 @@ class Entry:
     day: date
     cycle: str
     track: str
+    team: str
     summary: str
     body: str
 
@@ -276,6 +294,7 @@ def parse(path: Path) -> Entry:
         day=date.fromisoformat(meta.get("date", "1970-01-01")),
         cycle=meta.get("cycle", ""),
         track=meta.get("track", "process"),
+        team=meta.get("team", ""),
         summary=meta.get("summary", ""),
         body=raw.strip(),
     )
@@ -321,6 +340,19 @@ code{background:var(--code);padding:.12em .35em;border-radius:3px;
   font:.85em/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
 pre{background:var(--code);padding:1rem;border-radius:6px;overflow-x:auto}
 pre code{background:none;padding:0}
+.teamnav{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 .5rem;padding:0;list-style:none}
+.teamnav a{display:inline-flex;align-items:center;gap:.45rem;text-decoration:none;
+  color:var(--fg);font-size:.88rem;border:1px solid var(--rule);border-radius:999px;
+  padding:.3rem .8rem;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.teamnav a:hover{border-color:var(--tc,var(--accent))}
+.teamnav a[aria-current="page"]{border-color:var(--tc,var(--accent));
+  box-shadow:inset 0 -2px 0 var(--tc,var(--accent))}
+.dot{width:.55rem;height:.55rem;border-radius:50%;background:var(--tc,var(--muted));
+  display:inline-block;flex:none}
+.teamrule{height:3px;border:0;border-radius:2px;background:var(--tc,var(--accent));
+  margin:0 0 1.75rem;width:3.5rem}
+.entry-list .tag{display:inline-flex;align-items:center;gap:.4rem;color:var(--muted);
+  font-size:.72rem;text-transform:uppercase;letter-spacing:.07em}
 .scroll{overflow-x:auto;margin:1.5rem 0}
 figure{margin:2rem 0}
 figure svg{display:block}
@@ -402,10 +434,31 @@ def page(site: Site, title: str, body: str, depth: int = 0, path: str = "",
 """
 
 
-def entry_item(e: Entry) -> str:
+
+def team_nav(active: str = "", depth: int = 0) -> str:
+    up = "../" * depth
+    items = []
+    for slug, short, _full, light, dark in TEAMS:
+        cur = ' aria-current="page"' if slug == active else ""
+        items.append(
+            f'<li><a href="{up}team/{slug}/index.html"{cur} '
+            f'style="--tc:{light}"><span class="dot" style="--tc:{light}"></span>'
+            f'{short}</a></li>'
+        )
+    return f'<ul class="teamnav">{"".join(items)}</ul>'
+
+
+def entry_item(e: Entry, depth: int = 0) -> str:
+    up = "../" * depth
     extra = f" &middot; {html.escape(e.cycle)}" if e.cycle else ""
+    tm = team_of(e)
+    tag = ""
+    if tm:
+        _slug, short, _full, light, _dark = tm
+        tag = (f'<span class="tag" style="--tc:{light}">'
+               f'<span class="dot" style="--tc:{light}"></span>{short}</span> &middot; ')
     return (
-        f'<li><a href="{e.url}"><span class="meta">{e.day.isoformat()}{extra}'
+        f'<li><a href="{up}{e.url}"><span class="meta">{tag}{e.day.isoformat()}{extra}'
         f'</span><span class="t">{html.escape(e.title)}</span>'
         f'<span class="s">{html.escape(e.summary)}</span></a></li>'
     )
@@ -413,9 +466,14 @@ def entry_item(e: Entry) -> str:
 
 def write_entry_pages(site: Site, entries: list[Entry]) -> None:
     for e in entries:
+        tm = team_of(e)
+        rule = f'<hr class="teamrule" style="--tc:{tm[3]}">' if tm else ""
+        label = f" &middot; {tm[2]}" if tm else ""
         body = (
             f'<a class="back" href="../index.html">&larr; All entries</a>'
-            f'<p class="meta">{e.day.isoformat()}'
+            + (team_nav(e.team, depth=1) if site.key == "dsr" else "")
+            + rule
+            + f'<p class="meta">{e.day.isoformat()}{label}'
             + (f" &middot; {html.escape(e.cycle)}" if e.cycle else "")
             + f"</p><h2>{html.escape(e.title)}</h2>{render(e.body)}"
         )
@@ -442,6 +500,8 @@ def write_common(site: Site, entries: list[Entry], home: str) -> None:
         (site.out / site.google_verify).write_text(token_line + "\n", encoding="utf-8")
 
     pages = [""] + [e.url for e in entries]
+    if site.key == "dsr":
+        pages += [f"team/{slug}/" for slug, *_ in TEAMS]
     urls = "\n".join(f"  <url><loc>{site.base_url}/{p}</loc></url>" for p in pages)
     (site.out / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
@@ -522,7 +582,8 @@ def build_dsr(analysis: list[Entry]) -> None:
         "you, the tip jar is open."
     )
     home = (
-        about
+        team_nav()
+        + about
         + "<h2>The record</h2>"
         + picks_html
         + "<h2>Analysis</h2>"
@@ -530,6 +591,31 @@ def build_dsr(analysis: list[Entry]) -> None:
         + tip
     )
     write_common(site, analysis, home)
+
+    # One page per team. Empty ones still ship: a fan arriving in October for
+    # the Red Wings should find the page waiting, not a 404.
+    for slug, short, full, light, _dark in TEAMS:
+        mine = [e for e in analysis if e.team == slug]
+        (site.out / "team" / slug).mkdir(parents=True, exist_ok=True)
+        if mine:
+            listing = f'<ul class="entry-list">{"".join(entry_item(e, depth=2) for e in mine)}</ul>'
+        else:
+            listing = ('<div class="note">Nothing here yet. Calls go up before the '
+                       'game and grades go up after, so this page fills in as the '
+                       'season does.</div>')
+        body = (
+            team_nav(slug, depth=2)
+            + f'<hr class="teamrule" style="--tc:{light}">'
+            + f"<h2>{full}</h2>"
+            + f'<p>Every {short} call and every grade, in one place.</p>'
+            + listing
+        )
+        (site.out / "team" / slug / "index.html").write_text(
+            page(site, f"{full}{site.title_sep}{site.title}", body, depth=2,
+                 path=f"team/{slug}/",
+                 description=f"Detroit {short} analysis: calls made before the game, graded after."),
+            encoding="utf-8",
+        )
 
 
 def build() -> None:
